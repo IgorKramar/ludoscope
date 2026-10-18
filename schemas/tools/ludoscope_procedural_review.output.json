@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim_type": {
+      "type": "string",
+      "const": "MODEL_RESULT"
+    },
+    "sample_size": {
+      "type": "number"
+    },
+    "patterns": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "invalid": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "largest_pattern_share": {
+      "type": "number"
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "claim_type",
+    "sample_size",
+    "patterns",
+    "invalid",
+    "largest_pattern_share",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

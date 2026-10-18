@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+      },
+      "version": {
+        "type": "integer",
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991
+      },
+      "kind": {
+        "type": "string",
+        "enum": [
+          "Theory",
+          "Principle",
+          "Lens",
+          "Heuristic",
+          "ResearchMethod",
+          "MetricDefinition",
+          "ExperimentTemplate",
+          "DesignPattern",
+          "AntiPattern",
+          "Counterexample",
+          "TheoryConflict"
+        ]
+      },
+      "title": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "description": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+        }
+      },
+      "school": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "tags": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "applicable_genres": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "applicable_stages": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "conditions": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "questions": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "recommendations": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "limitations": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "conflicting_entry_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+        }
+      },
+      "related_entry_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+        }
+      },
+      "verification_status": {
+        "type": "string",
+        "enum": [
+          "VERIFIED_SOURCE",
+          "SOURCE_REQUIRED",
+          "EXPERT_INFERENCE"
+        ]
+      },
+      "confidence": {
+        "type": "string",
+        "enum": [
+          "high",
+          "medium",
+          "low",
+          "unknown"
+        ]
+      },
+      "evidence_locator": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "interpretation": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "required": [
+      "id",
+      "version",
+      "kind",
+      "title",
+      "description",
+      "source_ids",
+      "school",
+      "tags",
+      "applicable_genres",
+      "applicable_stages",
+      "conditions",
+      "questions",
+      "recommendations",
+      "limitations",
+      "conflicting_entry_ids",
+      "related_entry_ids",
+      "verification_status",
+      "confidence",
+      "evidence_locator",
+      "interpretation"
+    ],
+    "additionalProperties": false
+  }
+}

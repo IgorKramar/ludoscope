@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.gamevision",
+  "version": 1,
+  "type": "GameVision",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Игровое видение\n\nАудитория; целевой опыт; ограничения и авторские намерения.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

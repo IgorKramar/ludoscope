@@ -1,0 +1,58 @@
+import { mkdtemp, rm, readFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+const installed = process.argv[2];
+if (!installed)
+  throw new Error(
+    "Usage: node scripts/smoke-installed.mjs /absolute/installed/plugin",
+  );
+const root = await mkdtemp(path.join(os.tmpdir(), "ludoscope-installed-"));
+const exec = promisify(execFile);
+let client;
+try {
+  const cli = path.join(installed, "dist/cli/index.js");
+  await exec(process.execPath, [cli, "--project", root, "init"]);
+  client = new Client({ name: "installed-plugin-smoke", version: "1.0" });
+  await client.connect(
+    new StdioClientTransport({
+      command: process.execPath,
+      args: [path.join(installed, "dist/mcp/index.js")],
+      env: { ...process.env, LUDOSCOPE_PROJECT_ROOT: root },
+      stderr: "pipe",
+    }),
+  );
+  const { tools } = await client.listTools();
+  if (tools.length !== 23) throw new Error("Expected 23 tools");
+  const context = await client.callTool({
+    name: "ludoscope_project_context",
+    arguments: {},
+  });
+  if (context.isError) throw new Error(JSON.stringify(context));
+  const model = JSON.parse(
+    await readFile(
+      path.join(installed, "examples/economic-tycoon/economy.json"),
+      "utf8",
+    ),
+  );
+  const r = await client.callTool({
+    name: "ludoscope_simulate_system",
+    arguments: { model },
+  });
+  if (r.isError || r.structuredContent.result.final.money !== 20)
+    throw new Error(JSON.stringify(r));
+  console.log(
+    JSON.stringify({
+      installed_root: installed,
+      tools: tools.length,
+      context: "ok",
+      tycoon_final_money: r.structuredContent.result.final.money,
+    }),
+  );
+} finally {
+  await client?.close();
+  await rm(root, { recursive: true, force: true });
+}

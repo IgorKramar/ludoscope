@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.uxspecification",
+  "version": 1,
+  "type": "UXSpecification",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## UX\n\nАртефакты интерфейса; цели задач; видимость состояния; восстановление ошибок; доступность.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

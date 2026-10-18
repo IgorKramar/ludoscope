@@ -1,0 +1,1 @@
+{"name":"ludoscope-local","interface":{"displayName":"LUDOSCOPE local"},"plugins":[{"name":"ludoscope","source":{"source":"local","path":"./"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ludoscope",
+  "version": "0.1.0",
+  "description": "Game Design Intelligence Engine: локальный анализ игровых систем, моделирование и проектная память.",
+  "author": { "name": "LUDOSCOPE contributors" },
+  "license": "MIT",
+  "keywords": ["game-design", "simulation", "codex", "research"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "LUDOSCOPE",
+        "shortDescription": "Game Design Intelligence Engine",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "steps": 10,
+  "id": "model.influence",
+  "initial": {
+    "influence": 4
+  },
+  "processes": [
+    {
+      "id": "petition",
+      "inputs": {},
+      "outputs": {
+        "influence": 1
+      },
+      "probability": 0.5
+    },
+    {
+      "id": "promise",
+      "inputs": {
+        "influence": 1
+      },
+      "outputs": {}
+    }
+  ],
+  "invariants": [
+    {
+      "resource": "influence",
+      "min": 0
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "samples": {
+      "minItems": 1,
+      "maxItems": 10000,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "pattern": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "valid": {
+            "type": "boolean"
+          },
+          "reachable": {
+            "type": "boolean"
+          },
+          "solvable": {
+            "type": "boolean"
+          },
+          "resources": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          }
+        },
+        "required": [
+          "id",
+          "pattern",
+          "valid",
+          "reachable",
+          "solvable",
+          "resources"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required_resources": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "samples",
+    "required_resources"
+  ],
+  "additionalProperties": false
+}

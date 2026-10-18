@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.experimentplan",
+  "version": 1,
+  "type": "ExperimentPlan",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Эксперимент\n\nВопрос; опровержимая гипотеза; участники; условия; показатели; критерии интерпретации; ограничения выборки.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

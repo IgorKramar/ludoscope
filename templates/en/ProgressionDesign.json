@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.progressiondesign",
+  "version": 1,
+  "type": "ProgressionDesign",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Progression design\n\nSkill prerequisites; practice; transfer; available strategies; exhaustion risk.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

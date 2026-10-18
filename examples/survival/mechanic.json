@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "player_actions": [
+    "choose"
+  ],
+  "preconditions": [],
+  "rules": [
+    "Resolve one action per turn."
+  ],
+  "state_transitions": [
+    "Action changes the declared resource state."
+  ],
+  "resources": [
+    "food",
+    "energy"
+  ],
+  "feedback": [
+    "Show changed state."
+  ],
+  "failure_conditions": [],
+  "success_conditions": [
+    "Reach the scenario goal."
+  ],
+  "dependencies": [
+    "system.weather",
+    "system.farming",
+    "system.automation"
+  ],
+  "expected_experiences": [
+    "Understand consequences and discover alternatives."
+  ],
+  "design_risks": [
+    "One action may dominate."
+  ],
+  "validation_plan": [
+    "Compare observed choices in counterbalanced prototypes."
+  ],
+  "tags": [
+    "choice"
+  ],
+  "stage": "prototype",
+  "choices": [
+    {
+      "id": "choice.safe",
+      "consequences": [
+        "Preserve resources."
+      ],
+      "cost": 1,
+      "benefit": 1
+    },
+    {
+      "id": "choice.risky",
+      "consequences": [
+        "Gain more at higher cost."
+      ],
+      "cost": 2,
+      "benefit": 3
+    }
+  ],
+  "id": "mechanic.hunger",
+  "name": "Hunger with automation",
+  "genre": "survival",
+  "player_goal": "Choose how to reach the goal under resource constraints."
+}

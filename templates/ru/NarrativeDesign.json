@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.narrativedesign",
+  "version": 1,
+  "type": "NarrativeDesign",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Нарратив\n\nАвторский канон; состояния мира; предусловия событий; эффекты; допустимые конфликты.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

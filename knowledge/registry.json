@@ -1,0 +1,2515 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "id": "source.schell",
+      "version": 1,
+      "title": "The Art of Game Design: A Book of Lenses",
+      "authors": [
+        "Jesse Schell"
+      ],
+      "url": "https://www.schellgames.com/art-of-game-design",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Официальный сайт Schell Games прямо связывает Buy The Book с товаром Third edition и ISBN-10 1138632058. Издание проверено по авторскому сайту; содержание книги и карточек не изучено и не распространяется. Авторские линзы LUDOSCOPE не являются линзами Schell.",
+      "edition": "3rd edition",
+      "identifier": "ISBN-10:1138632058"
+    },
+    {
+      "id": "source.sylvester",
+      "version": 1,
+      "title": "Designing Games: A Guide to Engineering Experiences",
+      "authors": [
+        "Tynan Sylvester"
+      ],
+      "url": "https://www.oreilly.com/library/view/designing-games/9781449338015/",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверены издательская страница O’Reilly, дата публикации 2013-02-14, edition:1 и отображаемый ISBN 9781449338015. JSON-LD также указывает печатный ISBN 9781449337933. Проверена библиография, но книга целиком не изучалась; теории из неё в этом релизе не атрибутируются.",
+      "year": 2013,
+      "edition": "1st edition",
+      "identifier": "ISBN:9781449338015"
+    },
+    {
+      "id": "source.koster",
+      "version": 1,
+      "title": "A Theory of Fun for Game Design",
+      "authors": [
+        "Raph Koster"
+      ],
+      "url": "https://www.oreilly.com/library/view/-/9781449363208/",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверены заголовок, автор, JSON-LD и номер edition на O’Reilly. Это проверка библиографии конкретного издания. Содержание книги не исследовалось и не используется для атрибуции теорий.",
+      "year": 2013,
+      "edition": "2nd edition",
+      "identifier": "ISBN:9781449363208"
+    },
+    {
+      "id": "source.sellers",
+      "version": 1,
+      "title": "Advanced Game Design: A Systems Approach",
+      "authors": [
+        "Michael Sellers"
+      ],
+      "url": "https://www.oreilly.com/library/view/-/9780134668185/",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверены заголовок, автор, JSON-LD и номер edition на O’Reilly. Это проверка библиографии конкретного издания. Содержание книги не исследовалось и не используется для атрибуции теорий.",
+      "year": 2017,
+      "edition": "1st edition",
+      "identifier": "ISBN:9780134668185"
+    },
+    {
+      "id": "source.fullerton",
+      "version": 1,
+      "title": "Game Design Workshop",
+      "authors": [
+        "Tracy Fullerton"
+      ],
+      "url": "https://www.gamedesignworkshop.com/",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверен официальный сайт книги: Tracy Fullerton, Game Design Workshop, Fifth Edition. Год и ISBN не установлены. Подтверждена библиография текущего издания; содержание книги не использовано для записей теорий.",
+      "edition": "5th edition"
+    },
+    {
+      "id": "source.salen_zimmerman",
+      "version": 1,
+      "title": "Rules of Play: Game Design Fundamentals",
+      "authors": [
+        "Katie Salen",
+        "Eric Zimmerman"
+      ],
+      "url": "https://openlibrary.org/books/OL17101954M/Rules_of_play",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена библиографическая запись Open Library по конкретному ISBN; publisher MIT Press. Содержание недоступно и остаётся SOURCE_REQUIRED; никакая запись знания не атрибутируется этой книге. Номер редакции не установлен, указан конкретный выпуск по ISBN. Соавторы подтверждены полем by_statement подробной записи.",
+      "year": 2004,
+      "edition": "2004 MIT Press issue identified by ISBN 9780262240451",
+      "identifier": "ISBN:9780262240451"
+    },
+    {
+      "id": "source.zubek",
+      "version": 1,
+      "title": "Elements of Game Design",
+      "authors": [
+        "Robert Zubek"
+      ],
+      "url": "https://openlibrary.org/books/OL29887997M/Elements_of_Game_Design",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена библиографическая запись Open Library по конкретному ISBN; publisher MIT Press. Содержание недоступно и остаётся SOURCE_REQUIRED; никакая запись знания не атрибутируется этой книге. Номер редакции не установлен, указан конкретный выпуск по ISBN. ",
+      "year": 2020,
+      "edition": "2020 MIT Press issue identified by ISBN 9780262043915",
+      "identifier": "ISBN:9780262043915"
+    },
+    {
+      "id": "source.costikyan",
+      "version": 1,
+      "title": "Uncertainty in Games",
+      "authors": [
+        "Greg Costikyan"
+      ],
+      "url": "https://openlibrary.org/books/OL27961692M/Uncertainty_in_Games",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена библиографическая запись Open Library по конкретному ISBN; publisher MIT Press. Содержание недоступно и остаётся SOURCE_REQUIRED; никакая запись знания не атрибутируется этой книге. Номер редакции не установлен, указан конкретный выпуск по ISBN. ",
+      "year": 2015,
+      "edition": "2015 MIT Press issue identified by ISBN 9780262527538",
+      "identifier": "ISBN:9780262527538"
+    },
+    {
+      "id": "source.juul",
+      "version": 1,
+      "title": "The Art of Failure: An Essay on the Pain of Playing Video Games",
+      "authors": [
+        "Jesper Juul"
+      ],
+      "url": "https://openlibrary.org/books/OL29316434M/Art_of_Failure",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена библиографическая запись Open Library по конкретному ISBN; publisher MIT Press. Содержание недоступно и остаётся SOURCE_REQUIRED; никакая запись знания не атрибутируется этой книге. Номер редакции не установлен, указан конкретный выпуск по ISBN. ",
+      "year": 2016,
+      "edition": "2016 MIT Press issue identified by ISBN 9780262529952",
+      "identifier": "ISBN:9780262529952"
+    },
+    {
+      "id": "source.hodent",
+      "version": 1,
+      "title": "The Gamer’s Brain: How Neuroscience and UX Can Impact Video Game Design",
+      "authors": [
+        "Celia Hodent"
+      ],
+      "url": "https://openlibrary.org/books/OL28875471M",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена конкретная библиографическая запись Open Library и связанная авторская запись. Издание идентифицировано по году, издателю и ISBN; номер редакции не установлен. Содержание остаётся SOURCE_REQUIRED и не используется для атрибуции теорий.",
+      "year": 2017,
+      "edition": "2017 issue identified by ISBN 9781498775502",
+      "identifier": "ISBN:9781498775502"
+    },
+    {
+      "id": "source.swink",
+      "version": 1,
+      "title": "Game Feel: A Game Designer’s Guide to Virtual Sensation",
+      "authors": [
+        "Steve Swink"
+      ],
+      "url": "https://openlibrary.org/books/OL17075228M",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена конкретная библиографическая запись Open Library и связанная авторская запись. Издание идентифицировано по году, издателю и ISBN; номер редакции не установлен. Содержание остаётся SOURCE_REQUIRED и не используется для атрибуции теорий.",
+      "year": 2009,
+      "edition": "2009 issue identified by ISBN 9780123743282",
+      "identifier": "ISBN:9780123743282"
+    },
+    {
+      "id": "source.isbister",
+      "version": 1,
+      "title": "How Games Move Us: Emotion by Design",
+      "authors": [
+        "Katherine Isbister"
+      ],
+      "url": "https://openlibrary.org/books/OL27420581M/How_Games_Move_Us",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена библиографическая запись Open Library по конкретному ISBN; publisher MIT Press. Содержание недоступно и остаётся SOURCE_REQUIRED; никакая запись знания не атрибутируется этой книге. Номер редакции не установлен, указан конкретный выпуск по ISBN. ",
+      "year": 2017,
+      "edition": "2017 MIT Press issue identified by ISBN 9780262534451",
+      "identifier": "ISBN:9780262534451"
+    },
+    {
+      "id": "source.characteristics",
+      "version": 1,
+      "title": "Characteristics of Games",
+      "authors": [
+        "George Skaff Elias",
+        "Richard Garfield",
+        "K. Robert Gutschera"
+      ],
+      "url": "https://openlibrary.org/books/OL25018459M/Characteristics_of_games",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверена библиографическая запись Open Library по конкретному ISBN; publisher MIT Press. Содержание недоступно и остаётся SOURCE_REQUIRED; никакая запись знания не атрибутируется этой книге. Номер редакции не установлен, указан конкретный выпуск по ISBN. Соавторы подтверждены полем by_statement подробной записи.",
+      "year": 2012,
+      "edition": "2012 MIT Press issue identified by ISBN 9780262017138",
+      "identifier": "ISBN:9780262017138"
+    },
+    {
+      "id": "source.pcg",
+      "version": 1,
+      "title": "Procedural Content Generation in Games: A Textbook and an Overview of Current Research",
+      "authors": [
+        "Noor Shaker",
+        "Julian Togelius",
+        "Mark J. Nelson"
+      ],
+      "url": "https://www.pcgbook.com/",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Проверены сайт авторов и глава 1 https://www.pcgbook.com/chapter01.pdf; сайт подтверждает финальную авторскую версию 2016. Другие главы здесь не анализировались. Разрешено читать онлайн; право распространять PDF не предполагается.",
+      "year": 2016,
+      "edition": "2016 Springer edition; final author manuscript",
+      "identifier": "doi:10.1007/978-3-319-42716-4"
+    },
+    {
+      "id": "source.mda",
+      "version": 1,
+      "title": "MDA: A Formal Approach to Game Design and Game Research",
+      "authors": [
+        "Robin Hunicke",
+        "Marc LeBlanc",
+        "Robert Zubek"
+      ],
+      "url": "https://users.cs.northwestern.edu/~hunicke/MDA.pdf",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Прочитан доступный первичный PDF, разделы MDA, MDA in Detail, Aesthetics, Dynamic Models, Tuning. Это дизайнерский framework, не экспериментальное доказательство универсальной причинности.",
+      "year": 2004,
+      "edition": "AAAI workshop paper"
+    },
+    {
+      "id": "source.nielsen",
+      "version": 1,
+      "title": "10 Usability Heuristics for User Interface Design",
+      "authors": [
+        "Jakob Nielsen"
+      ],
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-18",
+      "license": "Copyright holders retain rights; bibliographic metadata and original summaries only.",
+      "notes": "Прочитаны все десять разделов и Note from Jakob. JSON-LD: публикация 1994-04-24, изменение 2026-08-20. Эвристики дизайна интерфейсов, не универсальные законы игр. Полная статья и плакаты не распространяются.",
+      "year": 1994,
+      "edition": "Web article, retrieved revision 2026-08-20"
+    }
+  ],
+  "entries": [
+    {
+      "id": "knowledge.mda_layers",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Разделять правила, динамику и переживания",
+      "description": "Описание алгоритмов, наблюдаемого поведения системы и желаемого эмоционального ответа относится к разным уровням модели.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "mechanics",
+        "experience",
+        "systems",
+        "механики",
+        "игровой опыт",
+        "системы"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Как правило меняет поведение и какое переживание предполагается?"
+      ],
+      "recommendations": [
+        "Хранить три уровня отдельно и связывать явной гипотезой."
+      ],
+      "limitations": [
+        "Связь уровней не гарантирует переживания конкретного игрока."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "MDA, p. 2",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.experience_first",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Начинать с целевого опыта",
+      "description": "MDA рассматривает проектирование от эстетических целей к динамике и механикам.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "experience",
+        "vision",
+        "игровой опыт"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какой опыт оправдывает добавление правила?"
+      ],
+      "recommendations": [
+        "Перед новой механикой назвать опыт и предполагаемую цепочку его возникновения."
+      ],
+      "limitations": [
+        "Это рабочий ракурс, не запрет на экспериментальное проектирование от технологии."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_mystery_feedback"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "MDA in Detail / MDA as Lens, p. 2",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.designer_player_views",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Сопоставлять взгляд автора и игрока",
+      "description": "Автор задаёт правила; игрок сначала сталкивается с проявлениями игры и переживаниями. Различие перспектив помогает разбирать последствия решений.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "experience",
+        "learning",
+        "feedback",
+        "игровой опыт",
+        "обучение",
+        "обратная связь"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что игрок видит раньше, чем поймёт правило?"
+      ],
+      "recommendations": [
+        "Проверить одну систему с точки зрения автора и первого знакомства игрока."
+      ],
+      "limitations": [
+        "Последовательность восприятия конкретного человека нужно наблюдать."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "MDA as Lens, p. 2",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.experience_vocabulary",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Конкретизировать слово «интересно»",
+      "description": "MDA предлагает несколько названий эстетических целей вместо одного неопределённого слова fun. Перечень не объявляется исчерпывающим.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "experience",
+        "motivation",
+        "игровой опыт"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Ищем открытие, вызов, выражение себя или другой конкретный опыт?"
+      ],
+      "recommendations": [
+        "Назвать несколько желаемых переживаний и возможный конфликт между ними."
+      ],
+      "limitations": [
+        "Категории не являются шкалой качества и не охватывают всех игроков."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "Aesthetics, pp. 2–3",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.dynamic_model",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Моделировать динамику во времени",
+      "description": "Авторы предлагают описывать динамику конкретными моделями, включая вероятности и обратные связи.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "systems",
+        "simulation",
+        "feedback",
+        "системы",
+        "симуляция",
+        "обратная связь"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Как меняется состояние после нескольких ходов?"
+      ],
+      "recommendations": [
+        "Для вычислимых правил построить минимальную модель переходов."
+      ],
+      "limitations": [
+        "Формальная модель пропускает неописанное поведение людей."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_complexity_readability"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "Dynamic Models, p. 3",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.reinforcing_advantage",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Проверять усиление преимущества",
+      "description": "Пример Monopoly показывает, как богатство усиливает возможность получать ещё больше богатства и увеличивает отрыв.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "economy",
+        "feedback",
+        "balance",
+        "экономика",
+        "обратная связь",
+        "баланс"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Даёт ли лидерство средства ускорять дальнейшее лидерство?"
+      ],
+      "recommendations": [
+        "Проследить петлю преимущества и проверить её влияние на желаемую конкуренцию."
+      ],
+      "limitations": [
+        "Подавление отстающих может быть намеренной темой; пример не доказывает дефект любой положительной петли."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "Dynamic Models, p. 3",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.tuning_observation",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Проверять настройку через игру",
+      "description": "Раздел Tuning связывает уточнение правил с плейтестами и проверкой соответствия эстетическим целям.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "playtest",
+        "balance",
+        "experiments",
+        "плейтест",
+        "баланс",
+        "эксперименты"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что в наблюдениях изменится при новой настройке?"
+      ],
+      "recommendations": [
+        "Изменять параметр и наблюдать заранее определённый показатель и опыт."
+      ],
+      "limitations": [
+        "Плейтест малого удобного набора участников не обосновывает универсальное заключение."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "Tuning, p. 4",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.tuning_cognitive_cost",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Учитывать читаемость балансировки",
+      "description": "Авторы замечают, что сложные вычисления налогов могут затруднять отслеживание прогресса и подрывать целевой опыт.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "mda",
+      "tags": [
+        "ux",
+        "balance",
+        "learning",
+        "интерфейс",
+        "баланс",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Не стало ли труднее понимать положение игроков?"
+      ],
+      "recommendations": [
+        "Сравнивать изменение динамики с затратами понимания новой формулы."
+      ],
+      "limitations": [
+        "Не следует из этого автоматически удалять сложную математику из экспертных игр."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "Tuning, p. 4",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_constraints",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Генерация учитывает ограничения игры",
+      "description": "Контент должен учитывать возможности, правила и ограничения игры, для которой создаётся.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "rules",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какие условия делают результат допустимым?"
+      ],
+      "recommendations": [
+        "Определить валидатор до оценки разнообразия."
+      ],
+      "limitations": [
+        "Валидность не доказывает интересность."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.1, pp. 1–2",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_speed",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Бюджет генерации зависит от момента использования",
+      "description": "Допустимое время вычисления различается для генерации во время игры и при разработке.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "performance",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Когда игрок или автор ждёт результат?"
+      ],
+      "recommendations": [
+        "Измерить худшее время и назначить бюджет."
+      ],
+      "limitations": [
+        "Нет единого допустимого времени для всех генераторов."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_speed_quality"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.5, p. 6",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_reliability",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Надёжность зависит от последствий сбоя",
+      "description": "Недопустимая структура обязательного уровня критичнее косметически странного необязательного объекта.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "validation",
+        "процедурная генерация",
+        "проверка"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Может ли ошибка заблокировать прохождение?"
+      ],
+      "recommendations": [
+        "Ранжировать проверки по последствиям нарушения."
+      ],
+      "limitations": [
+        "Косметическое отклонение тоже может нарушать художественную задачу."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_diversity_reliability"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.5, p. 6",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_control",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Определять управляемые измерения",
+      "description": "Генератор может предоставлять параметры, через которые человек или система задаёт свойства результата.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "control",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какие свойства автор должен задавать явно?"
+      ],
+      "recommendations": [
+        "Документировать параметры и измерять изменение выходных свойств."
+      ],
+      "limitations": [
+        "Название параметра ещё не гарантирует фактическую управляемость."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.5, p. 7",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_diversity",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различать разнообразие и случайные вариации",
+      "description": "Случайное изменение второстепенной детали не гарантирует существенного разнообразия; хаотическая сборка может разрушить играбельность.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "diversity",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "В чём результаты различаются для действий игрока?"
+      ],
+      "recommendations": [
+        "Оценивать распределения значимых характеристик вместе с валидностью."
+      ],
+      "limitations": [
+        "Выбор значимых характеристик зависит от проекта."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_diversity_reliability"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.5, p. 7",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_believability",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Проверять воспринимаемую искусственность",
+      "description": "Среди свойств PCG авторы выделяют творчество и правдоподобие, включая нежелательные признаки машинной сборки.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "experience",
+        "процедурная генерация",
+        "игровой опыт"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Есть ли повторяющийся шов или очевидный шаблон?"
+      ],
+      "recommendations": [
+        "Сопоставить выборку результатов с художественной целью."
+      ],
+      "limitations": [
+        "Намеренно искусственная эстетика допустима."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.5, p. 7",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_online_offline",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различать генерацию онлайн и офлайн",
+      "description": "Одна ось классификации разделяет генерацию во время прохождения и заранее при разработке либо до сессии.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "architecture",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Нужна ли адаптация во время игры?"
+      ],
+      "recommendations": [
+        "Выбирать режим исходя из бюджета и потребности в заранее проверенном контенте."
+      ],
+      "limitations": [
+        "Это континуум архитектур, а не жёсткая дихотомия."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.1, pp. 7–8",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_necessary_optional",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различать обязательный и заменяемый контент",
+      "description": "Ошибка обязательного для завершения контента требует более строгой гарантии корректности, чем ошибка заменяемого.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "validation",
+        "resources",
+        "процедурная генерация",
+        "проверка",
+        "ресурсы"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Можно ли пропустить или заменить этот результат?"
+      ],
+      "recommendations": [
+        "Отмечать критические ресурсы и пути отдельными инвариантами."
+      ],
+      "limitations": [
+        "Необязательное не означает несущественное для опыта."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.2, p. 8",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_seed_parameters",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различать seed и содержательные параметры",
+      "description": "Seed управляет воспроизведением, а вектор параметров может задавать свойства контента.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "simulation",
+        "reproducibility",
+        "процедурная генерация",
+        "симуляция"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Seed воспроизводит результат при той же версии алгоритма?"
+      ],
+      "recommendations": [
+        "Сохранять seed, версию генератора и параметры."
+      ],
+      "limitations": [
+        "Один seed без алгоритма и окружения недостаточен для воспроизводимости."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.3, p. 8",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_generic_adaptive",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различать общий и адаптивный контент",
+      "description": "Адаптивная генерация использует информацию о взаимодействии игрока, общая — не учитывает её.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "player_model",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какие данные поведения действительно используются?"
+      ],
+      "recommendations": [
+        "Явно описать входы адаптации и проверяемое ожидаемое изменение."
+      ],
+      "limitations": [
+        "Это определение, не доказательство превосходства адаптации."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.4, pp. 8–9",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_determinism",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Фиксировать условия детерминизма",
+      "description": "Детерминированная генерация позволяет восстановить результат при одинаковых начальных условиях и методе.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "reproducibility",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Все ли источники случайности управляются?"
+      ],
+      "recommendations": [
+        "Повторить прогон с одинаковыми входами и сравнить результат."
+      ],
+      "limitations": [
+        "Скрытые источники случайности и изменения версий нарушают повторяемость."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.5, p. 9",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_generate_test",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Разделять построение и отбор",
+      "description": "Конструктивные методы строят результат; generate-and-test чередует создание кандидата и его проверку.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "validation",
+        "процедурная генерация",
+        "проверка"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что произойдёт, если допустимый кандидат не найден?"
+      ],
+      "recommendations": [
+        "Ограничить число попыток и предусмотреть явный отказ или безопасный резерв."
+      ],
+      "limitations": [
+        "Ограничение попыток — инженерная интерпретация, не гарантия полноты поиска."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_speed_quality"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.6, p. 9",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.pcg_mixed_initiative",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Оставлять место авторскому участию",
+      "description": "Mixed-initiative объединяет действия человека с генератором вместо полной автоматизации решений.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "procedural_design",
+      "tags": [
+        "procedural",
+        "authorship",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какие авторские ограничения нельзя перезаписывать?"
+      ],
+      "recommendations": [
+        "Сохранять утверждённые части и показывать предлагаемые изменения."
+      ],
+      "limitations": [
+        "Автоматическая корректность не заменяет художественное согласование."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1.6.7, p. 10",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_status",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Показывать состояние",
+      "description": "Интерфейс должен своевременно сообщать пользователю, что происходит.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "feedback",
+        "интерфейс",
+        "обратная связь"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что подтверждает регистрацию действия?"
+      ],
+      "recommendations": [
+        "Проверять задержку и заметность обратной связи."
+      ],
+      "limitations": [
+        "Скрытое игровое состояние может быть частью правил."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_mystery_feedback"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§1 Visibility of System Status",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_language",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Использовать понятные игроку понятия",
+      "description": "Язык и отображение должны соотноситься с понятиями аудитории, а не внутренним жаргоном реализации.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "learning",
+        "интерфейс",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Как аудитория называет этот объект?"
+      ],
+      "recommendations": [
+        "Проверить терминологию и пространственные соответствия управления."
+      ],
+      "limitations": [
+        "Фантастическая терминология может быть намеренной и обучаемой."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§2 Match Between the System and the Real World",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_exit",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Различать ошибку ввода и игровой риск",
+      "description": "Эвристика контроля рекомендует понятные способы выхода из нежелательной операции.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "errors",
+        "интерфейс"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Можно ли отменить ошибочный выбор меню?"
+      ],
+      "recommendations": [
+        "Предусмотреть выход и отмену для интерфейсных операций."
+      ],
+      "limitations": [
+        "Не означает обязательную отмену всех игровых последствий."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§3 User Control and Freedom",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_consistency",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Сохранять понятные соответствия",
+      "description": "Согласованность терминов и действий снижает необходимость повторно разгадывать интерфейс.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "learning",
+        "интерфейс",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Одинаковые обозначения означают одно и то же?"
+      ],
+      "recommendations": [
+        "Проверить внутреннюю согласованность и платформенные ожидания."
+      ],
+      "limitations": [
+        "Новое взаимодействие допустимо при ясной цели и обучении."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§4 Consistency and Standards",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_prevent_errors",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Предотвращать дорогие ошибки взаимодействия",
+      "description": "Предупреждение ошибочных условий и разумные ограничения помогают предотвращать slips и ошибки ментальной модели.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "errors",
+        "risk",
+        "интерфейс"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что можно потерять из-за промаха, а не решения?"
+      ],
+      "recommendations": [
+        "Приоритизировать защиту необратимых интерфейсных операций."
+      ],
+      "limitations": [
+        "Нельзя автоматически убирать намеренный риск игры."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§5 Error Prevention",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_recognition",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Поддерживать узнавание вместо лишнего запоминания",
+      "description": "Видимые варианты и доступная по месту информация уменьшают ненужную нагрузку на память.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "learning",
+        "memory",
+        "интерфейс",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какую информацию приходится держать в памяти между экранами?"
+      ],
+      "recommendations": [
+        "Показывать доступные действия и контекстные справки."
+      ],
+      "limitations": [
+        "Запоминание может быть главным навыком игры; проверять назначение."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_complexity_readability"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§6 Recognition Rather than Recall",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_accelerators",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Поддерживать опытных пользователей",
+      "description": "Сокращённые пути и настройки частых операций могут помогать освоившим интерфейс пользователям.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "mastery",
+        "automation",
+        "интерфейс",
+        "мастерство"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Можно ли ускорить частую уже освоенную операцию?"
+      ],
+      "recommendations": [
+        "Предлагать настраиваемые горячие клавиши и быстрые действия."
+      ],
+      "limitations": [
+        "Автоматизация может убрать целевой игровой выбор."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_automation_mastery"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§7 Flexibility and Efficiency of Use",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_information_priority",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Выделять нужную сейчас информацию",
+      "description": "Лишняя информация конкурирует с необходимой и затрудняет её обнаружение.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "information",
+        "интерфейс"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какая информация нужна для текущего решения?"
+      ],
+      "recommendations": [
+        "Проверять иерархию и доступность деталей по запросу."
+      ],
+      "limitations": [
+        "Минимализм не является требованием бедной визуальной эстетики."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§8 Aesthetic and Minimalist Design",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_recovery",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Объяснять проблему и путь восстановления",
+      "description": "Сообщение об ошибке должно быть понятным, конкретным и полезным для исправления ситуации.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "errors",
+        "feedback",
+        "интерфейс",
+        "обратная связь"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Понятно ли, что произошло и что делать дальше?"
+      ],
+      "recommendations": [
+        "Сообщать причину и доступный следующий шаг."
+      ],
+      "limitations": [
+        "Не раскрывать намеренно скрытую информацию ради универсальной подсказки."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§9 Help Users Recognize, Diagnose, and Recover from Errors",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.ux_help",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Давать помощь в контексте задачи",
+      "description": "Справка должна быть доступной, краткой, связанной с текущей задачей и конкретными действиями.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "hci",
+      "tags": [
+        "ux",
+        "learning",
+        "tutorial",
+        "интерфейс",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Можно ли найти нужное объяснение в момент затруднения?"
+      ],
+      "recommendations": [
+        "Связать справку с текущим экраном или действием."
+      ],
+      "limitations": [
+        "Потребность в справке не доказывает плохое качество всей игры."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "§10 Help and Documentation",
+      "interpretation": "Самостоятельный пересказ проверенного фрагмента. Применение к конкретной игре требует отдельной проверки."
+    },
+    {
+      "id": "knowledge.method_experience_chain",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Цепочка опыта",
+      "description": "Описать действие → правило → изменение состояния → наблюдаемую динамику → обратную связь → гипотезу переживания. Для каждой стрелки указать допущение и возможное опровержение.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "experience",
+        "mechanics",
+        "игровой опыт",
+        "механики"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Как проверить самую слабую стрелку?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_removal_test",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Контрфактическое удаление",
+      "description": "Сравнить спецификацию с механикой и без неё. Перечислить исчезающие решения, затраты и обратную связь; проверить минимальный прототип без механики.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "mechanics",
+        "scope",
+        "механики"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что теряет целевой опыт при удалении?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [
+        "knowledge.conflict_automation_mastery"
+      ],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_feedback_trace",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Трассировка обратной связи",
+      "description": "Выбрать ресурс, проследить изменения по подписанным рёбрам и выписать условия замыкания цикла. Проверить численную модель при наличии коэффициентов.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "systems",
+        "economy",
+        "системы",
+        "экономика"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "При каких условиях преимущество усиливается?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_choice_matrix",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Матрица значимых альтернатив",
+      "description": "Для каждого действия записать доступную информацию, стоимость и последствия в одинаковых состояниях. Ищите строгое доминирование только в заданной модели.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "choice",
+        "balance",
+        "осмысленный выбор",
+        "баланс",
+        "meaningful choice",
+        "player choice",
+        "выбор игрока"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какие состояния делают другую альтернативу рациональной?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_ui_task_walk",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Проход интерфейсной задачи",
+      "description": "На реальном артефакте пройти одну задачу, отмечая видимость состояния, незнакомые термины, нагрузку памяти, выход и восстановление. Разделить наблюдаемое и предполагаемое.",
+      "source_ids": [
+        "source.nielsen"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "ux",
+        "learning",
+        "интерфейс",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какой шаг требует лишнего догадочного действия?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_mastery_probe",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Проверка переноса освоения",
+      "description": "Сформулировать навык, дать тренировочную задачу, затем задачу переноса без подсказки. Записать ошибки, время и действия; не смешивать тренировку с итоговым наблюдением.",
+      "source_ids": [
+        "source.nielsen",
+        "source.mda"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "mastery",
+        "learning",
+        "мастерство",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Переносится ли правило в новую ситуацию?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_seed_corpus",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Корпус воспроизводимых seed",
+      "description": "Зафиксировать алгоритм, версию, параметры, seed и инварианты. Прогнать обычные и граничные входы. Сохранить все отказы и сравнить повторные прогоны.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "procedural",
+        "validation",
+        "процедурная генерация",
+        "проверка"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Воспроизводится ли каждый выявленный отказ?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_generator_distribution",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Профиль распределения генератора",
+      "description": "На заранее выбранной серии seed измерить валидность, частоты категорий и распределения признаков. Хранить знаменатель, пропуски и критерии признаков.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "procedural",
+        "diversity",
+        "процедурная генерация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Есть ли частые шаблоны при номинальном разнообразии?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_variant_trial",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Контролируемое сравнение вариантов",
+      "description": "Назвать вопрос и различие вариантов. По возможности менять один фактор; сохранить условия и критерии интерпретации до сбора данных. Описать ограничения выборки.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "experiments",
+        "balance",
+        "эксперименты",
+        "баланс"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какое наблюдение позволит отвергнуть предпочтительный вариант?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.method_evidence_ledger",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Журнал утверждений",
+      "description": "Записать утверждение, статус, источник и локатор, допущения, альтернативное объяснение и способ проверки. При новых данных создавать новую версию, не повышать статус автоматически.",
+      "source_ids": [
+        "source.mda",
+        "source.nielsen",
+        "source.pcg"
+      ],
+      "school": "ludoscope_original_method",
+      "tags": [
+        "evidence",
+        "research",
+        "доказательства"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Что именно подтверждает источник, а что добавил дизайнер?"
+      ],
+      "recommendations": [
+        "Использовать шаги протокола и хранить исходные артефакты."
+      ],
+      "limitations": [
+        "Методика разработчика, не проверенный результат перечисленных авторов. Нужна независимая оценка полезности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE original operational protocol v1; inspiration in linked source sections",
+      "interpretation": "Оригинальная методика LUDOSCOPE. source_ids обозначает основания и вдохновение, а не публикацию данной методики в источнике."
+    },
+    {
+      "id": "knowledge.conflict_complexity_readability",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Глубина модели и читаемость",
+      "description": "Дополнительное правило может дать новую динамику и одновременно увеличить нагрузку памяти.",
+      "source_ids": [
+        "source.mda",
+        "source.nielsen"
+      ],
+      "school": "theory_conflicts",
+      "tags": [
+        "conflict",
+        "tradeoff"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какая сторона компромисса поддерживает текущую цель?"
+      ],
+      "recommendations": [
+        "Сравнить раскрытие информации, автоматизацию вычислений и удаление правила на одной задаче."
+      ],
+      "limitations": [
+        "Не универсальное противоречие: зависит от аудитории, реализации и авторского замысла."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.dynamic_model",
+        "knowledge.ux_recognition"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE comparative interpretation v1",
+      "interpretation": "Оригинальное сопоставление источников; не утверждение, что авторы спорили между собой."
+    },
+    {
+      "id": "knowledge.conflict_diversity_reliability",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Разнообразие и надёжность",
+      "description": "Расширение пространства результатов может затруднять гарантирование обязательных ограничений.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "theory_conflicts",
+      "tags": [
+        "conflict",
+        "tradeoff"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какая сторона компромисса поддерживает текущую цель?"
+      ],
+      "recommendations": [
+        "Сравнить долю валидных результатов и значимое разнообразие при фиксированном бюджете."
+      ],
+      "limitations": [
+        "Не универсальное противоречие: зависит от аудитории, реализации и авторского замысла."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.pcg_diversity",
+        "knowledge.pcg_reliability"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE comparative interpretation v1",
+      "interpretation": "Оригинальное сопоставление источников; не утверждение, что авторы спорили между собой."
+    },
+    {
+      "id": "knowledge.conflict_speed_quality",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Скорость генерации и отбор",
+      "description": "Дополнительные проверки кандидатов расходуют время, но могут отсеивать недопустимый контент.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "theory_conflicts",
+      "tags": [
+        "conflict",
+        "tradeoff"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какая сторона компромисса поддерживает текущую цель?"
+      ],
+      "recommendations": [
+        "Сравнить ограниченные бюджеты попыток, качество и частоту fallback."
+      ],
+      "limitations": [
+        "Не универсальное противоречие: зависит от аудитории, реализации и авторского замысла."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.pcg_speed",
+        "knowledge.pcg_generate_test"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE comparative interpretation v1",
+      "interpretation": "Оригинальное сопоставление источников; не утверждение, что авторы спорили между собой."
+    },
+    {
+      "id": "knowledge.conflict_mystery_feedback",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Неопределённость и видимость состояния",
+      "description": "Сокрытие данных может поддерживать исследование, но мешать понять факт регистрации действия.",
+      "source_ids": [
+        "source.mda",
+        "source.nielsen"
+      ],
+      "school": "theory_conflicts",
+      "tags": [
+        "conflict",
+        "tradeoff"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какая сторона компромисса поддерживает текущую цель?"
+      ],
+      "recommendations": [
+        "Разделить скрытые игровые сведения и явное подтверждение ввода; проверить понимание."
+      ],
+      "limitations": [
+        "Не универсальное противоречие: зависит от аудитории, реализации и авторского замысла."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.experience_first",
+        "knowledge.ux_status"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE comparative interpretation v1",
+      "interpretation": "Оригинальное сопоставление источников; не утверждение, что авторы спорили между собой."
+    },
+    {
+      "id": "knowledge.conflict_automation_mastery",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Автоматизация и осмысленное освоение",
+      "description": "Ускорение повторных операций может освобождать внимание или удалять основной навык игры.",
+      "source_ids": [
+        "source.mda",
+        "source.nielsen"
+      ],
+      "school": "theory_conflicts",
+      "tags": [
+        "conflict",
+        "tradeoff"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Применять при наличии соответствующего артефакта, цели или формальной модели."
+      ],
+      "questions": [
+        "Какая сторона компромисса поддерживает текущую цель?"
+      ],
+      "recommendations": [
+        "Сравнить ручной и автоматический варианты после освоения, измеряя оставшиеся решения."
+      ],
+      "limitations": [
+        "Не универсальное противоречие: зависит от аудитории, реализации и авторского замысла."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.ux_accelerators",
+        "knowledge.method_removal_test"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "LUDOSCOPE comparative interpretation v1",
+      "interpretation": "Оригинальное сопоставление источников; не утверждение, что авторы спорили между собой."
+    },
+    {
+      "id": "knowledge.lens_consequence",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза прослеживаемого последствия",
+      "description": "Оригинальная линза LUDOSCOPE для прослеживания связи действия игрока с отложенным последствием и доступной обратной связью.",
+      "source_ids": [
+        "source.mda"
+      ],
+      "school": "ludoscope_original_lens",
+      "tags": [
+        "mechanics",
+        "choice",
+        "механики",
+        "осмысленный выбор",
+        "meaningful choice",
+        "player choice",
+        "выбор игрока"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Есть действие с отложенным последствием."
+      ],
+      "questions": [
+        "Как игрок связывает позднее событие со своим предыдущим действием?"
+      ],
+      "recommendations": [
+        "Ответить на вопрос по конкретному артефакту и предложить проверку."
+      ],
+      "limitations": [
+        "Не является карточкой или нумерованной линзой Jesse Schell."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "Original LUDOSCOPE lens v1",
+      "interpretation": "Авторский аналитический вопрос, вдохновлённый указанными основаниями, без атрибуции формулировки авторам."
+    },
+    {
+      "id": "knowledge.lens_information",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза цены информации",
+      "description": "Оригинальная линза LUDOSCOPE для различения намеренной игровой неопределённости и ненужных затрат на поиск уже доступной информации.",
+      "source_ids": [
+        "source.nielsen",
+        "source.mda"
+      ],
+      "school": "ludoscope_original_lens",
+      "tags": [
+        "ux",
+        "uncertainty",
+        "интерфейс",
+        "неопределённость",
+        "meaningful choice",
+        "player choice",
+        "выбор игрока"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Решение зависит от скрытого или забываемого состояния."
+      ],
+      "questions": [
+        "Скрытие информации создаёт желаемую неопределённость или лишь требует искать данные?"
+      ],
+      "recommendations": [
+        "Ответить на вопрос по конкретному артефакту и предложить проверку."
+      ],
+      "limitations": [
+        "Не является карточкой или нумерованной линзой Jesse Schell."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "Original LUDOSCOPE lens v1",
+      "interpretation": "Авторский аналитический вопрос, вдохновлённый указанными основаниями, без атрибуции формулировки авторам."
+    },
+    {
+      "id": "knowledge.lens_generator_contract",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза договора генератора",
+      "description": "Оригинальная линза LUDOSCOPE для проверки минимального договора валидности обязательного процедурно создаваемого контента.",
+      "source_ids": [
+        "source.pcg"
+      ],
+      "school": "ludoscope_original_lens",
+      "tags": [
+        "procedural",
+        "validation",
+        "процедурная генерация",
+        "проверка"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Генерируемый результат необходим для прохождения."
+      ],
+      "questions": [
+        "Какой минимальный договор валидности гарантируется до выдачи результата?"
+      ],
+      "recommendations": [
+        "Ответить на вопрос по конкретному артефакту и предложить проверку."
+      ],
+      "limitations": [
+        "Не является карточкой или нумерованной линзой Jesse Schell."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "low",
+      "evidence_locator": "Original LUDOSCOPE lens v1",
+      "interpretation": "Авторский аналитический вопрос, вдохновлённый указанными основаниями, без атрибуции формулировки авторам."
+    }
+  ]
+}

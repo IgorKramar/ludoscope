@@ -1,0 +1,22 @@
+{
+  "id": "decision.hunger",
+  "problem": "Hunger may become routine.",
+  "context": "Prototype only.",
+  "alternatives": [
+    "Remove hunger",
+    "Contextual hunger"
+  ],
+  "chosen": "Contextual hunger",
+  "rationale": "Test whether route choices become meaningful.",
+  "consequences": [
+    "Requires resource feedback."
+  ],
+  "mechanics": [
+    "mechanic.hunger"
+  ],
+  "revisit_when": [
+    "Playtests show no meaningful route choice."
+  ],
+  "date": "2026-10-18T00:00:00Z",
+  "status": "approved"
+}

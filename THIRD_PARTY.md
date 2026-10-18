@@ -1,0 +1,28 @@
+# Third-party materials
+
+Оригинальный код, шаблоны и самостоятельно сформулированные записи LUDOSCOPE распространяются по MIT. Это не изменяет лицензии зависимостей и первичных источников.
+
+## Agent Plugins schemas
+
+`schemas/agent-plugin.schema.json` и `schemas/agent-mcp.schema.json` — неизменённые копии Agent Plugins 1.0.0, https://agent-plugins.org/schemas/1.0.0/. Upstream: https://github.com/agentplugins/agent-plugins-spec. Лицензия схем: Apache-2.0, согласно upstream LICENSE.md; полный текст сохранён в schemas/AGENT-PLUGINS-APACHE-2.0.txt. Эти файлы не перелицензируются под MIT.
+
+## Прямые npm-зависимости
+
+| Package | Version checked | License |
+|---|---|---|
+| @modelcontextprotocol/sdk | 1.32.1 | MIT |
+| commander | 14.0.3 | MIT |
+| csv-parse | 7.0.3 | MIT |
+| yaml | 2.9.1 | ISC |
+| zod | 4.6.7 | MIT |
+| @types/node | 24.19.2 | MIT |
+| ajv | 8.20.0 | MIT |
+| prettier | 3.9.10 | MIT |
+| typescript | 5.9.3 | Apache-2.0 |
+| vitest | 5.0.5 | MIT |
+
+Точные транзитивные версии зафиксированы в package-lock.json. Устанавливаемые npm-пакеты сохраняют собственные лицензии и notices.
+
+## Исследовательские источники
+
+Реестр knowledge/registry.json хранит права/режим использования каждого источника и URL. Коммерческие книги, полные карточки Schell, PDF MDA/PCG и HTML первоисточников не включены. Пересказы самостоятельно сформулированы и снабжены локаторами; доступность текста онлайн не трактуется как право на его перепубликацию. Пользовательский импорт требует указания лицензии и явного разрешённого режима.

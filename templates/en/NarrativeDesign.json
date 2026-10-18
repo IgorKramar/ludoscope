@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.narrativedesign",
+  "version": 1,
+  "type": "NarrativeDesign",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Narrative design\n\nAuthor canon; world states; event preconditions; effects; intentional conflicts.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

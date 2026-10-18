@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "VERIFIED_SOURCE",
+        "PROJECT_FACT",
+        "MODEL_RESULT",
+        "PLAYTEST_OBSERVATION",
+        "DESIGN_HYPOTHESIS",
+        "EXPERT_INFERENCE",
+        "UNVERIFIED"
+      ]
+    },
+    "evidence": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "assumptions": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "relevant_theories": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "alternatives": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "validation_method": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "supported",
+        "contradicted"
+      ]
+    }
+  },
+  "required": [
+    "claim",
+    "claim_type",
+    "evidence",
+    "assumptions",
+    "relevant_theories",
+    "limitations",
+    "alternatives",
+    "validation_method",
+    "status"
+  ],
+  "additionalProperties": false
+}

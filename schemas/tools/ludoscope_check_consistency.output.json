@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "valid": {
+      "type": "boolean",
+      "const": true
+    },
+    "nodes": {
+      "type": "number"
+    },
+    "decisions": {
+      "type": "number"
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "valid",
+    "nodes",
+    "decisions",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

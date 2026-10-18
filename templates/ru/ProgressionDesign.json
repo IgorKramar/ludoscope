@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.progressiondesign",
+  "version": 1,
+  "type": "ProgressionDesign",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Прогрессия\n\nПредпосылки навыков; практика; перенос освоенного; доступные стратегии; риск исчерпания.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

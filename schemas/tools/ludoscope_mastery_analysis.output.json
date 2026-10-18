@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim_type": {
+      "type": "string",
+      "const": "EXPERT_INFERENCE"
+    },
+    "issues": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "claim_type",
+    "issues",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

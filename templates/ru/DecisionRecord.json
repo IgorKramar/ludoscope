@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.decisionrecord",
+  "version": 1,
+  "type": "DecisionRecord",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Решение\n\nПроблема; контекст; альтернативы; выбранное решение; последствия; условия пересмотра. Утверждение отдельно.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

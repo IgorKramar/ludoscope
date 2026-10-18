@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim_type": {
+      "type": "string",
+      "const": "MODEL_RESULT"
+    },
+    "reachable": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "unreachable": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "deadlocks": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "no_terminal_path": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "ambiguous_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "action": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "claim_type",
+    "reachable",
+    "unreachable",
+    "deadlocks",
+    "no_terminal_path",
+    "ambiguous_actions",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

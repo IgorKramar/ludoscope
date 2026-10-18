@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "steps": 10,
+  "id": "model.cards",
+  "initial": {
+    "mana": 3,
+    "damage": 0
+  },
+  "processes": [
+    {
+      "id": "draw_mana",
+      "inputs": {},
+      "outputs": {
+        "mana": 1
+      }
+    },
+    {
+      "id": "combo",
+      "inputs": {
+        "mana": 2
+      },
+      "outputs": {
+        "damage": 3
+      },
+      "probability": 0.5
+    }
+  ],
+  "invariants": []
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.playtestreport",
+  "version": 1,
+  "type": "PlaytestReport",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Playtest report\n\nActual participants and conditions; measurements; observations; subjective feedback; missingness; hypothesis links.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim_type": {
+      "type": "string",
+      "const": "MODEL_RESULT"
+    },
+    "expected_unconstrained_net_per_tick": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "free_sources": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "gain_witnesses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "processes": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "net": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "processes",
+          "net"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "searched_combinations": {
+      "type": "number"
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "claim_type",
+    "expected_unconstrained_net_per_tick",
+    "free_sources",
+    "gain_witnesses",
+    "searched_combinations",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

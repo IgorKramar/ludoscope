@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "size": {
+            "type": "number"
+          },
+          "category": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "size",
+          "category"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "engine_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "claim_type": {
+            "type": "string",
+            "const": "PROJECT_FACT"
+          },
+          "claim": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file",
+          "sha256",
+          "claim_type",
+          "claim"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "skipped": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "bytes": {
+      "type": "number"
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "revision",
+    "files",
+    "engine_evidence",
+    "skipped",
+    "bytes",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

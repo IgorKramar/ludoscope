@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "changed": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+    },
+    "affected": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "PlayerGoal",
+              "PlayerAction",
+              "Mechanic",
+              "Rule",
+              "Resource",
+              "System",
+              "GameState",
+              "Feedback",
+              "Dynamic",
+              "ExperienceGoal",
+              "NarrativeEvent",
+              "ProgressionMilestone",
+              "Constraint",
+              "Metric",
+              "Experiment",
+              "Evidence",
+              "DesignDecision"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "files": {
+            "default": [],
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "label",
+          "files"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "paths": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      }
+    },
+    "limitation": {
+      "type": "string"
+    },
+    "mermaid": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "changed",
+    "affected",
+    "paths",
+    "limitation",
+    "mermaid"
+  ],
+  "additionalProperties": false
+}

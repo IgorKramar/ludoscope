@@ -1,0 +1,6 @@
+participant,kind,metric,value,text,hypothesis
+p1,measurement,task_seconds,10,,hypothesis.hunger
+p1,measurement,task_seconds,20,,hypothesis.hunger
+p2,measurement,task_seconds,30,,hypothesis.hunger
+p2,subjective,frustration,,Timer felt oppressive,hypothesis.hunger
+p1,observation,choice,,Took longer safe route,hypothesis.hunger

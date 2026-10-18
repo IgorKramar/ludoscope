@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim_type": {
+      "type": "string",
+      "const": "PLAYTEST_OBSERVATION"
+    },
+    "participants": {
+      "type": "number"
+    },
+    "rows": {
+      "type": "number"
+    },
+    "measurements": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "min": {
+            "type": "number"
+          },
+          "max": {
+            "type": "number"
+          },
+          "mean": {
+            "type": "number"
+          },
+          "rows": {
+            "type": "number"
+          },
+          "participants": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "min",
+          "max",
+          "mean",
+          "rows",
+          "participants"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "participant": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "observation",
+              "measurement",
+              "subjective"
+            ]
+          },
+          "metric": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "value": {
+            "type": "number"
+          },
+          "text": {
+            "default": "",
+            "type": "string",
+            "maxLength": 20000
+          },
+          "hypothesis": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "required": [
+          "participant",
+          "kind",
+          "metric",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "subjective": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "participant": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "observation",
+              "measurement",
+              "subjective"
+            ]
+          },
+          "metric": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "value": {
+            "type": "number"
+          },
+          "text": {
+            "default": "",
+            "type": "string",
+            "maxLength": 20000
+          },
+          "hypothesis": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "required": [
+          "participant",
+          "kind",
+          "metric",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "hypotheses": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "claim_type",
+    "participants",
+    "rows",
+    "measurements",
+    "observations",
+    "subjective",
+    "hypotheses",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

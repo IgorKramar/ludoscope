@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.uxspecification",
+  "version": 1,
+  "type": "UXSpecification",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## UX specification\n\nInterface artifacts; task goals; visible state; error recovery; accessibility.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

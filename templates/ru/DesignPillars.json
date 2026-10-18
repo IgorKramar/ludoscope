@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.designpillars",
+  "version": 1,
+  "type": "DesignPillars",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Принципы дизайна\n\nДля каждого принципа: решение, которое он поддерживает; конфликт; условия пересмотра.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "steps": 10,
+  "id": "model.tycoon",
+  "initial": {
+    "money": 10,
+    "ore": 0,
+    "goods": 0
+  },
+  "processes": [
+    {
+      "id": "buy",
+      "inputs": {
+        "money": 2
+      },
+      "outputs": {
+        "ore": 1
+      }
+    },
+    {
+      "id": "produce",
+      "inputs": {
+        "ore": 1
+      },
+      "outputs": {
+        "goods": 1
+      }
+    },
+    {
+      "id": "sell",
+      "inputs": {
+        "goods": 1
+      },
+      "outputs": {
+        "money": 3
+      }
+    }
+  ],
+  "invariants": [
+    {
+      "resource": "money",
+      "max": 15
+    }
+  ]
+}

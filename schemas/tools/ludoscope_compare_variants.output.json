@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "model_id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+      },
+      "claim_type": {
+        "type": "string",
+        "const": "MODEL_RESULT"
+      },
+      "runs": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "seed": {
+              "type": "number"
+            },
+            "final": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "violations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "step": {
+                    "type": "number"
+                  },
+                  "resource": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+                  },
+                  "value": {
+                    "type": "number"
+                  },
+                  "min": {
+                    "type": "number"
+                  },
+                  "max": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "step",
+                  "resource",
+                  "value"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "seed",
+            "final",
+            "violations"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "summary": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string"
+        },
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            },
+            "mean": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "limitations": {
+        "maxItems": 500,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      }
+    },
+    "required": [
+      "model_id",
+      "claim_type",
+      "runs",
+      "summary",
+      "limitations"
+    ],
+    "additionalProperties": false
+  }
+}

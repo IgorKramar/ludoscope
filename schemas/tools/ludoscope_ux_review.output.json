@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "claim_type": {
+      "type": "string",
+      "const": "EXPERT_INFERENCE"
+    },
+    "needs_artifacts": {
+      "type": "boolean"
+    },
+    "gaps": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "game_feel": {
+      "type": "object",
+      "properties": {
+        "measured_latency_ms": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "questions": {
+          "maxItems": 500,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        },
+        "limitation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "measured_latency_ms",
+        "questions",
+        "limitation"
+      ],
+      "additionalProperties": false
+    },
+    "limitations": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "claim_type",
+    "needs_artifacts",
+    "gaps",
+    "game_feel",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

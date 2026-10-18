@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.economydesign",
+  "version": 1,
+  "type": "EconomyDesign",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Экономика\n\nРесурсы; источники/стоки; обмен; ограничения; seed и модель; свидетели нарушений.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

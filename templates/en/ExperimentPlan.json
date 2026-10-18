@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.experimentplan",
+  "version": 1,
+  "type": "ExperimentPlan",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Experiment plan\n\nQuestion; falsifiable hypothesis; participants; conditions; metrics; interpretation criteria; sampling limits.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

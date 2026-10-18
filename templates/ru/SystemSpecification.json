@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.systemspecification",
+  "version": 1,
+  "type": "SystemSpecification",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Спецификация системы\n\nВходы; состояния; переходы; выходы; зависимости; инварианты; крайние случаи.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

@@ -1,0 +1,55 @@
+{
+  "name": "ludoscope",
+  "version": "0.1.0",
+  "description": "Local game design intelligence tools for Codex",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "ludoscope": "dist/cli/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "knowledge",
+    "schemas",
+    "skills",
+    "templates",
+    "docs",
+    "examples",
+    "plugin.json",
+    "mcp.json",
+    "README.md",
+    "LICENSE",
+    "*.md",
+    "scripts",
+    ".agents/plugins/marketplace.json"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/schemas.mjs",
+    "test": "vitest run",
+    "check": "npm run build && npm test && node scripts/verify-package.mjs",
+    "start": "node dist/cli/index.js",
+    "mcp": "node dist/mcp/index.js",
+    "prepack": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "commander": "^14.0.0",
+    "csv-parse": "^7.0.3",
+    "yaml": "^2.8.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "ajv": "^8.17.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.5"
+  }
+}

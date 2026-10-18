@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.mechanicspecification",
+  "version": 1,
+  "type": "MechanicSpecification",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Mechanic specification\n\nPurpose; choice; failure consequences; experience hypothesis; prototype and validation.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

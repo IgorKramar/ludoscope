@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "object",
+      "properties": {
+        "initial": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+        },
+        "states": {
+          "minItems": 1,
+          "maxItems": 500,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "terminal": {
+          "maxItems": 500,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "transitions": {
+          "maxItems": 5000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "to": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "action": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "action"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "initial",
+        "states",
+        "terminal",
+        "transitions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "rules"
+  ],
+  "additionalProperties": false
+}

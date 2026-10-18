@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.coregameplayloop",
+  "version": 1,
+  "type": "CoreGameplayLoop",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Основной игровой цикл\n\nДействие → правило → состояние → обратная связь → новое решение.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

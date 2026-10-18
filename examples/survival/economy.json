@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "steps": 10,
+  "id": "model.survival",
+  "initial": {
+    "food": 5,
+    "energy": 5
+  },
+  "processes": [
+    {
+      "id": "farm",
+      "inputs": {
+        "energy": 1
+      },
+      "outputs": {
+        "food": 2
+      }
+    },
+    {
+      "id": "eat",
+      "inputs": {
+        "food": 1
+      },
+      "outputs": {
+        "energy": 1
+      }
+    }
+  ],
+  "invariants": [
+    {
+      "resource": "food",
+      "max": 12
+    }
+  ]
+}

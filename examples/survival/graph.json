@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {
+      "id": "mechanic.hunger",
+      "type": "Mechanic",
+      "label": "Hunger with automation"
+    },
+    {
+      "id": "system.weather",
+      "type": "System",
+      "label": "system.weather"
+    },
+    {
+      "id": "system.farming",
+      "type": "System",
+      "label": "system.farming"
+    },
+    {
+      "id": "system.automation",
+      "type": "System",
+      "label": "system.automation"
+    },
+    {
+      "id": "resource.food",
+      "type": "Resource",
+      "label": "food"
+    },
+    {
+      "id": "resource.energy",
+      "type": "Resource",
+      "label": "energy"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanic.hunger",
+      "to": "system.weather",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.hunger",
+      "to": "system.farming",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.hunger",
+      "to": "system.automation",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.hunger",
+      "to": "resource.food",
+      "type": "Consumes"
+    },
+    {
+      "from": "mechanic.hunger",
+      "to": "resource.energy",
+      "type": "Consumes"
+    }
+  ]
+}

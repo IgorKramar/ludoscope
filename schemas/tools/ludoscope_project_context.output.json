@@ -1,0 +1,355 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "artifact_index": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "version": {
+            "type": "number"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "id",
+          "version",
+          "path"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 20000
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "ru",
+            "en"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "explore",
+            "design",
+            "review",
+            "validate"
+          ]
+        },
+        "disabled_sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "disabled_schools": {
+          "maxItems": 500,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        },
+        "requirements": {
+          "maxItems": 500,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        },
+        "canon": {
+          "maxItems": 500,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "name",
+        "language",
+        "mode",
+        "disabled_sources",
+        "disabled_schools",
+        "requirements",
+        "canon"
+      ],
+      "additionalProperties": false
+    },
+    "vision": {
+      "type": "string"
+    },
+    "principles": {
+      "type": "string"
+    },
+    "graph": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "nodes": {
+          "maxItems": 5000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "PlayerGoal",
+                  "PlayerAction",
+                  "Mechanic",
+                  "Rule",
+                  "Resource",
+                  "System",
+                  "GameState",
+                  "Feedback",
+                  "Dynamic",
+                  "ExperienceGoal",
+                  "NarrativeEvent",
+                  "ProgressionMilestone",
+                  "Constraint",
+                  "Metric",
+                  "Experiment",
+                  "Evidence",
+                  "DesignDecision"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "files": {
+                "default": [],
+                "maxItems": 500,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 20000
+                }
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "label",
+              "files"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "edges": {
+          "maxItems": 20000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "to": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Enables",
+                  "Requires",
+                  "Produces",
+                  "Consumes",
+                  "Modifies",
+                  "Restricts",
+                  "ConflictsWith",
+                  "Reinforces",
+                  "Counters",
+                  "DependsOn",
+                  "Measures",
+                  "Validates",
+                  "Implements"
+                ]
+              },
+              "evidence": {
+                "default": "",
+                "type": "string",
+                "maxLength": 20000
+              },
+              "status": {
+                "default": "DESIGN_HYPOTHESIS",
+                "type": "string",
+                "enum": [
+                  "VERIFIED_SOURCE",
+                  "PROJECT_FACT",
+                  "MODEL_RESULT",
+                  "PLAYTEST_OBSERVATION",
+                  "DESIGN_HYPOTHESIS",
+                  "EXPERT_INFERENCE",
+                  "UNVERIFIED"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "type",
+              "evidence",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "nodes",
+        "edges"
+      ],
+      "additionalProperties": false
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schema_version": {
+            "default": "1.0",
+            "type": "string",
+            "const": "1.0"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "version": {
+            "default": 1,
+            "type": "number",
+            "const": 1
+          },
+          "problem": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "context": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "alternatives": {
+            "minItems": 1,
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "chosen": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "rationale": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "consequences": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "mechanics": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+            }
+          },
+          "revisit_when": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+          },
+          "status": {
+            "type": "string",
+            "const": "approved"
+          }
+        },
+        "required": [
+          "schema_version",
+          "id",
+          "version",
+          "problem",
+          "context",
+          "alternatives",
+          "chosen",
+          "rationale",
+          "consequences",
+          "mechanics",
+          "revisit_when",
+          "date",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "source_trust": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_index",
+    "profile",
+    "vision",
+    "principles",
+    "graph",
+    "decisions",
+    "source_trust"
+  ],
+  "additionalProperties": false
+}

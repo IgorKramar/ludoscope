@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "playtest",
+        "simulation",
+        "inspection"
+      ]
+    },
+    "participants": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "conditions": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "metrics": {
+      "minItems": 1,
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "limitations": {
+      "minItems": 1,
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "required": [
+    "id",
+    "question",
+    "hypothesis",
+    "method",
+    "participants",
+    "conditions",
+    "metrics",
+    "interpretation",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

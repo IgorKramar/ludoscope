@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {
+      "id": "mechanic.factions",
+      "type": "Mechanic",
+      "label": "Faction commitments"
+    },
+    {
+      "id": "system.factions",
+      "type": "System",
+      "label": "system.factions"
+    },
+    {
+      "id": "system.story",
+      "type": "System",
+      "label": "system.story"
+    },
+    {
+      "id": "resource.influence",
+      "type": "Resource",
+      "label": "influence"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanic.factions",
+      "to": "system.factions",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.factions",
+      "to": "system.story",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.factions",
+      "to": "resource.influence",
+      "type": "Consumes"
+    }
+  ]
+}

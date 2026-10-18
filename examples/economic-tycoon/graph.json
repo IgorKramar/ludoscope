@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {
+      "id": "mechanic.production",
+      "type": "Mechanic",
+      "label": "Production and wages"
+    },
+    {
+      "id": "system.trade",
+      "type": "System",
+      "label": "system.trade"
+    },
+    {
+      "id": "system.wages",
+      "type": "System",
+      "label": "system.wages"
+    },
+    {
+      "id": "resource.money",
+      "type": "Resource",
+      "label": "money"
+    },
+    {
+      "id": "resource.ore",
+      "type": "Resource",
+      "label": "ore"
+    },
+    {
+      "id": "resource.goods",
+      "type": "Resource",
+      "label": "goods"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanic.production",
+      "to": "system.trade",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.production",
+      "to": "system.wages",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.production",
+      "to": "resource.money",
+      "type": "Consumes"
+    },
+    {
+      "from": "mechanic.production",
+      "to": "resource.ore",
+      "type": "Consumes"
+    },
+    {
+      "from": "mechanic.production",
+      "to": "resource.goods",
+      "type": "Consumes"
+    }
+  ]
+}

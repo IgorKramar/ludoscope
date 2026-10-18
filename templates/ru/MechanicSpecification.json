@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.mechanicspecification",
+  "version": 1,
+  "type": "MechanicSpecification",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Спецификация механики\n\nНазначение; выбор; последствия ошибки; опыт как гипотеза; прототип и проверка.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

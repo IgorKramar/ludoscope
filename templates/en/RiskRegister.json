@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.riskregister",
+  "version": 1,
+  "type": "RiskRegister",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Risk register\n\nFor each risk: evidence; uncertainty; consequences; owner; risk-reduction experiment.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

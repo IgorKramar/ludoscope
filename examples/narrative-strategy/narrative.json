@@ -1,0 +1,32 @@
+{
+  "initial": {
+    "treaty": true,
+    "betrayal": false,
+    "war": false
+  },
+  "canon": {
+    "treaty": true
+  },
+  "events": [
+    {
+      "id": "betray",
+      "requires": {
+        "betrayal": false
+      },
+      "effects": {
+        "betrayal": true,
+        "treaty": false
+      }
+    },
+    {
+      "id": "war",
+      "requires": {
+        "betrayal": true
+      },
+      "effects": {
+        "war": true
+      }
+    }
+  ],
+  "max_states": 100
+}

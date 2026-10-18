@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-18",
+  "project": "/workspace/ludoscope-demo-o45jp23s",
+  "mechanic": "mechanic.hunger",
+  "knowledge_matches": 7,
+  "simulation_seed": 42,
+  "simulation_final": {
+    "food": 15,
+    "energy": 5
+  },
+  "first_violation": {
+    "step": 8,
+    "resource": "food",
+    "max": 12,
+    "value": 13
+  },
+  "saved_decisions": 1,
+  "artifact_versions": 1,
+  "graph_nodes": 6,
+  "validated": true,
+  "report": "/workspace/ludoscope-demo-o45jp23s/.ludoscope/reports/hunger.md",
+  "real_players": 0
+}

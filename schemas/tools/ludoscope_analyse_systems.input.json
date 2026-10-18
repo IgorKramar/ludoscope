@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "graph": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "nodes": {
+          "maxItems": 5000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "PlayerGoal",
+                  "PlayerAction",
+                  "Mechanic",
+                  "Rule",
+                  "Resource",
+                  "System",
+                  "GameState",
+                  "Feedback",
+                  "Dynamic",
+                  "ExperienceGoal",
+                  "NarrativeEvent",
+                  "ProgressionMilestone",
+                  "Constraint",
+                  "Metric",
+                  "Experiment",
+                  "Evidence",
+                  "DesignDecision"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "files": {
+                "default": [],
+                "maxItems": 500,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 20000
+                }
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "label",
+              "files"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "edges": {
+          "maxItems": 20000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "to": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Enables",
+                  "Requires",
+                  "Produces",
+                  "Consumes",
+                  "Modifies",
+                  "Restricts",
+                  "ConflictsWith",
+                  "Reinforces",
+                  "Counters",
+                  "DependsOn",
+                  "Measures",
+                  "Validates",
+                  "Implements"
+                ]
+              },
+              "evidence": {
+                "default": "",
+                "type": "string",
+                "maxLength": 20000
+              },
+              "status": {
+                "default": "DESIGN_HYPOTHESIS",
+                "type": "string",
+                "enum": [
+                  "VERIFIED_SOURCE",
+                  "PROJECT_FACT",
+                  "MODEL_RESULT",
+                  "PLAYTEST_OBSERVATION",
+                  "DESIGN_HYPOTHESIS",
+                  "EXPERT_INFERENCE",
+                  "UNVERIFIED"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "type",
+              "evidence",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "nodes",
+        "edges"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "graph"
+  ],
+  "additionalProperties": false
+}

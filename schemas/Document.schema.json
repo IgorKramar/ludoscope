@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+    },
+    "version": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "GameVision",
+        "HighConcept",
+        "DesignPillars",
+        "CoreGameplayLoop",
+        "SystemSpecification",
+        "MechanicSpecification",
+        "ProgressionDesign",
+        "EconomyDesign",
+        "NarrativeDesign",
+        "UXSpecification",
+        "TechnicalConstraints",
+        "RiskRegister",
+        "DecisionRecord",
+        "ExperimentPlan",
+        "PlaytestReport"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "ru",
+        "en"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "approved",
+        "rejected"
+      ]
+    },
+    "sources": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+      }
+    },
+    "history": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "body": {
+      "type": "string",
+      "maxLength": 20000
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "type",
+    "language",
+    "status",
+    "sources",
+    "links",
+    "history",
+    "body"
+  ],
+  "additionalProperties": false
+}

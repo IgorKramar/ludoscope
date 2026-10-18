@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "observations": {
+      "minItems": 1,
+      "maxItems": 10000,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "participant": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "observation",
+              "measurement",
+              "subjective"
+            ]
+          },
+          "metric": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "value": {
+            "type": "number"
+          },
+          "text": {
+            "default": "",
+            "type": "string",
+            "maxLength": 20000
+          },
+          "hypothesis": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          }
+        },
+        "required": [
+          "participant",
+          "kind",
+          "metric",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "observations"
+  ],
+  "additionalProperties": false
+}

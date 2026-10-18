@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.playtestreport",
+  "version": 1,
+  "type": "PlaytestReport",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Плейтест\n\nФактические участники и условия; измерения; наблюдения; субъективные отзывы; пропуски; связь с гипотезами.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

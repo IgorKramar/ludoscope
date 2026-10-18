@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.technicalconstraints",
+  "version": 1,
+  "type": "TechnicalConstraints",
+  "language": "ru",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Технические ограничения\n\nПлатформа; бюджет; источники измерений; допустимые компромиссы; проверки соблюдения.\n\nСтатус утверждений: DESIGN_HYPOTHESIS до проверки. Укажите evidence, assumptions, alternatives, validation_method. Не вставляйте вымышленные результаты."
+}

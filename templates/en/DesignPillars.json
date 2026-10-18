@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.designpillars",
+  "version": 1,
+  "type": "DesignPillars",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Design pillars\n\nFor each pillar: supported decision; conflict; reconsideration conditions.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

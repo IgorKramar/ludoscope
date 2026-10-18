@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "document.gamevision",
+  "version": 1,
+  "type": "GameVision",
+  "language": "en",
+  "status": "draft",
+  "sources": [],
+  "links": [],
+  "history": [
+    "Template; replace with project-specific revision history."
+  ],
+  "body": "## Game vision\n\nAudience; intended experience; constraints and author intent.\n\nClaim status: DESIGN_HYPOTHESIS until tested. Include evidence, assumptions, alternatives and validation_method. Do not invent results."
+}

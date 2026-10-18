@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {
+      "id": "mechanic.cards",
+      "type": "Mechanic",
+      "label": "Card synergy"
+    },
+    {
+      "id": "system.rewards",
+      "type": "System",
+      "label": "system.rewards"
+    },
+    {
+      "id": "system.deck",
+      "type": "System",
+      "label": "system.deck"
+    },
+    {
+      "id": "resource.mana",
+      "type": "Resource",
+      "label": "mana"
+    },
+    {
+      "id": "resource.damage",
+      "type": "Resource",
+      "label": "damage"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanic.cards",
+      "to": "system.rewards",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.cards",
+      "to": "system.deck",
+      "type": "DependsOn"
+    },
+    {
+      "from": "mechanic.cards",
+      "to": "resource.mana",
+      "type": "Consumes"
+    },
+    {
+      "from": "mechanic.cards",
+      "to": "resource.damage",
+      "type": "Consumes"
+    }
+  ]
+}
