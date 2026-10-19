@@ -24,6 +24,22 @@ export const Source = z.strictObject({
   accessed_at: Text,
   license: Text,
   notes: Text,
+  provenance: z
+    .strictObject({
+      access: z.enum(["public_web", "user_supplied"]),
+      artifact_sha256: z
+        .string()
+        .regex(/^[a-f0-9]{64}$/)
+        .optional(),
+      pdf_pages: z.number().int().positive().optional(),
+      verified_pdf_pages: z
+        .array(z.number().int().positive())
+        .max(20000)
+        .optional(),
+      content_verified: z.boolean(),
+      redistribution: z.literal("metadata_and_original_analysis_only"),
+    })
+    .optional(),
 });
 export const Entry = z.strictObject({
   id: Id,
@@ -62,9 +78,36 @@ export const Entry = z.strictObject({
   confidence: z.enum(["high", "medium", "low", "unknown"]),
   evidence_locator: Text,
   interpretation: Text,
+  evidence: z
+    .array(
+      z.strictObject({
+        source_id: Id,
+        pdf_pages: z.array(z.number().int().positive()).min(1).max(1000),
+        section: Text.min(1),
+        claim_scope: z.enum([
+          "author_position",
+          "derived_method",
+          "cross_source_inference",
+        ]),
+      }),
+    )
+    .max(100)
+    .optional(),
+  selection: z
+    .strictObject({
+      any_tags: Strings.default([]),
+      all_tags: Strings.default([]),
+      excluded_tags: Strings.default([]),
+      required_system_types: Strings.default([]),
+      modes: z
+        .array(z.enum(["explore", "design", "review", "validate"]))
+        .max(4)
+        .default([]),
+    })
+    .optional(),
 });
 export const RegistrySchema = z.strictObject({
-  schema_version: z.literal("1.0"),
+  schema_version: z.enum(["1.0", "1.1"]),
   sources: z.array(Source).max(1000),
   entries: z.array(Entry).max(10000),
 });

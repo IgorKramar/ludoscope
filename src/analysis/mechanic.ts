@@ -1,5 +1,9 @@
 import { Mechanic, Claim } from "../core/schemas.js";
-import { registry, KnowledgeRegistry } from "../core/knowledge.js";
+import {
+  registry,
+  KnowledgeRegistry,
+  retrieveContext,
+} from "../core/knowledge.js";
 import type { SearchContext } from "../core/knowledge.js";
 import type { z } from "zod";
 export async function analyseMechanic(
@@ -9,15 +13,25 @@ export async function analyseMechanic(
 ) {
   const m = Mechanic.parse(input);
   const k = knowledge ?? (await registry());
-  const theories = k.search(
+  const retrievalContext = {
+    ...context,
+    tags: [...(context.tags ?? []), ...m.tags],
+    genre: m.genre || undefined,
+    stage: m.stage,
+    mode: context.mode ?? ("design" as const),
+    system_types: [
+      ...new Set([
+        ...(context.system_types ?? []),
+        "mechanic",
+        ...(m.resources.length ? ["resource"] : []),
+      ]),
+    ],
+    limit: 8,
+  };
+  const theories = retrieveContext(
+    k,
     [m.name, m.player_goal, ...m.tags, ...m.expected_experiences].join(" "),
-    {
-      ...context,
-      tags: m.tags,
-      genre: m.genre || undefined,
-      stage: m.stage,
-      limit: 8,
-    },
+    retrievalContext,
   );
   const findings: z.infer<typeof Claim>[] = [];
   function finding(
@@ -106,10 +120,15 @@ export async function analyseMechanic(
     findings,
     knowledge: theories,
     conflicts: theories.flatMap((t) =>
-      t.conflicting_entry_ids.map((id) => ({
-        entry: t.id,
-        conflicts_with: id,
-      })),
+      t.conflicting_entry_ids
+        .filter((id) => {
+          const target = k.data.entries.find((e) => e.id === id);
+          return target && k.applicable(target, retrievalContext);
+        })
+        .map((id) => ({
+          entry: t.id,
+          conflicts_with: id,
+        })),
     ),
     affected_systems: m.dependencies,
     experience_chain: {

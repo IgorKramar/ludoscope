@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { VERSION } from "../core/version.js";
 import { Command } from "commander";
 import path from "node:path";
 import { ProjectStore, scan } from "../project/store.js";
@@ -20,7 +21,7 @@ import { evaluatePlaytest, importPlaytest } from "../analysis/labs.js";
 const cli = new Command()
   .name("ludoscope")
   .description("Локальные инструменты геймдизайна / Local game design tools")
-  .version("0.1.0")
+  .version(VERSION)
   .option("--project <path>", "Project root", ".");
 const store = () => new ProjectStore(path.resolve(cli.opts().project));
 const print = (x: unknown) =>
@@ -41,6 +42,11 @@ cli
   );
 cli.command("context").action(async () => print(await store().context()));
 const knowledge = cli.command("knowledge");
+knowledge
+  .command("get <ids...>")
+  .action(async (ids) =>
+    print(await invoke("ludoscope_knowledge_get", { ids }, store())),
+  );
 knowledge
   .command("search <query>")
   .action(async (query) =>

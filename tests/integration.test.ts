@@ -420,6 +420,7 @@ describe("shared operations and real MCP protocol", () => {
       ludoscope_project_scan: {},
       ludoscope_project_context: {},
       ludoscope_knowledge_search: { query: "choice" },
+      ludoscope_knowledge_get: { ids: ["source.mda", "knowledge.lens_consequence"], include_sources: true },
       ludoscope_get_lenses: { query: "", system: "Hunger" },
       ludoscope_analyse_mechanic: { mechanic },
       ludoscope_analyse_dependencies: { id: mechanic.id, graph },

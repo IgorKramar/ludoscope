@@ -26,12 +26,31 @@
     "stage": {
       "type": "string",
       "maxLength": 20000
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "explore",
+        "design",
+        "review",
+        "validate"
+      ]
+    },
+    "system_types": {
+      "default": [],
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
     }
   },
   "required": [
     "query",
     "system",
-    "tags"
+    "tags",
+    "system_types"
   ],
   "additionalProperties": false
 }

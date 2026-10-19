@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+    },
+    "version": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "authors": {
+      "maxItems": 500,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "year": {
+      "type": "integer",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "edition": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "identifier": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "VERIFIED_SOURCE",
+        "SOURCE_REQUIRED"
+      ]
+    },
+    "accessed_at": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "license": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "access": {
+          "type": "string",
+          "enum": [
+            "public_web",
+            "user_supplied"
+          ]
+        },
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pdf_pages": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "verified_pdf_pages": {
+          "maxItems": 20000,
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "content_verified": {
+          "type": "boolean"
+        },
+        "redistribution": {
+          "type": "string",
+          "const": "metadata_and_original_analysis_only"
+        }
+      },
+      "required": [
+        "access",
+        "content_verified",
+        "redistribution"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "title",
+    "authors",
+    "url",
+    "verification_status",
+    "accessed_at",
+    "license",
+    "notes"
+  ],
+  "additionalProperties": false
+}

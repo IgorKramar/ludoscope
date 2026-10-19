@@ -6,6 +6,7 @@
 
 | Инструмент | Назначение | Доступ |
 |---|---|---|
+| ludoscope_knowledge_get | Load specific knowledge entries and source provenance by stable IDs without retrieving full books. Respects disabled sources/schools. | read-only |
 | ludoscope_record_artifact | Preview or explicitly commit a versioned mechanic, hypothesis, experiment, playtest or GDD document. Existing versions are immutable. | preview; explicit commit writes |
 | ludoscope_update_graph | Preview graph replacement; explicit commit requires reviewed expected_sha256 and creates an immutable backup. | preview; explicit commit writes |
 | ludoscope_analyse_systems | Feedback components and bounded interaction chains; not causal proof. | read-only |
@@ -46,8 +47,10 @@
 
 Ресурсные лимиты определены в schemas и SIMULATION.md. Некоторые операции требуют .ludoscope/project.yaml; ENOENT — контролируемая ошибка. Результаты SQL, реальных плейтестов и недоступного кода не выдумываются.
 
-## Сохранение проектных артефактов
+## Происхождение знаний и контекст линз
 
-`ludoscope_record_artifact({"artifact":{"kind":"mechanic","id":"mechanic.hunger","version":1,"data":<Mechanic JSON>}})` возвращает preview; явный `commit:true` создаёт неизменяемую версию. Те же правила работают для experiment, playtest, hypothesis и document. project_context возвращает artifact_index с путями и версиями.
+`ludoscope_knowledge_get({"ids":["knowledge.schell.meaningful_alternatives","source.sylvester_ru_2020"],"include_sources":true})` возвращает entries, sources и missing_ids. У новых записей evidence содержит точные PDF-страницы и область утверждения; provenance источника задаёт hash и ограниченное проверенное покрытие. Файлы книг не передаются. include_sources=false отключает автоматическую подгрузку связанных библиографий; явно запрошенный source ID по-прежнему возвращает его метаданные.
 
-`ludoscope_update_graph({"graph":<Graph JSON>})` возвращает diff и expected_sha256. Commit требует этот хеш; устаревший preview отклоняется, предыдущее состояние сохраняется в history. Эти два инструмента имеют readOnlyHint=false, но по умолчанию не записывают.
+knowledge_search и get_lenses поддерживают mode и system_types. Поиск добавляет слова запроса к тематическим признакам, но не выводит тип системы из имени файла. Требование procedural/narrative в selection требует явного типа системы. get_lenses возвращает bound_questions и relevance: matched_tags, matched_system_types, reasons. Это причины выбора вопроса, не научная оценка и не прогноз интереса.
+
+record_artifact и update_graph работают как прежде: preview по умолчанию, commit по явному намерению. Предыдущее состояние графа сохраняется; stale hash отклоняется. Новые знания не меняют утверждённые проектные решения автоматически.

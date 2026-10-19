@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ids": {
+      "minItems": 1,
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+      }
+    },
+    "include_sources": {
+      "default": true,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "ids",
+    "include_sources"
+  ],
+  "additionalProperties": false
+}

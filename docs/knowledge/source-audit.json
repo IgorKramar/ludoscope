@@ -1,0 +1,23 @@
+{
+  "scope": "File identity, nonempty pages, schema integrity and long literal overlap. This does not prove semantic accuracy, empirical validity or redistribution rights.",
+  "sources": [
+    {
+      "source_id": "source.schell_ru_2019",
+      "pdf_sha256": "16b0e8d0440d33ca134137e7caf361e3c0cecd3c727773a716a00ea1d5ac2c49",
+      "pdf_pages": 550,
+      "entries": 64,
+      "unique_cited_pages": 68,
+      "page_locators": 184,
+      "long_literal_description_overlaps": 0
+    },
+    {
+      "source_id": "source.sylvester_ru_2020",
+      "pdf_sha256": "6d34ff8319ec4a385a720feb52944f2953533f982d42650f720beda80f0237f5",
+      "pdf_pages": 483,
+      "entries": 57,
+      "unique_cited_pages": 98,
+      "page_locators": 208,
+      "long_literal_description_overlaps": 0
+    }
+  ]
+}

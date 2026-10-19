@@ -17,7 +17,7 @@ ludoscope knowledge import notes.json --license 'CC-BY-4.0; permission supplied 
 
 Адаптер движка должен ссылаться на файлы и ревизию. Нельзя извлекать игровое поведение только из названия класса. Universal Modder не имеет реализованного адаптера: сначала нужен проверенный реальный API.
 
-Новая версия несовместимой схемы требует явной миграции и backup. В0.1.0 поддержана только schema_version=1.0: автоматических миграций старых форматов ещё нет; неподдерживаемая версия отклоняется.
+Новая версия несовместимой схемы требует явной миграции и backup. Проектные схемы остаются 1.0; реестр знаний 1.1 принимает прежние пакеты 1.0. Автоматических миграций несовместимых форматов ещё нет; неподдерживаемая версия отклоняется.
 
 ## Проектные артефакты
 
@@ -26,3 +26,7 @@ ludoscope knowledge import notes.json --license 'CC-BY-4.0; permission supplied 
 `ludoscope graph graph.json` показывает diff и expected_sha256. Для явного применения передайте `--commit --expected-sha256 <reviewed-hash>`. Предыдущее состояние сохраняется в `.ludoscope/history/`; после изменения исходного файла preview становится устаревшим.
 
 30 двуязычных шаблонов в templates/ru и templates/en можно копировать и заполнять, затем проверять/рендерить через `ludoscope document document.json`.
+
+Для источника предоставленного PDF используйте provenance с SHA-256, pdf_pages, verified_pdf_pages, content_verified и режимом metadata_and_original_analysis_only. Entry.evidence ссылается только на проверенные страницы. VERIFIED_SOURCE допускает author_position; derived_method/cross_source_inference должны оставаться EXPERT_INFERENCE. Проверка копии и длинных буквальных совпадений доступна через scripts/verify-source-evidence.mjs; полноценная редакционная проверка остаётся отдельной работой.
+
+Контекстная линза может задавать selection.any_tags/all_tags/excluded_tags/required_system_types/modes. Эти предварительные условия проверяются до ранжирования. Если нужен просмотр точного ID без выбора по условиям, используйте knowledge_get; отключённые источники/школы при этом сохраняются. Не добавляйте жанровые ограничения только ради продвижения своей записи в поиске.

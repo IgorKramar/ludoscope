@@ -1,3 +1,4 @@
+import { operations } from "../dist/core/operations.js";
 import { mkdtemp, rm, readFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -26,12 +27,28 @@ try {
     }),
   );
   const { tools } = await client.listTools();
-  if (tools.length !== 23) throw new Error("Expected 23 tools");
+  if (tools.length !== Object.keys(operations).length)
+    throw new Error("Installed tool count differs from current core");
   const context = await client.callTool({
     name: "ludoscope_project_context",
     arguments: {},
   });
   if (context.isError) throw new Error(JSON.stringify(context));
+  const knowledge = await client.callTool({
+    name: "ludoscope_knowledge_get",
+    arguments: {
+      ids: [
+        "knowledge.schell.meaningful_alternatives",
+        "source.sylvester_ru_2020",
+      ],
+    },
+  });
+  if (
+    knowledge.isError ||
+    !knowledge.structuredContent.result.entries[0]?.evidence?.length ||
+    knowledge.structuredContent.result.sources.length !== 2
+  )
+    throw new Error("Installed book knowledge or evidence is missing");
   const model = JSON.parse(
     await readFile(
       path.join(installed, "examples/economic-tycoon/economy.json"),
@@ -49,6 +66,7 @@ try {
       installed_root: installed,
       tools: tools.length,
       context: "ok",
+      book_knowledge: "ok",
       tycoon_final_money: r.structuredContent.result.final.money,
     }),
   );

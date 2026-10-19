@@ -4,6 +4,8 @@ import * as schemas from "../dist/core/schemas.js";
 await mkdir("schemas", { recursive: true });
 for (const name of [
   "RegistrySchema",
+  "Source",
+  "Entry",
   "Mechanic",
   "Graph",
   "Decision",

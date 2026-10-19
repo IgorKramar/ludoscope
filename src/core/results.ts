@@ -12,6 +12,7 @@ import {
   Observation,
   Project,
   Decision,
+  Source,
 } from "./schemas.js";
 const obj = z.strictObject,
   n = z.number().finite(),
@@ -101,6 +102,11 @@ const RuleResult = obj({
 });
 const Summary = obj({ min: n, max: n, mean: n });
 export const resultSchemas = {
+  ludoscope_knowledge_get: obj({
+    entries: z.array(Entry),
+    sources: z.array(Source),
+    missing_ids: arr,
+  }),
   ludoscope_record_artifact: obj({ path: str, diff: str, written: flag }),
   ludoscope_update_graph: obj({
     path: str,
@@ -111,7 +117,16 @@ export const resultSchemas = {
   ludoscope_project_scan: Scan,
   ludoscope_project_context: Context,
   ludoscope_knowledge_search: z.array(Entry),
-  ludoscope_get_lenses: z.array(Entry.extend({ bound_questions: arr })),
+  ludoscope_get_lenses: z.array(
+    Entry.extend({
+      bound_questions: arr,
+      relevance: obj({
+        matched_tags: arr,
+        matched_system_types: arr,
+        reasons: arr,
+      }),
+    }),
+  ),
   ludoscope_analyse_mechanic: MechanicAnalysis,
   ludoscope_analyse_dependencies: obj({
     changed: Id,

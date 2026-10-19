@@ -16,6 +16,8 @@ import {
   Artifact,
 } from "./schemas.js";
 import { registry, projectRegistry } from "./knowledge.js";
+import { selectLenses } from "./lenses.js";
+import { terms } from "./retrieval.js";
 import { ProjectStore, scan } from "../project/store.js";
 import { analyseMechanic } from "../analysis/mechanic.js";
 import { impact, mermaid, validateGraph, validateRules } from "./graph.js";
@@ -48,6 +50,30 @@ function operation<S extends z.ZodType, R>(
   return { description, input, run, write };
 }
 export const operations = {
+  ludoscope_knowledge_get: operation(
+    "Load specific knowledge entries and source provenance by stable IDs without retrieving full books. Respects disabled sources/schools.",
+    z.strictObject({
+      ids: z.array(Id).min(1).max(20),
+      include_sources: z.boolean().default(true),
+    }),
+    async (a, s) => {
+      let context = {};
+      try {
+        const p = await s.profile();
+        context = {
+          disabled_sources: p.disabled_sources,
+          disabled_schools: p.disabled_schools,
+        };
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+      }
+      return (await projectRegistry(s.root)).get(
+        a.ids,
+        context,
+        a.include_sources,
+      );
+    },
+  ),
   ludoscope_record_artifact: operation(
     "Preview or explicitly commit a versioned mechanic, hypothesis, experiment, playtest or GDD document. Existing versions are immutable.",
     z.strictObject({ artifact: Artifact, commit: z.boolean().default(false) }),
@@ -89,6 +115,8 @@ export const operations = {
       tags: Strings.optional(),
       genre: Text.optional(),
       stage: Text.optional(),
+      mode: z.enum(["explore", "design", "review", "validate"]).optional(),
+      system_types: Strings.optional(),
       limit: z.number().int().min(1).max(50).default(10),
     }),
     async (a, s) => {
@@ -98,12 +126,15 @@ export const operations = {
         disabled = {
           disabled_sources: p.disabled_sources,
           disabled_schools: p.disabled_schools,
+          mode: a.mode ?? p.mode,
         };
       } catch (e) {
         if ((e as NodeJS.ErrnoException).code !== "ENOENT") throw e;
       }
       return (await projectRegistry(s.root)).search(a.query, {
         ...a,
+        mode: a.mode ?? "design",
+        tags: [...(a.tags ?? []), ...terms(a.query)],
         ...disabled,
       });
     },
@@ -116,20 +147,17 @@ export const operations = {
       tags: Strings.default([]),
       genre: Text.optional(),
       stage: Text.optional(),
+      mode: z.enum(["explore", "design", "review", "validate"]).optional(),
+      system_types: Strings.default([]),
     }),
     async (a, s) => {
       const p = await s.profile();
-      return (await projectRegistry(s.root))
-        .search(a.query, {
-          ...a,
-          kind: "Lens",
-          disabled_sources: p.disabled_sources,
-          disabled_schools: p.disabled_schools,
-        })
-        .map((l) => ({
-          ...l,
-          bound_questions: l.questions.map((q) => `${a.system}: ${q}`),
-        }));
+      return selectLenses(await projectRegistry(s.root), {
+        ...a,
+        mode: a.mode ?? p.mode,
+        disabled_sources: p.disabled_sources,
+        disabled_schools: p.disabled_schools,
+      });
     },
   ),
   ludoscope_analyse_mechanic: operation(
@@ -142,6 +170,7 @@ export const operations = {
         {
           disabled_sources: p.disabled_sources,
           disabled_schools: p.disabled_schools,
+          mode: p.mode,
         },
         await projectRegistry(s.root),
       );
@@ -224,6 +253,7 @@ export const operations = {
             {
               disabled_sources: p.disabled_sources,
               disabled_schools: p.disabled_schools,
+              mode: p.mode,
             },
             await projectRegistry(s.root),
           ),

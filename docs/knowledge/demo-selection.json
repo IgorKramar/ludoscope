@@ -1,0 +1,543 @@
+{
+  "date": "2026-10-19",
+  "mode": "design",
+  "input": {
+    "query": "голод автоматизация выбор обратная связь",
+    "system": "Питание в экспедиции",
+    "tags": [
+      "hunger",
+      "automation",
+      "choice",
+      "feedback"
+    ],
+    "system_types": [
+      "resource",
+      "economy"
+    ],
+    "stage": "prototype",
+    "genre": "survival",
+    "mode": "design"
+  },
+  "lenses": [
+    {
+      "id": "knowledge.schell.lens_alternative_survival",
+      "title": "Линза жизнеспособной альтернативы",
+      "relevance": {
+        "matched_tags": [
+          "choice",
+          "automation",
+          "hunger"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какое легальное состояние делает редкий вариант осмысленным?",
+        "Питание в экспедиции: Какая цель участника делает одинаковые численно варианты различными?",
+        "Питание в экспедиции: Не объясняется ли редкость невидимостью, стоимостью обучения или поздним доступом?"
+      ],
+      "source_ids": [
+        "source.schell_ru_2019"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            196,
+            226,
+            227,
+            231,
+            232,
+            233
+          ],
+          "section": "Основания: несколько путей; модель баланса; осмысленные альтернативы; риск",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.schell.lens_signal_truth",
+      "title": "Линза правдивого отклика",
+      "relevance": {
+        "matched_tags": [
+          "feedback",
+          "обратная связь",
+          "hunger"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какое заключение о состоянии позволяет сделать отклик и верно ли оно?",
+        "Питание в экспедиции: Что участник подумает, если команда принята, но результат ещё не наступил?",
+        "Питание в экспедиции: Можно ли различить отказ и задержку без повторного нажатия?"
+      ],
+      "source_ids": [
+        "source.schell_ru_2019"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            190,
+            201,
+            278,
+            280,
+            282,
+            285,
+            286
+          ],
+          "section": "Основания: состояния; режимы; цикл взаимодействия; сочность; каналы",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.schell.lens_missing_bridge",
+      "title": "Линза пропущенного звена",
+      "relevance": {
+        "matched_tags": [
+          "choice",
+          "feedback"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какое наблюдаемое событие находится между правилом и обещанной реакцией?",
+        "Питание в экспедиции: Что останется от переживания, если убрать декоративный сигнал, сохранив правила?",
+        "Питание в экспедиции: Какая альтернативная причина дала бы ту же реакцию?"
+      ],
+      "source_ids": [
+        "source.schell_ru_2019"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            29,
+            37,
+            40,
+            73,
+            74
+          ],
+          "section": "Основания: различение игры и опыта; описание переживания; существенные черты; взаимовлияние элементов",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_complexity_return",
+      "title": "Линза цены внимания",
+      "relevance": {
+        "matched_tags": [
+          "automation",
+          "choice"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какое решение исчезнет при удалении этой механики?",
+        "Питание в экспедиции: Можно ли сохранить её ценность, используя уже освоенный инструмент?"
+      ],
+      "source_ids": [
+        "source.sylvester_ru_2020"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            60,
+            65,
+            66,
+            67,
+            69
+          ],
+          "section": "Глава 2 → Элегантность; Прекрасный запах элегантности поутру",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_foreseeable_choice",
+      "title": "Линза доступного предвидения",
+      "relevance": {
+        "matched_tags": [
+          "choice",
+          "feedback"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какие основания позволяют предпочесть один вариант другому до результата?",
+        "Питание в экспедиции: Где неизвестность создаёт пространство вывода, а где лишает выбор основания?"
+      ],
+      "source_ids": [
+        "source.sylvester_ru_2020"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            151,
+            154,
+            155,
+            156,
+            159,
+            160,
+            165
+          ],
+          "section": "Глава 5 → Чувствуя будущее; Предсказуемость; Информационный баланс; Как скрыть информацию",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_interaction_consequence",
+      "title": "Линза отдалённого последствия",
+      "relevance": {
+        "matched_tags": [
+          "feedback",
+          "automation"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какое прежнее применение потеряет смысл после этого исправления?",
+        "Питание в экспедиции: Какие тесты, документы и контент предполагают старые параметры?"
+      ],
+      "source_ids": [
+        "source.sylvester_ru_2020"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            63,
+            64,
+            349,
+            403
+          ],
+          "section": "Глава 2 → Непредсказуемость в основе элегантности; Глава 11 → Цена чрезмерного планирования; Глава 13 → Зависимости",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_signal_survival",
+      "title": "Линза устойчивого сигнала",
+      "relevance": {
+        "matched_tags": [
+          "feedback",
+          "обратная_связь"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Где игрок восстановит важную информацию, если пропустит этот момент?",
+        "Питание в экспедиции: Как отличить непонимание от сознательного отказа следовать подсказке?"
+      ],
+      "source_ids": [
+        "source.sylvester_ru_2020"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            276,
+            277,
+            282,
+            283,
+            287,
+            290,
+            291
+          ],
+          "section": "Глава 9 → Интерфейс; Словарь метафор; Визуальная иерархия; Избыточность",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.lens_consequence",
+      "title": "Линза прослеживаемого последствия",
+      "relevance": {
+        "matched_tags": [
+          "choice"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Как игрок связывает позднее событие со своим предыдущим действием?"
+      ],
+      "source_ids": [
+        "source.mda"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "knowledge.schell.lens_unnecessary_fidelity",
+      "title": "Линза дорогой подробности",
+      "relevance": {
+        "matched_tags": [
+          "automation"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какую существенную возможность игрок потеряет без этой подробности?",
+        "Питание в экспедиции: Можно ли передать тот же смысл другим правилом, сигналом или уровнем абстракции?",
+        "Питание в экспедиции: Не является ли точное моделирование самостоятельным осознанным авторским намерением?"
+      ],
+      "source_ids": [
+        "source.schell_ru_2019"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            40,
+            73,
+            74,
+            93,
+            121
+          ],
+          "section": "Основания: существенный опыт; взаимовлияние элементов; постановка проблемы; риск проекта",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_experience_purpose",
+      "title": "Линза значимого изменения",
+      "relevance": {
+        "matched_tags": [
+          "choice"
+        ],
+        "matched_system_types": [],
+        "reasons": [
+          "Совпали тематические признаки запроса.",
+          "Режим работы удовлетворяет условиям линзы.",
+          "Линза является оригинальной операционализацией LUDOSCOPE; релевантность не доказывает эффект."
+        ]
+      },
+      "bound_questions": [
+        "Питание в экспедиции: Какое изменение игрок сможет заметить и почему оно ему важно?",
+        "Питание в экспедиции: Если событие оставить, но убрать его значение для цели или отношений, что останется от опыта?"
+      ],
+      "source_ids": [
+        "source.sylvester_ru_2020"
+      ],
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            9,
+            10,
+            15,
+            16,
+            44
+          ],
+          "section": "Глава 1 → Механика и события; Эмоция и изменение; Создавая опыт",
+          "claim_scope": "derived_method"
+        }
+      ]
+    }
+  ],
+  "retrieved_knowledge": [
+    {
+      "id": "knowledge.schell.lens_alternative_survival",
+      "title": "Линза жизнеспособной альтернативы",
+      "school": "experience_design",
+      "status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            196,
+            226,
+            227,
+            231,
+            232,
+            233
+          ],
+          "section": "Основания: несколько путей; модель баланса; осмысленные альтернативы; риск",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_complexity_return",
+      "title": "Линза цены внимания",
+      "school": "engineering_experiences",
+      "status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            60,
+            65,
+            66,
+            67,
+            69
+          ],
+          "section": "Глава 2 → Элегантность; Прекрасный запах элегантности поутру",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.conflict.books_mastery_automation",
+      "title": "Автоматизация рутины и сохранение осмысленной практики",
+      "school": "cross_school_design",
+      "status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            205,
+            206
+          ],
+          "section": "Глава 12 / «Навык», «Реальные навыки против виртуальных»",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            176,
+            177,
+            178
+          ],
+          "section": "Глава 5 → Объем решения",
+          "claim_scope": "cross_source_inference"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.lens_consequence",
+      "title": "Линза прослеживаемого последствия",
+      "school": "ludoscope_original_lens",
+      "status": "EXPERT_INFERENCE",
+      "evidence": []
+    },
+    {
+      "id": "knowledge.schell.meaningful_alternatives",
+      "title": "Выбор различается последствиями и уместностью вариантов",
+      "school": "experience_design",
+      "status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            231,
+            232
+          ],
+          "section": "Глава 13 / «Осмысленный выбор»",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.schell.lens_missing_bridge",
+      "title": "Линза пропущенного звена",
+      "school": "experience_design",
+      "status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            29,
+            37,
+            40,
+            73,
+            74
+          ],
+          "section": "Основания: различение игры и опыта; описание переживания; существенные черты; взаимовлияние элементов",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.schell.risk_reward_attention",
+      "title": "Альтернатива риска может состоять в перераспределении внимания",
+      "school": "experience_design",
+      "status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            232,
+            233
+          ],
+          "section": "Глава 13 / обсуждение выбора между осторожностью и большей наградой",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.sylvester.lens_experience_purpose",
+      "title": "Линза значимого изменения",
+      "school": "engineering_experiences",
+      "status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            9,
+            10,
+            15,
+            16,
+            44
+          ],
+          "section": "Глава 1 → Механика и события; Эмоция и изменение; Создавая опыт",
+          "claim_scope": "derived_method"
+        }
+      ]
+    }
+  ],
+  "source_ids": [
+    "source.schell_ru_2019",
+    "source.sylvester_ru_2020"
+  ],
+  "observation_status": "DESIGN_HYPOTHESIS: no real participants or outcome measurements."
+}

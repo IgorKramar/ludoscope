@@ -1,3 +1,4 @@
+import { VERSION } from "../core/version.js";
 import { resultSchemas } from "../core/results.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
@@ -5,7 +6,7 @@ import { operations, invoke, type OperationName } from "../core/operations.js";
 import { ProjectStore } from "../project/store.js";
 import { LudoscopeError } from "../core/errors.js";
 export function createServer(root: string) {
-  const server = new McpServer({ name: "ludoscope", version: "0.1.0" });
+  const server = new McpServer({ name: "ludoscope", version: VERSION });
   const store = new ProjectStore(root);
   for (const [name, op] of Object.entries(operations)) {
     server.registerTool(

@@ -3,3 +3,8 @@ dist/
 *.tgz
 coverage/
 .ludoscope/
+
+# Licensed source books and private extraction artifacts never belong in the public plugin.
+*.pdf
+private-sources/
+book-extracts/
