@@ -36,3 +36,10 @@ AI Skills требуют ручной оценки: релевантность �
 ## Костер и Mastery Analysis 0.3.0
 
 `tests/koster-knowledge.test.ts` проверяет точную идентичность копии и сохранение отдельного издания 2013 года, статусы evidence, отключение источника, четыре RU/EN запроса, отсутствие жанрового навязывания, фильтры Mastery Analysis, защиту аудита от watermark-only страниц и состав пакета. Общий результат: 61 тест в четырёх файлах. Практический прогон: [koster-mastery-run.json](docs/knowledge/koster-mastery-run.json); результаты установки: [verification-0.3.0.md](docs/verification-0.3.0.md).
+
+
+## WORLD FORGE 0.4.0
+
+`tests/world-forge.test.ts`: все 16 схем операций, корректные/некорректные вызовы, реальные MCP SDK transports, UTC/version/cross-project checks, лимиты вычислений, тип происхождения тестов, потерянные связи гипотез, недоступный/зависший Chronicler, history/rejected variants/repeated questions, отсутствие записи при preview и без разрешения, сквозной цикл с сохранением project/task IDs. Интеграция Chronicler тестируется через in-memory adapter; реальный сервис не заявляется.
+
+Воспроизведение после сборки: `node examples/world-forge/workflow.mjs` и `node examples/world-forge/mcp-client.mjs`. Синтетические инженерные данные demo явно обозначены и не публикуются как реальный плейтест.

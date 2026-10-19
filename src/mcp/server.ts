@@ -1,3 +1,5 @@
+import { registerAgentTools } from "../integration/mcp.js";
+import type { AgentApiOptions } from "../integration/api.js";
 import { VERSION } from "../core/version.js";
 import { resultSchemas } from "../core/results.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -5,7 +7,7 @@ import { z } from "zod";
 import { operations, invoke, type OperationName } from "../core/operations.js";
 import { ProjectStore } from "../project/store.js";
 import { LudoscopeError } from "../core/errors.js";
-export function createServer(root: string) {
+export function createServer(root: string, options: AgentApiOptions = {}) {
   const server = new McpServer({ name: "ludoscope", version: VERSION });
   const store = new ProjectStore(root);
   for (const [name, op] of Object.entries(operations)) {
@@ -70,5 +72,6 @@ export function createServer(root: string) {
       },
     );
   }
+  registerAgentTools(server, options);
   return server;
 }

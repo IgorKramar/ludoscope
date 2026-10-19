@@ -198,7 +198,6 @@
                 }
               },
               "required": [
-                "schema_version",
                 "id",
                 "name",
                 "player_goal",
@@ -213,12 +212,7 @@
                 "dependencies",
                 "expected_experiences",
                 "design_risks",
-                "validation_plan",
-                "tags",
-                "genre",
-                "stage",
-                "choices",
-                "intentional_tradeoffs"
+                "validation_plan"
               ],
               "additionalProperties": false
             }
@@ -393,8 +387,7 @@
                     "required": [
                       "participant",
                       "kind",
-                      "metric",
-                      "text"
+                      "metric"
                     ],
                     "additionalProperties": false
                   }
@@ -643,8 +636,7 @@
     }
   },
   "required": [
-    "artifact",
-    "commit"
+    "artifact"
   ],
   "additionalProperties": false
 }

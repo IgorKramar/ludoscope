@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "uri": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    }
+  },
+  "required": [
+    "id",
+    "project_id",
+    "kind",
+    "description"
+  ],
+  "additionalProperties": false
+}

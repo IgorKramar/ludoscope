@@ -1,0 +1,498 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+        },
+        "task_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+        },
+        "agent_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+        },
+        "artifact_refs": {
+          "default": [],
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+              },
+              "project_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "uri": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "revision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "required": [
+              "id",
+              "project_id",
+              "kind",
+              "description"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "evidence": {
+          "default": [],
+          "maxItems": 200,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "source",
+                  "artifact",
+                  "model",
+                  "playtest",
+                  "inference"
+                ]
+              },
+              "claim_type": {
+                "type": "string",
+                "enum": [
+                  "VERIFIED_SOURCE",
+                  "PROJECT_FACT",
+                  "MODEL_RESULT",
+                  "PLAYTEST_OBSERVATION",
+                  "DESIGN_HYPOTHESIS",
+                  "EXPERT_INFERENCE",
+                  "UNVERIFIED"
+                ]
+              },
+              "source_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+              },
+              "artifact_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+              },
+              "uri": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "limitations": {
+                "maxItems": 100,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4000
+                }
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "claim_type",
+              "locator",
+              "description",
+              "limitations"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status": {
+          "type": "string",
+          "const": "submitted"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "subject": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4000
+            },
+            "genre": {
+              "default": "",
+              "type": "string",
+              "maxLength": 200
+            },
+            "audience": {
+              "default": "",
+              "type": "string",
+              "maxLength": 1000
+            },
+            "author_goals": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "creative_principles": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "constraints": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "tags": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "system_types": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "disabled_sources": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            },
+            "disabled_schools": {
+              "default": [],
+              "maxItems": 100,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              }
+            }
+          },
+          "required": [
+            "subject"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "api_version",
+        "request_id",
+        "project_id",
+        "timestamp",
+        "status",
+        "context"
+      ],
+      "additionalProperties": false
+    },
+    "concept": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "mechanics": {
+      "default": [],
+      "maxItems": 10,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schema_version": {
+            "default": "1.0",
+            "type": "string",
+            "const": "1.0"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "player_goal": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "player_actions": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "preconditions": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "rules": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "state_transitions": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "resources": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "feedback": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "failure_conditions": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "success_conditions": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+            }
+          },
+          "expected_experiences": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "design_risks": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "validation_plan": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "tags": {
+            "default": [],
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "genre": {
+            "default": "",
+            "type": "string",
+            "maxLength": 20000
+          },
+          "stage": {
+            "default": "prototype",
+            "type": "string",
+            "maxLength": 20000
+          },
+          "choices": {
+            "default": [],
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+                },
+                "consequences": {
+                  "maxItems": 500,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 20000
+                  }
+                },
+                "cost": {
+                  "type": "number"
+                },
+                "benefit": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "consequences"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "intentional_tradeoffs": {
+            "default": [],
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "player_goal",
+          "player_actions",
+          "preconditions",
+          "rules",
+          "state_transitions",
+          "resources",
+          "feedback",
+          "failure_conditions",
+          "success_conditions",
+          "dependencies",
+          "expected_experiences",
+          "design_risks",
+          "validation_plan"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "request",
+    "concept"
+  ],
+  "additionalProperties": false
+}

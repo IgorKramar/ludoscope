@@ -28,10 +28,36 @@ await mkdir("schemas/tools", { recursive: true });
 for (const [name, op] of Object.entries(operations)) {
   await writeFile(
     `schemas/tools/${name}.input.json`,
-    JSON.stringify(z.toJSONSchema(op.input), null, 2) + "\n",
+    JSON.stringify(z.toJSONSchema(op.input, { io: "input" }), null, 2) + "\n",
   );
   await writeFile(
     `schemas/tools/${name}.output.json`,
     JSON.stringify(z.toJSONSchema(resultSchemas[name]), null, 2) + "\n",
+  );
+}
+
+const { contractSchemas, operationInputs, operationOutputs } =
+  await import("../dist/integration/contracts.js");
+await mkdir("contracts/fip/v1/operations", { recursive: true });
+for (const [name, schema] of Object.entries(contractSchemas))
+  await writeFile(
+    `contracts/fip/v1/${name}.schema.json`,
+    JSON.stringify(
+      z.toJSONSchema(
+        schema,
+        name === "GameDesignRequest" ? { io: "input" } : {},
+      ),
+      null,
+      2,
+    ) + "\n",
+  );
+for (const [name, input] of Object.entries(operationInputs)) {
+  await writeFile(
+    `contracts/fip/v1/operations/${name}.input.schema.json`,
+    JSON.stringify(z.toJSONSchema(input, { io: "input" }), null, 2) + "\n",
+  );
+  await writeFile(
+    `contracts/fip/v1/operations/${name}.output.schema.json`,
+    JSON.stringify(z.toJSONSchema(operationOutputs[name]), null, 2) + "\n",
   );
 }

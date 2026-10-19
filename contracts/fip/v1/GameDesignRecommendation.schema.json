@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+    },
+    "action": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "expected_consequences": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    },
+    "tradeoffs": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    },
+    "evidence_ids": {
+      "maxItems": 200,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+      }
+    },
+    "hypothesis_ids": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "calibrated": {
+          "type": "boolean",
+          "const": false
+        }
+      },
+      "required": [
+        "level",
+        "rationale",
+        "calibrated"
+      ],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string",
+      "const": "proposed"
+    }
+  },
+  "required": [
+    "id",
+    "action",
+    "priority",
+    "expected_consequences",
+    "tradeoffs",
+    "evidence_ids",
+    "hypothesis_ids",
+    "confidence",
+    "status"
+  ],
+  "additionalProperties": false
+}

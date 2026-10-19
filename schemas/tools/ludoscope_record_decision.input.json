@@ -78,9 +78,7 @@
         }
       },
       "required": [
-        "schema_version",
         "id",
-        "version",
         "problem",
         "context",
         "alternatives",
@@ -100,8 +98,7 @@
     }
   },
   "required": [
-    "decision",
-    "commit"
+    "decision"
   ],
   "additionalProperties": false
 }

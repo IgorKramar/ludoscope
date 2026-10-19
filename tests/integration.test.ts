@@ -1,3 +1,4 @@
+import { agentCapabilities } from "../src/integration/api.js";
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import {
   mkdtemp,
@@ -343,7 +344,7 @@ describe("shared operations and real MCP protocol", () => {
     await Promise.all([server.connect(st), client.connect(ct)]);
     try {
       const listed = await client.listTools();
-      expect(listed.tools.length).toBe(Object.keys(operations).length);
+      expect(listed.tools.length).toBe(Object.keys(operations).length + agentCapabilities.length);
       expect(
         listed.tools.find((t) => t.name === "ludoscope_simulate_system")!
           .annotations?.readOnlyHint,

@@ -2,7 +2,7 @@
 
 Локальный stdio-сервер на официальном @modelcontextprotocol/sdk. Запуск: `node dist/mcp/index.js`. stdout зарезервирован протоколом. Корень определяется LUDOSCOPE_PROJECT_ROOT или cwd при старте; инструменты не принимают произвольный root. Данные не отправляются в сеть.
 
-Каждый input/output строго проверяется Zod. JSON Schema: `schemas/tools/<name>.input.json` и `<name>.output.json`. Успех: `{schema_version:"1.0",operation:<name>,result:<typed result>}`. Ошибка: isError=true и текст JSON `{error:{code,message}}`; ошибки аргументов SDK могут возвращаться до обработчика. Типы данных экспортируются TypeScript-библиотекой.
+Ниже описаны прежние 24 операции; новый агентный контракт — в разделе «Агентный API 0.4.0». Каждый input/output строго проверяется Zod. JSON Schema: `schemas/tools/<name>.input.json` и `<name>.output.json`. Успех: `{schema_version:"1.0",operation:<name>,result:<typed result>}`. Ошибка: isError=true и текст JSON `{error:{code,message}}`; ошибки аргументов SDK могут возвращаться до обработчика. Типы данных экспортируются TypeScript-библиотекой.
 
 | Инструмент | Назначение | Доступ |
 |---|---|---|
@@ -58,3 +58,8 @@ record_artifact и update_graph работают как прежде: preview п
 ## Mastery Analysis в 0.3
 
 Вход skills/requires/introduced_at/practice/variation сохранён. Результат содержит прежние structural issues и limitations, а также до6 связанных knowledge entries, research_questions и evidence_scope=structural_plan_only. Claim остаётся EXPERT_INFERENCE. Присутствие VERIFIED_SOURCE среди оснований не означает, что человек освоил навык. Источники и школы, отключённые в проекте, не включаются в контекст. Инструмент работает и без project profile, с mode=design.
+
+
+## Агентный API 0.4.0
+
+Дополнительно зарегистрированы 16 агентных операций: get_capabilities, list_lenses, get_lens, analyze_concept, analyze_mechanic, analyze_game_loop, evaluate_player_agency, analyze_progression, analyze_balance, evaluate_systems, review_gdd, generate_alternatives, formulate_playtest, evaluate_playtest, compare_designs, publish_analysis. Всего 40 инструментов. Они используют самостоятельный предварительный FIP envelope; wrapper старых 24 операций сохранён. Схемы — contracts/fip/v1/operations. Полное описание и MCP-вызов: [docs/API.md](docs/API.md). Текущий standalone сервер не подключает Chronicler; это дополнительная возможность встраиваемого сервера/API.

@@ -1,3 +1,4 @@
+import { agentCapabilities } from "../dist/integration/api.js";
 import { operations } from "../dist/core/operations.js";
 import { mkdtemp, rm, readFile } from "node:fs/promises";
 import os from "node:os";
@@ -27,7 +28,10 @@ try {
     }),
   );
   const { tools } = await client.listTools();
-  if (tools.length !== Object.keys(operations).length)
+  if (
+    tools.length !==
+    Object.keys(operations).length + agentCapabilities.length
+  )
     throw new Error("Installed tool count differs from current core");
   const context = await client.callTool({
     name: "ludoscope_project_context",
@@ -72,6 +76,36 @@ try {
     )
   )
     throw new Error("Installed mastery source context missing");
+  const request = {
+    api_version: "1.0",
+    request_id: "request.installed",
+    project_id: "project.installed",
+    task_id: "task.design",
+    timestamp: new Date().toISOString(),
+    status: "submitted",
+    artifact_refs: [],
+    evidence: [],
+    context: { subject: "Planning", author_goals: ["Meaningful choices"] },
+  };
+  const capabilities = await client.callTool({
+    name: "get_capabilities",
+    arguments: { request },
+  });
+  const concept = await client.callTool({
+    name: "analyze_concept",
+    arguments: {
+      request,
+      concept: "Choose a route with visible consequences.",
+    },
+  });
+  if (
+    capabilities.isError ||
+    capabilities.structuredContent.capabilities.length !== 16 ||
+    concept.isError ||
+    concept.structuredContent.project_id !== request.project_id ||
+    concept.structuredContent.task_id !== request.task_id
+  )
+    throw new Error("Installed WORLD FORGE API failed");
   const model = JSON.parse(
     await readFile(
       path.join(installed, "examples/economic-tycoon/economy.json"),
@@ -91,6 +125,7 @@ try {
       context: "ok",
       book_knowledge: "ok",
       koster_mastery: "ok",
+      world_forge_api: "ok",
       tycoon_final_money: r.structuredContent.result.final.money,
     }),
   );

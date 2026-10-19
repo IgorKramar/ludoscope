@@ -1,0 +1,33 @@
+{
+  "scope": "In-memory adapter and synthetic engineering data; no human playtest or real Chronicler",
+  "project_id": "demo.forge",
+  "task_id": "task.hunger",
+  "alternatives": [
+    {
+      "id": "alternative.3fe74ed457a443f285e9a396",
+      "title": "Baseline: preserve the authored mechanic"
+    },
+    {
+      "id": "alternative.5a7ea36a3ad14911f98ad349",
+      "title": "Make consequences legible"
+    },
+    {
+      "id": "alternative.7e87a42e81dc1810fb6b8394",
+      "title": "Compare immediate and deferred action"
+    }
+  ],
+  "criterion_outcomes": [
+    {
+      "hypothesis_id": "hypothesis.9a2964d5d8208485ae8a20e5",
+      "status": "descriptively_contradicted",
+      "rationale": "Submitted criterion rule_passes gte 1; linked-row mean 0, n=1. Descriptive only; no causal inference."
+    }
+  ],
+  "preview": "preview",
+  "publication": {
+    "state": "published",
+    "analysis_id": "analysis.9c6be9c5-9dbf-4f6a-9efb-5388db0768c0",
+    "receipt_id": "demo.receipt.1"
+  },
+  "publication_count": 1
+}

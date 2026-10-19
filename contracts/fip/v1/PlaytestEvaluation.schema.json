@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "data_origin": {
+      "type": "string",
+      "enum": [
+        "human_playtest",
+        "simulation",
+        "engineering_test"
+      ]
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "PLAYTEST_OBSERVATION",
+        "MODEL_RESULT",
+        "PROJECT_FACT"
+      ]
+    },
+    "participants": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "rows": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "metrics": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+          },
+          "count": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "min": {
+            "type": "number"
+          },
+          "max": {
+            "type": "number"
+          },
+          "mean": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "metric",
+          "count",
+          "min",
+          "max",
+          "mean"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "hypothesis_outcomes": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hypothesis_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "descriptively_supported",
+              "descriptively_contradicted",
+              "inconclusive"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          }
+        },
+        "required": [
+          "hypothesis_id",
+          "status",
+          "rationale"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    }
+  },
+  "required": [
+    "data_origin",
+    "claim_type",
+    "participants",
+    "rows",
+    "metrics",
+    "hypothesis_outcomes",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

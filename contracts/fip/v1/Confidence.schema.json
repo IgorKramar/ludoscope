@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "calibrated": {
+      "type": "boolean",
+      "const": false
+    }
+  },
+  "required": [
+    "level",
+    "rationale",
+    "calibrated"
+  ],
+  "additionalProperties": false
+}

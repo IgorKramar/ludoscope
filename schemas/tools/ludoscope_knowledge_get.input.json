@@ -17,8 +17,7 @@
     }
   },
   "required": [
-    "ids",
-    "include_sources"
+    "ids"
   ],
   "additionalProperties": false
 }

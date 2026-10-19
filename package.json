@@ -1,6 +1,6 @@
 {
   "name": "ludoscope",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Local game design intelligence tools for Codex",
   "type": "module",
   "license": "MIT",
@@ -11,7 +11,10 @@
     "ludoscope": "dist/cli/index.js"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./api": "./dist/integration/api.js",
+    "./contracts/fip/v1": "./dist/integration/contracts.js",
+    "./adapters/chronicler": "./dist/integration/chronicler.js"
   },
   "files": [
     "dist",
@@ -27,7 +30,8 @@
     "LICENSE",
     "*.md",
     "scripts",
-    ".agents/plugins/marketplace.json"
+    ".agents/plugins/marketplace.json",
+    "contracts"
   ],
   "scripts": {
     "build": "tsc && node scripts/schemas.mjs",

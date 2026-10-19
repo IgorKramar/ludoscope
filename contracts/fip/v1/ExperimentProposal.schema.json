@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+    },
+    "hypothesis_ids": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+      }
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "playtest",
+        "simulation",
+        "inspection"
+      ]
+    },
+    "participants": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "conditions": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    },
+    "metrics": {
+      "minItems": 1,
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "limitations": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    },
+    "prior_experiment_ids": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]*$"
+      }
+    },
+    "repeat_rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    }
+  },
+  "required": [
+    "id",
+    "hypothesis_ids",
+    "question",
+    "method",
+    "participants",
+    "conditions",
+    "metrics",
+    "interpretation",
+    "limitations",
+    "prior_experiment_ids"
+  ],
+  "additionalProperties": false
+}

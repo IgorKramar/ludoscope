@@ -58,8 +58,7 @@
             "required": [
               "id",
               "type",
-              "label",
-              "files"
+              "label"
             ],
             "additionalProperties": false
           }
@@ -118,9 +117,7 @@
             "required": [
               "from",
               "to",
-              "type",
-              "evidence",
-              "status"
+              "type"
             ],
             "additionalProperties": false
           }
@@ -143,8 +140,7 @@
     }
   },
   "required": [
-    "graph",
-    "commit"
+    "graph"
   ],
   "additionalProperties": false
 }

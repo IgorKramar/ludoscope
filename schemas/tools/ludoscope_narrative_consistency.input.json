@@ -71,9 +71,7 @@
   },
   "required": [
     "initial",
-    "events",
-    "canon",
-    "max_states"
+    "events"
   ],
   "additionalProperties": false
 }

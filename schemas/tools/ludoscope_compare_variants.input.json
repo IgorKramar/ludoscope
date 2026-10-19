@@ -87,9 +87,7 @@
               "required": [
                 "id",
                 "inputs",
-                "outputs",
-                "probability",
-                "limit"
+                "outputs"
               ],
               "additionalProperties": false
             }
@@ -120,13 +118,11 @@
           }
         },
         "required": [
-          "schema_version",
           "id",
           "seed",
           "steps",
           "initial",
-          "processes",
-          "invariants"
+          "processes"
         ],
         "additionalProperties": false
       }

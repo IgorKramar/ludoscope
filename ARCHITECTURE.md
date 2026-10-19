@@ -1,6 +1,6 @@
 # Архитектура
 
-Версия пакета 0.3.0. Knowledge Registry 1.1 (чтение 1.0 сохранено); проектные и MCP envelope-контракты 1.0. Архитектурные решения и проверенные официальные спецификации: [ADR](docs/architecture/decisions.md).
+Версия пакета 0.4.0. Knowledge Registry 1.1 (чтение 1.0 сохранено); проектные и MCP envelope-контракты 1.0. Архитектурные решения и проверенные официальные спецификации: [ADR](docs/architecture/decisions.md).
 
 ```mermaid
 flowchart TD
@@ -39,3 +39,12 @@ Source.provenance и Entry.evidence отделяют проверку библи
 `core/retrieval.ts` выполняет только лексическую нормализацию. `core/lenses.ts` применяет selection и объясняет контекстную привязку. Строковые conditions всё ещё требуют интерпретации Codex; они не объявляются вычисленными причинными правилами. Контекст механики ограничен восемью релевантными записями с резервом для разных школ; точечный knowledge_get загружает до20 записей/источников.
 
 Mastery operation переиспользует неизменённый structural mastery core, затем добавляет ограниченный context через registry и проектные фильтры. PDF/OCR не являются runtime-зависимостью. Optional source audit использует отдельный readability guard: повторяющиеся колонтитулы и watermark-only извлечения не принимаются за содержательный текст; это не доказательство OCR-точности или истинности авторских выводов.
+
+
+## WORLD FORGE Integration Layer
+
+`src/integration/` содержит публичный LudoscopeAgentApi, DesignKnowledgeEngine, AnalysisEngine, RecommendationEngine, EvaluationEngine, FIP schemas и ChroniclerAdapter. Это логические модули общего процесса, переиспользующие существующие mechanics/systems/labs/simulation. MCP сервер регистрирует 24 старых операции и 16 новых; совместимость старого wrapper сохранена. Агентные ответы используют отдельный FIP envelope непосредственно в structuredContent. CLI по-прежнему работает через прежнее ядро; агентная интеграция доступна MCP и библиотеке.
+
+`contracts/fip/v1/` генерируется из Zod; api_version 1.0 предварительная, profile=ludoscope.fip-v1-draft.1. Новый API знает author_goals, creative_principles, constraints и project/task correlation. Он возвращает кандидатные спецификации и не переписывает авторские решения. Вызовы Chronicler ограничены timeout и требуют хостового клиента; публикация отдельно авторизуется. Конкретное официальное подключение не заявляется.
+
+Подробности: [API](docs/API.md), [WORLD FORGE](docs/WORLD_FORGE_INTEGRATION.md), [Chronicler](docs/CHRONICLER_INTEGRATION.md).

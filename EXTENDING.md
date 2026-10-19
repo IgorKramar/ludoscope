@@ -30,3 +30,6 @@ ludoscope knowledge import notes.json --license 'CC-BY-4.0; permission supplied 
 Для источника предоставленного PDF используйте provenance с SHA-256, pdf_pages, verified_pdf_pages, content_verified и режимом metadata_and_original_analysis_only. Entry.evidence ссылается только на проверенные страницы. VERIFIED_SOURCE допускает author_position; derived_method/cross_source_inference должны оставаться EXPERT_INFERENCE. Проверка копии и длинных буквальных совпадений доступна через scripts/verify-source-evidence.mjs; полноценная редакционная проверка остаётся отдельной работой.
 
 Контекстная линза может задавать selection.any_tags/all_tags/excluded_tags/required_system_types/modes. Эти предварительные условия проверяются до ранжирования. Если нужен просмотр точного ID без выбора по условиям, используйте knowledge_get; отключённые источники/школы при этом сохраняются. Не добавляйте жанровые ограничения только ради продвижения своей записи в поиске.
+
+
+WORLD FORGE: `ludoscope/api`, `ludoscope/contracts/fip/v1`, `ludoscope/adapters/chronicler` — публичные package exports. [FIP-профиль](contracts/fip/v1/README.md) и [Chronicler port](docs/CHRONICLER_INTEGRATION.md) определяют расширение без доступа к внутренним БД и произвольной загрузки кода источников.

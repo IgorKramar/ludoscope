@@ -36,3 +36,19 @@ for (const language of ["ru", "en"])
     templates++;
   }
 console.log(JSON.stringify({ document_templates: templates }));
+
+const { agentCapabilities } = await import("../dist/integration/api.js");
+const { contractSchemas } = await import("../dist/integration/contracts.js");
+for (const capability of agentCapabilities) {
+  await access(capability.input_schema);
+  await access(capability.output_schema);
+}
+for (const name of Object.keys(contractSchemas))
+  await access(`contracts/fip/v1/${name}.schema.json`);
+console.log(
+  JSON.stringify({
+    agent_tools: agentCapabilities.length,
+    total_mcp_tools: Object.keys(operations).length + agentCapabilities.length,
+    fip_profile: "ludoscope.fip-v1-draft.1",
+  }),
+);
