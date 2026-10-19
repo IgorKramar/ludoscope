@@ -1,3 +1,4 @@
+import { assertSubstantivePages } from "./source-evidence-quality.mjs";
 /** Optional offline audit against the owner's private PDFs and extracted page arrays. No book text is emitted. */
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
@@ -39,6 +40,14 @@ for (const source of registry.data.sources.filter(
   const entries = registry.data.entries.filter((e) =>
     e.source_ids.includes(source.id),
   );
+  const readability = assertSubstantivePages(
+    pages,
+    entries.flatMap((entry) =>
+      (entry.evidence ?? [])
+        .filter((e) => e.source_id === source.id)
+        .flatMap((e) => e.pdf_pages),
+    ),
+  );
   let locators = 0;
   const checkedPages = new Set();
   for (const entry of entries) {
@@ -75,6 +84,7 @@ for (const source of registry.data.sources.filter(
     entries: entries.length,
     unique_cited_pages: checkedPages.size,
     page_locators: locators,
+    readability,
     long_literal_description_overlaps: 0,
   });
 }

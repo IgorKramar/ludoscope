@@ -1,0 +1,314 @@
+{
+  "scope": "Structural plan checks; no participants or observed learning",
+  "results": [
+    {
+      "input": {
+        "skills": [
+          {
+            "id": "skill.read_signal",
+            "requires": [],
+            "introduced_at": 1,
+            "practice": [
+              "Повторить один и тот же показ безопасного маршрута."
+            ],
+            "variation": [
+              "Изменить положение цели."
+            ]
+          },
+          {
+            "id": "skill.plan_route",
+            "requires": [
+              "skill.read_signal"
+            ],
+            "introduced_at": 0,
+            "practice": [
+              "Повторить сохранённый маршрут до успеха."
+            ],
+            "variation": []
+          },
+          {
+            "id": "skill.revise_plan",
+            "requires": [
+              "skill.plan_route"
+            ],
+            "introduced_at": 2,
+            "practice": [],
+            "variation": []
+          }
+        ]
+      },
+      "issues": [
+        "skill.plan_route precedes prerequisite skill.read_signal",
+        "skill.plan_route: no transfer or variation specified",
+        "skill.revise_plan: no explicit practice",
+        "skill.revise_plan: no transfer or variation specified"
+      ],
+      "claim_type": "EXPERT_INFERENCE",
+      "evidence_scope": "structural_plan_only",
+      "knowledge": [
+        {
+          "id": "knowledge.koster.structural_transfer",
+          "source_ids": [
+            "source.koster_user_pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.koster_user_pdf",
+              "pdf_pages": [
+                43
+              ],
+              "section": "Chapter Two / transfer between stringed instruments",
+              "claim_scope": "author_position"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.method_mastery_probe",
+          "source_ids": [
+            "source.nielsen",
+            "source.mda"
+          ]
+        },
+        {
+          "id": "knowledge.conflict.books_mastery_automation",
+          "source_ids": [
+            "source.schell_ru_2019",
+            "source.sylvester_ru_2020"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.schell_ru_2019",
+              "pdf_pages": [
+                205,
+                206
+              ],
+              "section": "Глава 12 / «Навык», «Реальные навыки против виртуальных»",
+              "claim_scope": "cross_source_inference"
+            },
+            {
+              "source_id": "source.sylvester_ru_2020",
+              "pdf_pages": [
+                176,
+                177,
+                178
+              ],
+              "section": "Глава 5 → Объем решения",
+              "claim_scope": "cross_source_inference"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.schell.latent_skill_requirements",
+          "source_ids": [
+            "source.schell_ru_2019"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.schell_ru_2019",
+              "pdf_pages": [
+                206
+              ],
+              "section": "Глава 12 / «Список навыков»",
+              "claim_scope": "author_position"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.koster.unrecognized_pattern",
+          "source_ids": [
+            "source.koster_user_pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.koster_user_pdf",
+              "pdf_pages": [
+                35,
+                37
+              ],
+              "section": "Chapter Two / unfamiliar structure and the jazz example",
+              "claim_scope": "author_position"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.koster.learning_completion",
+          "source_ids": [
+            "source.koster_user_pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.koster_user_pdf",
+              "pdf_pages": [
+                57,
+                137
+              ],
+              "section": "Chapter Three / teaching what the game offers; Chapter Seven / learning and completion",
+              "claim_scope": "author_position"
+            }
+          ]
+        }
+      ],
+      "research_questions": [
+        "Какую закономерность должен освоить игрок и какое действие позволит это проверить?",
+        "Какая задача с изменённым контекстом отличит перенос навыка от запоминания ответа?",
+        "Повторение сохраняет значимый выбор, поддерживает желаемый ритм или требует нового контекста?",
+        "Какие альтернативные причины объясняют скуку или ошибку: непонимание, темп, обратная связь, освоение либо несовпадение интересов?"
+      ]
+    },
+    {
+      "input": {
+        "skills": [
+          {
+            "id": "skill.read_signal",
+            "requires": [],
+            "introduced_at": 0,
+            "practice": [
+              "В безопасной комнате сопоставить значок сенсора, видимое препятствие и результат проверки; после ошибки доступна повторная попытка."
+            ],
+            "variation": [
+              "Узнать тот же сигнал при другой позиции препятствия; цвет не является единственным признаком."
+            ]
+          },
+          {
+            "id": "skill.plan_route",
+            "requires": [
+              "skill.read_signal"
+            ],
+            "introduced_at": 1,
+            "practice": [
+              "Выбрать путь при видимом ограничении запаса; получить причину расхода и повторить с теми же возможностями."
+            ],
+            "variation": [
+              "Новая топология комнаты при том же правиле расхода и без усиления персонажа."
+            ]
+          },
+          {
+            "id": "skill.revise_plan",
+            "requires": [
+              "skill.plan_route"
+            ],
+            "introduced_at": 2,
+            "practice": [
+              "После неудачного выбора указать предположенную причину, изменить одно решение и повторить задачу."
+            ],
+            "variation": [
+              "Новая комбинация известных сигналов и ограничений; расположение маршрутов не совпадает с тренировкой."
+            ]
+          }
+        ]
+      },
+      "issues": [],
+      "claim_type": "EXPERT_INFERENCE",
+      "evidence_scope": "structural_plan_only",
+      "knowledge": [
+        {
+          "id": "knowledge.koster.structural_transfer",
+          "source_ids": [
+            "source.koster_user_pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.koster_user_pdf",
+              "pdf_pages": [
+                43
+              ],
+              "section": "Chapter Two / transfer between stringed instruments",
+              "claim_scope": "author_position"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.method_mastery_probe",
+          "source_ids": [
+            "source.nielsen",
+            "source.mda"
+          ]
+        },
+        {
+          "id": "knowledge.conflict.books_mastery_automation",
+          "source_ids": [
+            "source.schell_ru_2019",
+            "source.sylvester_ru_2020"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.schell_ru_2019",
+              "pdf_pages": [
+                205,
+                206
+              ],
+              "section": "Глава 12 / «Навык», «Реальные навыки против виртуальных»",
+              "claim_scope": "cross_source_inference"
+            },
+            {
+              "source_id": "source.sylvester_ru_2020",
+              "pdf_pages": [
+                176,
+                177,
+                178
+              ],
+              "section": "Глава 5 → Объем решения",
+              "claim_scope": "cross_source_inference"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.schell.latent_skill_requirements",
+          "source_ids": [
+            "source.schell_ru_2019"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.schell_ru_2019",
+              "pdf_pages": [
+                206
+              ],
+              "section": "Глава 12 / «Список навыков»",
+              "claim_scope": "author_position"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.koster.unrecognized_pattern",
+          "source_ids": [
+            "source.koster_user_pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.koster_user_pdf",
+              "pdf_pages": [
+                35,
+                37
+              ],
+              "section": "Chapter Two / unfamiliar structure and the jazz example",
+              "claim_scope": "author_position"
+            }
+          ]
+        },
+        {
+          "id": "knowledge.koster.learning_completion",
+          "source_ids": [
+            "source.koster_user_pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "source.koster_user_pdf",
+              "pdf_pages": [
+                57,
+                137
+              ],
+              "section": "Chapter Three / teaching what the game offers; Chapter Seven / learning and completion",
+              "claim_scope": "author_position"
+            }
+          ]
+        }
+      ],
+      "research_questions": [
+        "Какую закономерность должен освоить игрок и какое действие позволит это проверить?",
+        "Какая задача с изменённым контекстом отличит перенос навыка от запоминания ответа?",
+        "Повторение сохраняет значимый выбор, поддерживает желаемый ритм или требует нового контекста?",
+        "Какие альтернативные причины объясняют скуку или ошибку: непонимание, темп, обратная связь, освоение либо несовпадение интересов?"
+      ]
+    }
+  ]
+}

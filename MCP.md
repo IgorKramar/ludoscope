@@ -54,3 +54,7 @@
 knowledge_search и get_lenses поддерживают mode и system_types. Поиск добавляет слова запроса к тематическим признакам, но не выводит тип системы из имени файла. Требование procedural/narrative в selection требует явного типа системы. get_lenses возвращает bound_questions и relevance: matched_tags, matched_system_types, reasons. Это причины выбора вопроса, не научная оценка и не прогноз интереса.
 
 record_artifact и update_graph работают как прежде: preview по умолчанию, commit по явному намерению. Предыдущее состояние графа сохраняется; stale hash отклоняется. Новые знания не меняют утверждённые проектные решения автоматически.
+
+## Mastery Analysis в 0.3
+
+Вход skills/requires/introduced_at/practice/variation сохранён. Результат содержит прежние structural issues и limitations, а также до6 связанных knowledge entries, research_questions и evidence_scope=structural_plan_only. Claim остаётся EXPERT_INFERENCE. Присутствие VERIFIED_SOURCE среди оснований не означает, что человек освоил навык. Источники и школы, отключённые в проекте, не включаются в контекст. Инструмент работает и без project profile, с mode=design.

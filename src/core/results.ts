@@ -183,6 +183,9 @@ export const resultSchemas = {
   }),
   ludoscope_record_decision: obj({ path: str, diff: str, written: flag }),
   ludoscope_mastery_analysis: obj({
+    knowledge: z.array(Entry).max(6),
+    research_questions: arr,
+    evidence_scope: z.literal("structural_plan_only"),
     claim_type: inference,
     issues: arr,
     ...limits,

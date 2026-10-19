@@ -5,18 +5,39 @@
       "source_id": "source.schell_ru_2019",
       "pdf_sha256": "16b0e8d0440d33ca134137e7caf361e3c0cecd3c727773a716a00ea1d5ac2c49",
       "pdf_pages": 550,
-      "entries": 64,
+      "entries": 65,
       "unique_cited_pages": 68,
-      "page_locators": 184,
+      "page_locators": 186,
+      "readability": {
+        "checked_pages": 68,
+        "excluded_repeated_lines": 68
+      },
       "long_literal_description_overlaps": 0
     },
     {
       "source_id": "source.sylvester_ru_2020",
       "pdf_sha256": "6d34ff8319ec4a385a720feb52944f2953533f982d42650f720beda80f0237f5",
       "pdf_pages": 483,
-      "entries": 57,
+      "entries": 61,
       "unique_cited_pages": 98,
-      "page_locators": 208,
+      "page_locators": 222,
+      "readability": {
+        "checked_pages": 98,
+        "excluded_repeated_lines": 0
+      },
+      "long_literal_description_overlaps": 0
+    },
+    {
+      "source_id": "source.koster_user_pdf",
+      "pdf_sha256": "1f8a80c9ab19a24ecd91b92b0e459cfcd220058583b89d9d0ef64c62672a4e1b",
+      "pdf_pages": 256,
+      "entries": 46,
+      "unique_cited_pages": 41,
+      "page_locators": 125,
+      "readability": {
+        "checked_pages": 41,
+        "excluded_repeated_lines": 62
+      },
       "long_literal_description_overlaps": 0
     }
   ]

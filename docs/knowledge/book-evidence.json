@@ -188,11 +188,62 @@
       ],
       "content_verified": true,
       "redistribution": "metadata_and_original_analysis_only"
+    },
+    {
+      "source_id": "source.koster_user_pdf",
+      "access": "user_supplied",
+      "artifact_sha256": "1f8a80c9ab19a24ecd91b92b0e459cfcd220058583b89d9d0ef64c62672a4e1b",
+      "pdf_pages": 256,
+      "verified_pdf_pages": [
+        3,
+        31,
+        33,
+        35,
+        37,
+        39,
+        43,
+        45,
+        47,
+        49,
+        53,
+        55,
+        57,
+        81,
+        83,
+        85,
+        87,
+        89,
+        91,
+        95,
+        97,
+        99,
+        101,
+        105,
+        107,
+        109,
+        115,
+        125,
+        127,
+        129,
+        131,
+        133,
+        135,
+        137,
+        139,
+        155,
+        163,
+        171,
+        173,
+        177,
+        179,
+        181
+      ],
+      "content_verified": true,
+      "redistribution": "metadata_and_original_analysis_only"
     }
   ],
   "entries": [
     {
-      "entry_id": "knowledge.schell.artifact_experience",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -203,10 +254,10 @@
           "section": "Глава 2 / «Игра – это не опыт»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.artifact_experience"
     },
     {
-      "entry_id": "knowledge.schell.introspection_boundaries",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -218,10 +269,10 @@
           "section": "Глава 2 / «Самоанализ: преимущества, риски и применение»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.introspection_boundaries"
     },
     {
-      "entry_id": "knowledge.schell.specific_experience_language",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -232,10 +283,10 @@
           "section": "Глава 2 / «Описывайте свои ощущения»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.specific_experience_language"
     },
     {
-      "entry_id": "knowledge.schell.essential_experience",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -246,10 +297,10 @@
           "section": "Глава 2 / «Существенный опыт»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.essential_experience"
     },
     {
-      "entry_id": "knowledge.schell.element_interdependence",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -261,10 +312,10 @@
           "section": "Глава 5 / «Четыре основных элемента»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.element_interdependence"
     },
     {
-      "entry_id": "knowledge.schell.theme_coherence",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -276,10 +327,10 @@
           "section": "Глава 6 / «Единая тема»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.theme_coherence"
     },
     {
-      "entry_id": "knowledge.schell.problem_before_solution",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -290,10 +341,10 @@
           "section": "Глава 7 / «Постановка (формулирование) проблемы»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.problem_before_solution"
     },
     {
-      "entry_id": "knowledge.schell.iteration_learning",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -304,10 +355,10 @@
           "section": "Глава 8 / «Правило цикла»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.iteration_learning"
     },
     {
-      "entry_id": "knowledge.schell.risk_specific_prototypes",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -318,10 +369,10 @@
           "section": "Глава 8 / «Оценка рисков и прототипирование»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.risk_specific_prototypes"
     },
     {
-      "entry_id": "knowledge.schell.question_scoped_prototype",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -332,10 +383,10 @@
           "section": "Глава 8 / «Десять советов для продуктивного прототипирования»: назначение и временность прототипа",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.question_scoped_prototype"
     },
     {
-      "entry_id": "knowledge.schell.prototype_order_medium",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -347,10 +398,10 @@
           "section": "Глава 8 / советы о приоритете, совмещении, бумажных и неинтерактивных прототипах",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.prototype_order_medium"
     },
     {
-      "entry_id": "knowledge.schell.audience_situated_perspective",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -361,10 +412,10 @@
           "section": "Глава 9 / «Поставьте себя на место игрока»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.audience_situated_perspective"
     },
     {
-      "entry_id": "knowledge.schell.audience_motivations",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -376,10 +427,10 @@
           "section": "Глава 9 / «Психографика»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.audience_motivations"
     },
     {
-      "entry_id": "knowledge.schell.attention_goal_feedback",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -391,10 +442,10 @@
           "section": "Глава 10 / «Внимание»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.attention_goal_feedback"
     },
     {
-      "entry_id": "knowledge.schell.explicit_state_transitions",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -406,10 +457,10 @@
           "section": "Глава 12 / «Объекты, свойства и состояния»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.explicit_state_transitions"
     },
     {
-      "entry_id": "knowledge.schell.generative_actions",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -421,10 +472,10 @@
           "section": "Глава 12 / «Действия» и «Возникающий гейм-плей»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.generative_actions"
     },
     {
-      "entry_id": "knowledge.schell.rule_representation",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -435,10 +486,10 @@
           "section": "Глава 12 / «Правила», обсуждение анализа Парлетта",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.rule_representation"
     },
     {
-      "entry_id": "knowledge.schell.mode_readability",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -449,10 +500,10 @@
           "section": "Глава 12 / «Режимы» и начало «Судья»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.mode_readability"
     },
     {
-      "entry_id": "knowledge.schell.player_vs_character_skill",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -464,10 +515,10 @@
           "section": "Глава 12 / «Навык», «Реальные навыки против виртуальных»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.player_vs_character_skill"
     },
     {
-      "entry_id": "knowledge.schell.latent_skill_requirements",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -478,10 +529,10 @@
           "section": "Глава 12 / «Список навыков»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.latent_skill_requirements"
     },
     {
-      "entry_id": "knowledge.schell.probability_sample_space",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -492,10 +543,10 @@
           "section": "Глава 12 / «Шанс», обсуждение перечисления исходов и сложения событий",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.probability_sample_space"
     },
     {
-      "entry_id": "knowledge.schell.balance_model_calibration",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -507,10 +558,10 @@
           "section": "Глава 13 / асимметричный баланс, пример модели свойств",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.balance_model_calibration"
     },
     {
-      "entry_id": "knowledge.schell.difficulty_cohorts",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -522,10 +573,10 @@
           "section": "Глава 13 / «Сложность и успех»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.difficulty_cohorts"
     },
     {
-      "entry_id": "knowledge.schell.meaningful_alternatives",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -537,10 +588,10 @@
           "section": "Глава 13 / «Осмысленный выбор»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.meaningful_alternatives"
     },
     {
-      "entry_id": "knowledge.schell.risk_reward_attention",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -552,10 +603,10 @@
           "section": "Глава 13 / обсуждение выбора между осторожностью и большей наградой",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.risk_reward_attention"
     },
     {
-      "entry_id": "knowledge.schell.economy_earning_spending",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -566,10 +617,10 @@
           "section": "Глава 13 / «Баланс игровой экономики»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.economy_earning_spending"
     },
     {
-      "entry_id": "knowledge.schell.adaptive_difficulty_contract",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -580,10 +631,10 @@
           "section": "Глава 13 / «Динамическая балансировка игры»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.adaptive_difficulty_contract"
     },
     {
-      "entry_id": "knowledge.schell.puzzle_entry",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -596,10 +647,10 @@
           "section": "Глава 14 / «Хорошие головоломки»: цель и начало решения",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.puzzle_entry"
     },
     {
-      "entry_id": "knowledge.schell.puzzle_progress_evidence",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -611,10 +662,10 @@
           "section": "Глава 14 / ощущение прогресса и уверенность в разрешимости",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.puzzle_progress_evidence"
     },
     {
-      "entry_id": "knowledge.schell.parallel_challenges",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -625,10 +676,10 @@
           "section": "Глава 14 / самостоятельный порядок решения и параллелизм",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.parallel_challenges"
     },
     {
-      "entry_id": "knowledge.schell.input_acknowledgement",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -640,10 +691,10 @@
           "section": "Глава 15 / «Цикл взаимодействия», обратная связь при задержке результата",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.input_acknowledgement"
     },
     {
-      "entry_id": "knowledge.schell.information_channels",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -655,10 +706,10 @@
           "section": "Глава 15 / «Каналы информации»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.information_channels"
     },
     {
-      "entry_id": "knowledge.schell.responsive_embellishment",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -669,10 +720,10 @@
           "section": "Глава 15 / «Сочность»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.responsive_embellishment"
     },
     {
-      "entry_id": "knowledge.schell.pacing_key_moments",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -685,10 +736,10 @@
           "section": "Глава 16 / «Кривые интереса», «Шаблоны внутри шаблонов»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.pacing_key_moments"
     },
     {
-      "entry_id": "knowledge.schell.branching_cost_consequence",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -700,10 +751,10 @@
           "section": "Глава 17 / «Проблемы»: единство истории и комбинаторный взрыв",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.branching_cost_consequence"
     },
     {
-      "entry_id": "knowledge.schell.agency_expectation_alignment",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -718,10 +769,10 @@
           "section": "Глава 18 / «Чувство свободы» и обсуждение непрямого контроля",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.agency_expectation_alignment"
     },
     {
-      "entry_id": "knowledge.schell.playtest_question",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -733,10 +784,10 @@
           "section": "Глава 27 / «Первый вопрос плейтеста: почему?» и «Четвёртый вопрос плейтеста: что?»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.playtest_question"
     },
     {
-      "entry_id": "knowledge.schell.playtest_participant_fit",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -748,10 +799,10 @@
           "section": "Глава 27 / «Второй вопрос плейтеста: кто?»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.playtest_participant_fit"
     },
     {
-      "entry_id": "knowledge.schell.playtest_reactivity",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -764,10 +815,10 @@
           "section": "Глава 27 / «Пятый вопрос плейтеста: как?», инструктаж и вмешательство",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.playtest_reactivity"
     },
     {
-      "entry_id": "knowledge.schell.playtest_interview_boundaries",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -779,10 +830,10 @@
           "section": "Глава 27 / данные после сессии, анкеты и интервью",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.playtest_interview_boundaries"
     },
     {
-      "entry_id": "knowledge.schell.method_experience_bridge",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -798,10 +849,10 @@
           "section": "Основания: игра и опыт; субъективность самоанализа; описание ощущений; существенный опыт; цикл взаимодействия",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_experience_bridge"
     },
     {
-      "entry_id": "knowledge.schell.method_risk_to_test",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -817,10 +868,10 @@
           "section": "Основания: постановка проблемы; цикл; риск; вопрос прототипа; порядок и носители прототипирования",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_risk_to_test"
     },
     {
-      "entry_id": "knowledge.schell.method_action_state_audit",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -837,10 +888,10 @@
           "section": "Основания: взаимозависимость элементов; свойства и состояния; действия; представления правил",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_action_state_audit"
     },
     {
-      "entry_id": "knowledge.schell.method_alternative_witness",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -856,10 +907,10 @@
           "section": "Основания: пути к цели; калибровка баланса; осмысленный выбор; риск и награда",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_alternative_witness"
     },
     {
-      "entry_id": "knowledge.schell.method_skill_transfer",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -873,10 +924,10 @@
           "section": "Основания: реальный и виртуальный навык; фактический список навыков; различия сложности для участников",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_skill_transfer"
     },
     {
-      "entry_id": "knowledge.schell.method_interaction_contract",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -893,10 +944,10 @@
           "section": "Основания: состояния; режимы; цикл взаимодействия; сочность; каналы информации",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_interaction_contract"
     },
     {
-      "entry_id": "knowledge.schell.method_pacing_trace",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -913,10 +964,10 @@
           "section": "Основания: конкретное описание опыта; сильные моменты и кривые интереса; наблюдение и интервью",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_pacing_trace"
     },
     {
-      "entry_id": "knowledge.schell.method_playtest_evidence",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -935,10 +986,10 @@
           "section": "Основания: вопросы, участники, наблюдение, инструктаж, вмешательство, анкеты и интервью",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.method_playtest_evidence"
     },
     {
-      "entry_id": "knowledge.schell.lens_missing_bridge",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -953,10 +1004,10 @@
           "section": "Основания: различение игры и опыта; описание переживания; существенные черты; взаимовлияние элементов",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_missing_bridge"
     },
     {
-      "entry_id": "knowledge.schell.lens_unnecessary_fidelity",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -971,10 +1022,10 @@
           "section": "Основания: существенный опыт; взаимовлияние элементов; постановка проблемы; риск проекта",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_unnecessary_fidelity"
     },
     {
-      "entry_id": "knowledge.schell.lens_audience_counterexample",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -990,10 +1041,10 @@
           "section": "Основания: субъективность самоанализа; перспектива игрока; психографика; выбор участников",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_audience_counterexample"
     },
     {
-      "entry_id": "knowledge.schell.lens_hidden_skill",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1007,10 +1058,10 @@
           "section": "Основания: реальный навык; фактические требования; режимы; задержка управления",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_hidden_skill"
     },
     {
-      "entry_id": "knowledge.schell.lens_alternative_survival",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1026,10 +1077,10 @@
           "section": "Основания: несколько путей; модель баланса; осмысленные альтернативы; риск",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_alternative_survival"
     },
     {
-      "entry_id": "knowledge.schell.lens_signal_truth",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1046,10 +1097,10 @@
           "section": "Основания: состояния; режимы; цикл взаимодействия; сочность; каналы",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_signal_truth"
     },
     {
-      "entry_id": "knowledge.schell.lens_convergence_residue",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1065,10 +1116,10 @@
           "section": "Основания: различие последствий; стоимость ветвления; ощущение свободы и интерфейсные ожидания",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_convergence_residue"
     },
     {
-      "entry_id": "knowledge.schell.lens_observation_cost",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1085,10 +1136,10 @@
           "section": "Основания: вопрос исследования; непредвиденные наблюдения; инструктаж; мысли вслух; интервью",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.schell.lens_observation_cost"
     },
     {
-      "entry_id": "knowledge.sylvester.mechanics_generate_events",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1100,10 +1151,10 @@
           "section": "Глава 1. Машины опыта → Механика и события",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.mechanics_generate_events"
     },
     {
-      "entry_id": "knowledge.sylvester.emotional_range",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1117,10 +1168,10 @@
           "section": "Глава 1 → Главенство эмоций",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.emotional_range"
     },
     {
-      "entry_id": "knowledge.sylvester.human_value_changes",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1132,10 +1183,10 @@
           "section": "Глава 1 → Эмоция и изменение",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.human_value_changes"
     },
     {
-      "entry_id": "knowledge.sylvester.fiction_adds_meaning",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1147,10 +1198,10 @@
           "section": "Глава 1 → История и механика",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.fiction_adds_meaning"
     },
     {
-      "entry_id": "knowledge.sylvester.experience_sequence",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1163,10 +1214,10 @@
           "section": "Глава 1 → Создавая опыт; Чистые эмоции; Совмещение; Антагонистические эмоции",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.experience_sequence"
     },
     {
-      "entry_id": "knowledge.sylvester.atmosphere_and_pacing",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1180,10 +1231,10 @@
           "section": "Глава 1 → Атмосфера; Смена эмоций",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.atmosphere_and_pacing"
     },
     {
-      "entry_id": "knowledge.sylvester.attention_cost",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1195,10 +1246,10 @@
           "section": "Глава 2. Элегантность → вступление; Непредсказуемость в основе элегантности",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.attention_cost"
     },
     {
-      "entry_id": "knowledge.sylvester.combinatorial_interactions",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1211,10 +1262,10 @@
           "section": "Глава 2 → Непредсказуемость в основе элегантности",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.combinatorial_interactions"
     },
     {
-      "entry_id": "knowledge.sylvester.coupling_change_cost",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1226,10 +1277,10 @@
           "section": "Глава 2 → Непредсказуемость в основе элегантности",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.coupling_change_cost"
     },
     {
-      "entry_id": "knowledge.sylvester.multiuse_tools",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1241,10 +1292,10 @@
           "section": "Глава 2 → Прекрасный запах элегантности поутру: несколько способов использования",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.multiuse_tools"
     },
     {
-      "entry_id": "knowledge.sylvester.distinct_mechanical_roles",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1256,10 +1307,10 @@
           "section": "Глава 2 → Прекрасный запах элегантности поутру: несовпадающие роли",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.distinct_mechanical_roles"
     },
     {
-      "entry_id": "knowledge.sylvester.shared_scale",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1271,10 +1322,10 @@
           "section": "Глава 2 → Прекрасный запах элегантности поутру: масштаб механик",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.shared_scale"
     },
     {
-      "entry_id": "knowledge.sylvester.repeated_tool_new_context",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1285,10 +1336,10 @@
           "section": "Глава 2 → Прекрасный запах элегантности поутру: повторное использование",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.repeated_tool_new_context"
     },
     {
-      "entry_id": "knowledge.sylvester.environmental_backstory",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1303,10 +1354,10 @@
           "section": "Глава 4. Нарратив → Нарратив о мире; Приемы; Нарратив о мире и интерактивность",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.environmental_backstory"
     },
     {
-      "entry_id": "knowledge.sylvester.world_implications",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1318,10 +1369,10 @@
           "section": "Глава 4 → Логичность мира",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.world_implications"
     },
     {
-      "entry_id": "knowledge.sylvester.emergent_narrative_bounds",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1334,10 +1385,10 @@
           "section": "Глава 4 → Эмергентная история; Анализ Fallout 3",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.emergent_narrative_bounds"
     },
     {
-      "entry_id": "knowledge.sylvester.interpretable_agents",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1350,10 +1401,10 @@
           "section": "Глава 4 → Апофения; Навешивание ярлыков",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.interpretable_agents"
     },
     {
-      "entry_id": "knowledge.sylvester.event_memory",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1366,10 +1417,10 @@
           "section": "Глава 4 → Ведение записей; Система «спортивный обозреватель»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.event_memory"
     },
     {
-      "entry_id": "knowledge.sylvester.anticipated_futures",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1382,10 +1433,10 @@
           "section": "Глава 5. Решения → Чувствуя будущее",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.anticipated_futures"
     },
     {
-      "entry_id": "knowledge.sylvester.partial_predictability",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1398,10 +1449,10 @@
           "section": "Глава 5 → Предсказуемость",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.partial_predictability"
     },
     {
-      "entry_id": "knowledge.sylvester.ai_predictability_tradeoff",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1413,10 +1464,10 @@
           "section": "Глава 5 → Прогнозирование и искусственный интеллект",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.ai_predictability_tradeoff"
     },
     {
-      "entry_id": "knowledge.sylvester.information_balance",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1430,10 +1481,10 @@
           "section": "Глава 5 → Информационный баланс; Информационное голодание; Как скрыть информацию",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.information_balance"
     },
     {
-      "entry_id": "knowledge.sylvester.decision_volume_mastery",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1446,10 +1497,10 @@
           "section": "Глава 5 → Объем решения",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.decision_volume_mastery"
     },
     {
-      "entry_id": "knowledge.sylvester.decision_rhythm",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1466,10 +1517,10 @@
           "section": "Глава 5 → Как избежать прерывания потока; Избегайте избыточного потока; Принятие решений в пошаговых играх; Разнообразие решений",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.decision_rhythm"
     },
     {
-      "entry_id": "knowledge.sylvester.communicated_events",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1481,10 +1532,10 @@
           "section": "Глава 9. Интерфейс → вступление",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.communicated_events"
     },
     {
-      "entry_id": "knowledge.sylvester.consistent_affordance_vocabulary",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1496,10 +1547,10 @@
           "section": "Глава 9 → Словарь метафор",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.consistent_affordance_vocabulary"
     },
     {
-      "entry_id": "knowledge.sylvester.signal_hierarchy",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1515,10 +1566,10 @@
           "section": "Глава 9 → Сигнал и шум; Шум и сложная графика; Визуальная иерархия",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.signal_hierarchy"
     },
     {
-      "entry_id": "knowledge.sylvester.redundant_communication",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1530,10 +1581,10 @@
           "section": "Глава 9 → Избыточность",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.redundant_communication"
     },
     {
-      "entry_id": "knowledge.sylvester.iterative_uncertainty",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1551,10 +1602,10 @@
           "section": "Глава 11. Планирование и итерация → Перепланировщик; Недостаточное планирование; Итерация",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.iterative_uncertainty"
     },
     {
-      "entry_id": "knowledge.sylvester.playtest_context",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1569,10 +1620,10 @@
           "section": "Глава 11 → Протокол тестирования; Как выбрать тестировщиков",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.playtest_context"
     },
     {
-      "entry_id": "knowledge.sylvester.neutral_observation",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1585,10 +1636,10 @@
           "section": "Глава 11 → Плейтестинг «через плечо»; Методика опроса",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.neutral_observation"
     },
     {
-      "entry_id": "knowledge.sylvester.graybox_fidelity",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1600,10 +1651,10 @@
           "section": "Глава 11 → Тестирование методом «серого ящика»; Что не нужно тестировать методом «серого ящика»",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.graybox_fidelity"
     },
     {
-      "entry_id": "knowledge.sylvester.knowledge_methods_complement",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1617,10 +1668,10 @@
           "section": "Глава 12. Создание знаний → Тестирование; Метрики; Изобретенные методы",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.knowledge_methods_complement"
     },
     {
-      "entry_id": "knowledge.sylvester.dependency_first_work",
       "verification_status": "VERIFIED_SOURCE",
       "evidence": [
         {
@@ -1634,10 +1685,10 @@
           "section": "Глава 13. Зависимости → Стек зависимостей",
           "claim_scope": "author_position"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.dependency_first_work"
     },
     {
-      "entry_id": "knowledge.sylvester.method_experience_trace",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1652,10 +1703,10 @@
           "section": "Глава 1 → Механика и события; Создавая опыт; Глава 5 → Разнообразие решений",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_experience_trace"
     },
     {
-      "entry_id": "knowledge.sylvester.method_information_variants",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1670,10 +1721,10 @@
           "section": "Глава 5 → Предсказуемость; Информационный баланс",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_information_variants"
     },
     {
-      "entry_id": "knowledge.sylvester.method_emergent_incident",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1687,10 +1738,10 @@
           "section": "Глава 4 → Эмергентная история; Ведение записей; Система «спортивный обозреватель»",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_emergent_incident"
     },
     {
-      "entry_id": "knowledge.sylvester.method_silent_observer",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1705,10 +1756,10 @@
           "section": "Глава 11 → Протокол тестирования; Плейтестинг «через плечо»; Методика опроса",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_silent_observer"
     },
     {
-      "entry_id": "knowledge.sylvester.method_knowledge_cohorts",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1721,10 +1772,10 @@
           "section": "Глава 11 → Как выбрать тестировщиков; Размер выборки",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_knowledge_cohorts"
     },
     {
-      "entry_id": "knowledge.sylvester.method_fidelity_gate",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1737,10 +1788,10 @@
           "section": "Глава 9 → Шум и сложная графика; Глава 11 → Серый ящик; Что не нужно тестировать методом «серого ящика»",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_fidelity_gate"
     },
     {
-      "entry_id": "knowledge.sylvester.method_dependency_risk",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1753,10 +1804,10 @@
           "section": "Глава 11 → Цена чрезмерного планирования; Глава 13 → Стек зависимостей",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_dependency_risk"
     },
     {
-      "entry_id": "knowledge.sylvester.method_contextual_metric",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1770,10 +1821,10 @@
           "section": "Глава 12 → Метрики; Изобретенные методы",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.method_contextual_metric"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_experience_purpose",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1788,10 +1839,10 @@
           "section": "Глава 1 → Механика и события; Эмоция и изменение; Создавая опыт",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_experience_purpose"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_complexity_return",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1806,10 +1857,10 @@
           "section": "Глава 2 → Элегантность; Прекрасный запах элегантности поутру",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_complexity_return"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_interaction_consequence",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1823,10 +1874,10 @@
           "section": "Глава 2 → Непредсказуемость в основе элегантности; Глава 11 → Цена чрезмерного планирования; Глава 13 → Зависимости",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_interaction_consequence"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_story_agency",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1842,10 +1893,10 @@
           "section": "Глава 4 → Нарратив о мире и интерактивность; Эмергентная история; Анализ; Глава 5 → Прогнозирование и заранее определенные решения",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_story_agency"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_foreseeable_choice",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1862,10 +1913,10 @@
           "section": "Глава 5 → Чувствуя будущее; Предсказуемость; Информационный баланс; Как скрыть информацию",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_foreseeable_choice"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_mastery_shift",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1881,10 +1932,10 @@
           "section": "Глава 2 → Повторное использование; Глава 5 → Объем решения; Принятие решений в пошаговых играх; Разнообразие решений",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_mastery_shift"
     },
     {
-      "entry_id": "knowledge.sylvester.lens_signal_survival",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1901,10 +1952,10 @@
           "section": "Глава 9 → Интерфейс; Словарь метафор; Визуальная иерархия; Избыточность",
           "claim_scope": "derived_method"
         }
-      ]
+      ],
+      "entry_id": "knowledge.sylvester.lens_signal_survival"
     },
     {
-      "entry_id": "knowledge.conflict.books_prototype_fidelity",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1924,10 +1975,10 @@
           "section": "Глава 11 → Тестирование методом «серого ящика»; Что не нужно тестировать методом «серого ящика»",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_prototype_fidelity"
     },
     {
-      "entry_id": "knowledge.conflict.books_interaction_surface",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1948,10 +1999,10 @@
           "section": "Глава 2 → Непредсказуемость в основе элегантности",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_interaction_surface"
     },
     {
-      "entry_id": "knowledge.conflict.books_signal_uncertainty",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1974,10 +2025,10 @@
           "section": "Глава 5 → Информационный баланс; Информационное голодание; Как скрыть информацию",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_signal_uncertainty"
     },
     {
-      "entry_id": "knowledge.conflict.books_authored_emergent",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -1999,10 +2050,10 @@
           "section": "Глава 4 → Эмергентная история; Анализ Fallout 3",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_authored_emergent"
     },
     {
-      "entry_id": "knowledge.conflict.books_mastery_automation",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -2024,10 +2075,10 @@
           "section": "Глава 5 → Объем решения",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_mastery_automation"
     },
     {
-      "entry_id": "knowledge.conflict.books_pacing_rest",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -2054,10 +2105,10 @@
           "section": "Глава 5 → Как избежать прерывания потока; Избегайте избыточного потока; Принятие решений в пошаговых играх; Разнообразие решений",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_pacing_rest"
     },
     {
-      "entry_id": "knowledge.conflict.books_metrics_context",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -2080,10 +2131,10 @@
           "section": "Глава 12. Создание знаний → Тестирование; Метрики; Изобретенные методы",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_metrics_context"
     },
     {
-      "entry_id": "knowledge.conflict.books_challenge_emotion",
       "verification_status": "EXPERT_INFERENCE",
       "evidence": [
         {
@@ -2106,7 +2157,782 @@
           "section": "Глава 1 → Главенство эмоций",
           "claim_scope": "cross_source_inference"
         }
-      ]
+      ],
+      "entry_id": "knowledge.conflict.books_challenge_emotion"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            101,
+            107
+          ],
+          "section": "Chapter Five / author distinction between fun and other enjoyment; contextual definition",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.fun_term_scope"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            31
+          ],
+          "section": "Chapter Two / routine and chunking example",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.chunked_routine"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            33
+          ],
+          "section": "Chapter Two / habitual patterns and violations of expectation",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.expectation_break"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            35,
+            37
+          ],
+          "section": "Chapter Two / unfamiliar structure and the jazz example",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.unrecognized_pattern"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            39,
+            43
+          ],
+          "section": "Chapter Two / understanding, grokking, and musical practice",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.understanding_vs_execution"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            43
+          ],
+          "section": "Chapter Two / transfer between stringed instruments",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.structural_transfer"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            45,
+            47
+          ],
+          "section": "Chapter Three / abstraction and practicing permutations",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.abstraction_for_practice"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53
+          ],
+          "section": "Chapter Three / finite formal systems, mastery, and boredom",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.finite_learning_space"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            53
+          ],
+          "section": "Chapter Three / new data, new experiences, and overload",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.new_data_vs_new_system"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            55,
+            57
+          ],
+          "section": "Chapter Three / different paths to boredom",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.boredom_differential"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            55
+          ],
+          "section": "Chapter Three / pacing of pattern variation",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.variation_pacing"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            57,
+            137
+          ],
+          "section": "Chapter Three / teaching what the game offers; Chapter Seven / learning and completion",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.learning_completion"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            81,
+            83,
+            89
+          ],
+          "section": "Chapter Four / topology, incremental additions, and new dimensions",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.structural_novelty"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            85
+          ],
+          "section": "Chapter Four / precision, speed, and rote physical practice",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.precision_before_speed"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            87
+          ],
+          "section": "Chapter Four / thoroughness and exploration",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.exploration_as_skill"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            91,
+            95,
+            171,
+            173
+          ],
+          "section": "Chapters Five and Ten / formal structure versus the overall represented experience",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.fiction_formal_distinction"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            97,
+            99
+          ],
+          "section": "Chapter Five / story grafted onto gameplay; comparison of games and stories",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.narrative_gating"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            105,
+            101
+          ],
+          "section": "Chapter Five / delight, recognition, and author terminology",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.recognition_delight"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            107
+          ],
+          "section": "Chapter Five / contextual fun and practicing versus winning",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.purpose_changes_context"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            115
+          ],
+          "section": "Chapter Six / differing experience and limits of universal appeal",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.prior_experience_matters"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            125,
+            129
+          ],
+          "section": "Chapter Seven / circumvention, optimization, and low-risk repetition",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.optimal_shortcuts"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            133,
+            135
+          ],
+          "section": "Chapter Seven / rewards, easy encounters, and the Mastery Problem",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.novice_expert_challenge"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            131
+          ],
+          "section": "Chapter Seven / preparation and challenge structure",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.preparation_consequence"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            133
+          ],
+          "section": "Chapter Seven / variable feedback and consequences of encounters",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.feedback_differentiation"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            137
+          ],
+          "section": "Chapter Seven / elegant systems and the purpose they support",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.coherent_learning_core"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            139
+          ],
+          "section": "Chapter Eight / emergence, opponents, and player-generated challenges",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.renewing_challenges"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            155,
+            163
+          ],
+          "section": "Chapter Nine / fulfillment, emotional scope, and creative response",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.fulfillment_beyond_happiness"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            171,
+            173,
+            177
+          ],
+          "section": "Chapter Ten / aesthetic contribution, dressing, and overall experience",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.presentation_whole_experience"
+    },
+    {
+      "verification_status": "VERIFIED_SOURCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            179,
+            181
+          ],
+          "section": "Chapter Ten / semantic framing and creator responsibility",
+          "claim_scope": "author_position"
+        }
+      ],
+      "entry_id": "knowledge.koster.ethical_semantic_context"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            53,
+            55,
+            57,
+            101,
+            107
+          ],
+          "section": "Grounding: boredom mechanisms and author scope of fun",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.method_boredom_diagnosis"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            31,
+            39,
+            43,
+            47,
+            85
+          ],
+          "section": "Grounding: chunking, levels of understanding, transfer and practice",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.method_pattern_transfer"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            55,
+            81,
+            83,
+            89
+          ],
+          "section": "Grounding: novelty, variation pacing and structural change",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.method_variation_map"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            125,
+            129,
+            131,
+            133,
+            135
+          ],
+          "section": "Grounding: circumvention, optimization, preparation and mastery problem",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.method_incentive_bypass"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            33,
+            47,
+            133,
+            171,
+            177
+          ],
+          "section": "Grounding: expectation, practicing alternatives, feedback and representation",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.method_feedback_discrimination"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            91,
+            95,
+            155,
+            171,
+            173,
+            177,
+            179,
+            181
+          ],
+          "section": "Grounding: formal abstraction, fulfillment, whole experience and ethical context",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.method_semantic_mechanical_review"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            55,
+            57
+          ],
+          "section": "Grounding: exhaustion and paths to boredom",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.lens_already_solved"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            35,
+            37,
+            53,
+            55
+          ],
+          "section": "Grounding: unfamiliar structure and overload",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.lens_missing_foothold"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            39,
+            43,
+            47
+          ],
+          "section": "Grounding: understanding, practice, and transfer",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.lens_portable_relation"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            125,
+            129,
+            133
+          ],
+          "section": "Grounding: optimization, circumvention, and mastery rewards",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.lens_rewarded_avoidance"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            91,
+            95,
+            171,
+            173,
+            179,
+            181
+          ],
+          "section": "Grounding: metaphor, whole experience, and ethical semantics",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.lens_same_rules_different_meaning"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            101,
+            105,
+            107,
+            155,
+            163,
+            171
+          ],
+          "section": "Grounding: author terminology, recognition, fulfillment, and presentation",
+          "claim_scope": "derived_method"
+        }
+      ],
+      "entry_id": "knowledge.koster.lens_enjoyment_not_learning"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            129
+          ],
+          "section": "Chapter Three: What Games Are; Chapter Seven: The Problem with Learning — исчерпание паттерна, рутина и повтор лёгких задач",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            69
+          ],
+          "section": "Глава 2 → Прекрасный запах элегантности поутру: повторное использование",
+          "claim_scope": "cross_source_inference"
+        }
+      ],
+      "entry_id": "knowledge.koster.conflict_learning_routine"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            99,
+            101,
+            105,
+            107,
+            109
+          ],
+          "section": "Chapter Five: What Games Aren’t — различение learning-oriented fun, aesthetic appreciation и flow",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            10,
+            11,
+            12,
+            13,
+            44
+          ],
+          "section": "Глава 1 → Главенство эмоций; Создавая опыт",
+          "claim_scope": "cross_source_inference"
+        }
+      ],
+      "entry_id": "knowledge.koster.conflict_fun_experience_scope"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            55
+          ],
+          "section": "Chapter Three: What Games Are — новизна, overload и темп раскрытия вариаций",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            60,
+            61,
+            65,
+            66
+          ],
+          "section": "Глава 2 → Элегантность; Прекрасный запах элегантности поутру: простота и несколько применений",
+          "claim_scope": "cross_source_inference"
+        }
+      ],
+      "entry_id": "knowledge.koster.conflict_novelty_attention_cost"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            43,
+            125
+          ],
+          "section": "Chapter Two: How the Brain Works — пример переноса между струнными инструментами; Chapter Seven: The Problem with Learning — обход задания и освоение техники",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            205,
+            206
+          ],
+          "section": "Глава 12 → Механика 6. Навык; Реальные навыки против виртуальных; Список навыков",
+          "claim_scope": "cross_source_inference"
+        }
+      ],
+      "entry_id": "knowledge.koster.conflict_progress_transfer"
+    },
+    {
+      "verification_status": "EXPERT_INFERENCE",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            127,
+            131,
+            133
+          ],
+          "section": "Chapter Seven: The Problem with Learning — ограниченная неопределённость, range of challenges и variable feedback system",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            154,
+            155,
+            156,
+            159
+          ],
+          "section": "Глава 5 → Предсказуемость; Информационный баланс",
+          "claim_scope": "cross_source_inference"
+        }
+      ],
+      "entry_id": "knowledge.koster.conflict_variable_outcome_readable_rules"
     }
   ]
 }

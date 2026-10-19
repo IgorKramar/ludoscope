@@ -15,7 +15,12 @@ import {
   Document,
   Artifact,
 } from "./schemas.js";
-import { registry, projectRegistry } from "./knowledge.js";
+import {
+  registry,
+  projectRegistry,
+  retrieveContext,
+  type SearchContext,
+} from "./knowledge.js";
 import { selectLenses } from "./lenses.js";
 import { terms } from "./retrieval.js";
 import { ProjectStore, scan } from "../project/store.js";
@@ -286,7 +291,44 @@ export const operations = {
   ludoscope_mastery_analysis: operation(
     "Check explicit learning prerequisites and practice opportunities.",
     Learning,
-    (a) => mastery(a),
+    async (a, s) => {
+      let context: SearchContext = { mode: "design" };
+      try {
+        const p = await s.profile();
+        context = {
+          ...context,
+          ...{
+            disabled_sources: p.disabled_sources,
+            disabled_schools: p.disabled_schools,
+          },
+          mode: p.mode,
+        };
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+      }
+      const knowledge = retrieveContext(
+        await projectRegistry(s.root),
+        "learning mastery patterns transfer boredom",
+        {
+          ...context,
+          tags: ["learning", "mastery", "patterns", "transfer"],
+          system_types: ["learning"],
+          stage: "prototype",
+          limit: 6,
+        },
+      );
+      return {
+        ...mastery(a),
+        knowledge,
+        evidence_scope: "structural_plan_only" as const,
+        research_questions: [
+          "Какую закономерность должен освоить игрок и какое действие позволит это проверить?",
+          "Какая задача с изменённым контекстом отличит перенос навыка от запоминания ответа?",
+          "Повторение сохраняет значимый выбор, поддерживает желаемый ритм или требует нового контекста?",
+          "Какие альтернативные причины объясняют скуку или ошибку: непонимание, темп, обратная связь, освоение либо несовпадение интересов?",
+        ],
+      };
+    },
   ),
   ludoscope_ux_review: operation(
     "Artifact inventory and cognitive UX / game feel review prompts.",

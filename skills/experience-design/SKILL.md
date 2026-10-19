@@ -44,3 +44,5 @@ Map intended player experience to actions, rules, feedback, learning and a testa
 
 ## 10. Связанные Skills
 ux-review, game-feel, progression-design, playtest-design. Загружай следующий Skill только при переходе к соответствующей задаче; не читай всю библиотеку заранее.
+
+При обращении к learning/patterns различай освоение в модели Костера и более широкий целевой опыт. Не своди страх, красоту, социальность или авторский ритуал к единственному критерию fun. Проверяй конкретное издание и страницы через knowledge_get; оригинальный сравнительный разбор должен оставаться EXPERT_INFERENCE.

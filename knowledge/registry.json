@@ -553,6 +553,73 @@
         "content_verified": true,
         "redistribution": "metadata_and_original_analysis_only"
       }
+    },
+    {
+      "id": "source.koster_user_pdf",
+      "version": 1,
+      "title": "A Theory of Fun for Game Design",
+      "authors": [
+        "Raph Koster"
+      ],
+      "year": 2004,
+      "edition": "Paraglyph Press issue identified by ISBN 1-932111-97-2; scanned copyright page © 2005. Open Library catalogues the same ISBN as “1 edition”, published 2004-11-06; the scan itself does not explicitly state an edition number.",
+      "url": "urn:sha256:1f8a80c9ab19a24ecd91b92b0e459cfcd220058583b89d9d0ef64c62672a4e1b",
+      "identifier": "ISBN:9781932111972",
+      "verification_status": "VERIFIED_SOURCE",
+      "accessed_at": "2026-10-19",
+      "license": "Copyright retained by the book rights holders. User-supplied copy for private source analysis; no permission to redistribute PDF, page images, OCR, illustrations, substantial excerpts or source checklists. Outputs contain bibliographic metadata, original summaries and original analytical methods only.",
+      "notes": "User-supplied scanned PDF, 256 pages, SHA-256 1f8a80c9ab19a24ecd91b92b0e459cfcd220058583b89d9d0ef64c62672a4e1b. PDF page 3 was visually checked, including its copyright line rendered at 300 dpi: © 2005 Raph Koster, Paraglyph Press, ISBN 1-932111-97-2. Public bibliographic cross-check https://openlibrary.org/isbn/1932111972.json reports publication on November 6, 2004 and edition_name “1 edition” for ISBN 1932111972 / 9781932111972. Source.year 2004 is this catalog publication year, distinct from printed copyright 2005. This is not the O’Reilly 2013 second edition. pdftotext did not extract substantive book content. All 256 pages underwent private OCR using pdftoppm and tesseract eng --psm 3, 3 workers, OMP_THREAD_LIMIT=1, with per-process timeouts. The batch used 190 dpi by default; the cached initial OCR of page 3 used a 2400-pixel render, followed by a separate 300-dpi visual bibliographic check. OCR has spelling errors, missing lines, handwritten annotation interference and illustration-page omissions. Knowledge review covered only the substantive passages listed in provenance and entry evidence, not all OCR pages. PDF page 101 was additionally viewed to verify the author’s restricted meaning of fun versus wider enjoyment. VERIFIED_SOURCE establishes faithful attribution of the author’s position, not independent empirical validation of cognitive, evolutionary, gender, personality or neurochemical claims. Original LUDOSCOPE methods and lenses use EXPERT_INFERENCE and derived_method scope. Source bibliographic page 3 and the 39 substantive evidence pages are listed in verified_pdf_pages. Full-book theoretical coverage is not claimed.",
+      "provenance": {
+        "access": "user_supplied",
+        "artifact_sha256": "1f8a80c9ab19a24ecd91b92b0e459cfcd220058583b89d9d0ef64c62672a4e1b",
+        "pdf_pages": 256,
+        "verified_pdf_pages": [
+          3,
+          31,
+          33,
+          35,
+          37,
+          39,
+          43,
+          45,
+          47,
+          49,
+          53,
+          55,
+          57,
+          81,
+          83,
+          85,
+          87,
+          89,
+          91,
+          95,
+          97,
+          99,
+          101,
+          105,
+          107,
+          109,
+          115,
+          125,
+          127,
+          129,
+          131,
+          133,
+          135,
+          137,
+          139,
+          155,
+          163,
+          171,
+          173,
+          177,
+          179,
+          181
+        ],
+        "content_verified": true,
+        "redistribution": "metadata_and_original_analysis_only"
+      }
     }
   ],
   "entries": [
@@ -10645,6 +10712,3060 @@
             13
           ],
           "section": "Глава 1 → Главенство эмоций",
+          "claim_scope": "cross_source_inference"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.fun_term_scope",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Термин fun в книге уже, чем всё множество приятных переживаний",
+      "description": "Костер намеренно использует fun для умственного освоения проблем и отличает его от эстетического удовольствия, телесной реакции и некоторых социальных переживаний. Его объяснение обучения следует читать в рамках этого словоупотребления, а не как доказательство, что любое ценное удовольствие обязательно является освоением нового правила.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "fun",
+        "learning",
+        "experience",
+        "удовольствие",
+        "обучение",
+        "границы теории"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Требуется применить тезис Костера об обучении к оценке игрового опыта."
+      ],
+      "questions": [
+        "Ищет ли проект освоение новой закономерности или другой вид переживания?",
+        "Не исключает ли выбранное определение то удовольствие, ради которого люди возвращаются?"
+      ],
+      "recommendations": [
+        "Явно назвать, в каком смысле используется fun в заключении.",
+        "Оценивать удовольствие от общения, эстетики, ритуала и освоенного исполнения отдельно, если они входят в замысел."
+      ],
+      "limitations": [
+        "Это авторское определение, не универсальная классификация эмоций.",
+        "Прочтение книги не подтверждает приведённые нейрохимические или эволюционные объяснения; первичные исследования здесь не валидированы."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 101, 107 (1-based); Chapter Five / author distinction between fun and other enjoyment; contextual definition",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            101,
+            107
+          ],
+          "section": "Chapter Five / author distinction between fun and other enjoyment; contextual definition",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.chunked_routine",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Освоенная последовательность может восприниматься как единое действие",
+      "description": "Через пример повседневной рутины Костер объясняет chunking как сворачивание знакомой последовательности в привычный блок. Дизайнеру это даёт ракурс на различие между шагами, которые эксперт уже не замечает, и операциями, которые новичок ещё должен разбирать по отдельности.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "chunking",
+        "routine",
+        "onboarding",
+        "чанкинг",
+        "привычка",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Эксперт считает взаимодействие простым, но новичок теряется в последовательности."
+      ],
+      "questions": [
+        "Какие промежуточные решения эксперт перестал замечать?",
+        "Сколько новых соответствий должен удержать человек до первого осмысленного результата?"
+      ],
+      "recommendations": [
+        "Разложить знакомую операцию на реально требуемые решения и действия.",
+        "Проверить прохождение новичком без подсказок и сопоставить с выполнением опытного участника."
+      ],
+      "limitations": [
+        "Популярное объяснение chunking в книге не заменяет современное исследование когнитивных механизмов.",
+        "Автоматизация рутины может освобождать внимание и быть желаемым освоением, а не дефектом."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 31 (1-based); Chapter Two / routine and chunking example",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            31
+          ],
+          "section": "Chapter Two / routine and chunking example",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.expectation_break",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Нарушение освоенного ожидания требует распознать изменение контекста",
+      "description": "Костер отмечает, что привычные схемы помогают быстро действовать, но дают сбой, если знакомая ситуация ведёт себя иначе. Изменённое правило или контекст важно исследовать не только как новизну, но и как столкновение с уже усвоенным способом действия.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "expectations",
+        "transfer",
+        "feedback",
+        "ожидания",
+        "перенос навыка",
+        "обратная связь"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Игра меняет знакомое правило или прежний приём перестаёт работать."
+      ],
+      "questions": [
+        "Какая предыдущая успешная схема побуждает игрока ошибаться?",
+        "Что позволяет обнаружить смену условия до бессмысленного повторения?"
+      ],
+      "recommendations": [
+        "Указать изменённое условие и дать различимый сигнал его действия.",
+        "Сравнить способность объяснить ошибку и скорректировать стратегию после первого столкновения."
+      ],
+      "limitations": [
+        "Перенастройка ожиданий может быть намеренной задачей; она не обязана всегда быть безопасной или очевидной.",
+        "Нельзя выводить постоянные свойства личности из сопротивления одному неожиданному изменению."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.chunked_routine"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 33 (1-based); Chapter Two / habitual patterns and violations of expectation",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            33
+          ],
+          "section": "Chapter Two / habitual patterns and violations of expectation",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.unrecognized_pattern",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Видимая бессвязность может означать нераспознанную структуру",
+      "description": "В примере знакомства с непривычной музыкой Костер предлагает отличать отсутствие порядка от неспособности пока обнаружить его. Знакомство с опорными элементами способно изменить восприятие сложного материала, хотя это не означает, что любая запутанная игра в действительности содержательна.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "patterns",
+        "legibility",
+        "learning",
+        "закономерности",
+        "читаемость",
+        "освоение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Участник описывает систему как хаос, не имея опор для предсказания."
+      ],
+      "questions": [
+        "Есть ли в модели повторяемая связь, которую можно обнаружить?",
+        "Какая минимальная подсказка помогает увидеть связь, не подменяя самостоятельное решение?"
+      ],
+      "recommendations": [
+        "Проверить, что предполагаемая закономерность реально существует и проявляется достаточно последовательно.",
+        "Предложить короткий контрастный пример и наблюдать последующие предсказания участника."
+      ],
+      "limitations": [
+        "Нельзя объявлять непонимание недостатком человека или доказательством скрытой глубины.",
+        "Аналогия автора не даёт автоматической проверки обучаемости конкретного правила."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.expectation_break"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 35, 37 (1-based); Chapter Two / unfamiliar structure and the jazz example",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            35,
+            37
+          ],
+          "section": "Chapter Two / unfamiliar structure and the jazz example",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.understanding_vs_execution",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Словесное понимание не равнозначно устойчивому исполнению",
+      "description": "Костер различает интеллектуальное понимание, интуитивную ориентировку и глубоко освоенное выполнение. Его музыкальные примеры показывают, почему объяснение принципа и успешное действие в изменяющейся ситуации требуют разных проверок.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "mastery",
+        "execution",
+        "practice",
+        "мастерство",
+        "исполнение",
+        "практика"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Участник может повторить правило, но не применяет его в игре."
+      ],
+      "questions": [
+        "Что человек умеет объяснить и что способен устойчиво сделать?",
+        "Какая нагрузка мешает применить уже понятный принцип?"
+      ],
+      "recommendations": [
+        "Проверять объяснение и выполнение раздельно.",
+        "Начать с контролируемой задачи и затем добавить типичные ограничения реальной игры."
+      ],
+      "limitations": [
+        "Разделение автора — полезный дизайнерский ракурс, не диагностическая модель уровней мозга.",
+        "Не следует считать автоматическое исполнение единственно правильным итогом любой игры."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.chunked_routine"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 39, 43 (1-based); Chapter Two / understanding, grokking, and musical practice",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            39,
+            43
+          ],
+          "section": "Chapter Two / understanding, grokking, and musical practice",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.structural_transfer",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Перенос навыка опирается на общую структуру, а не только похожее движение",
+      "description": "Сравнивая знакомый и новый струнный инструмент, Костер связывает частичный перенос с накопленным пониманием ритма, интервалов и принципов, а не одним моторным навыком. Игровая проверка переноса поэтому должна различать знакомую поверхность и действительно общее отношение между действиями и результатом.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "transfer",
+        "mastery",
+        "generalization",
+        "перенос навыка",
+        "мастерство",
+        "обобщение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Дизайн предполагает применение освоенного принципа в новой задаче."
+      ],
+      "questions": [
+        "Какая структура остаётся общей при смене внешнего оформления?",
+        "Что в новой задаче требует отдельного обучения и может помешать переносу?"
+      ],
+      "recommendations": [
+        "Назвать сохраняемое отношение и меняющиеся условия до теста.",
+        "Предложить новую конфигурацию без повторения заученной последовательности и наблюдать способ решения."
+      ],
+      "limitations": [
+        "Музыкальный пример автора не доказывает дальний перенос игровых навыков на повседневную жизнь.",
+        "Успех может объясняться прежним опытом или лёгкостью второй задачи; условия нужно сохранять и описывать."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.understanding_vs_execution"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 43 (1-based); Chapter Two / transfer between stringed instruments",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            43
+          ],
+          "section": "Chapter Two / transfer between stringed instruments",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.abstraction_for_practice",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Абстракция делает выбранное отношение удобным для повторных проб",
+      "description": "Костер рассматривает игровые формальные системы как упрощённые представления, в которых часть мешающих деталей исключена. В отличие от одного объяснения, взаимодействие позволяет многократно пробовать варианты и замечать связи между решением и последствием.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "abstraction",
+        "practice",
+        "simulation",
+        "абстракция",
+        "практика",
+        "модель"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Нужно решить, какие детали моделировать для освоения конкретного принципа."
+      ],
+      "questions": [
+        "Какое отношение должно сохраняться во всех пробах?",
+        "Какие подробности лишь увеличивают затраты понимания, а какие меняют смысл результата?"
+      ],
+      "recommendations": [
+        "Отделить изучаемое отношение от несущественных деталей носителя.",
+        "Сохранить возможность сравнивать последствия разных действий, а допущения модели указать явно."
+      ],
+      "limitations": [
+        "Упрощённая модель не доказывает правильность вывода о реальном мире.",
+        "Из текста не следует, что все игры обязаны иметь внешнюю учебную цель."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.structural_transfer"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 45, 47 (1-based); Chapter Three / abstraction and practicing permutations",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            45,
+            47
+          ],
+          "section": "Chapter Three / abstraction and practicing permutations",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.finite_learning_space",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Конечный набор знакомых задач может исчерпать обучающую новизну",
+      "description": "В рамках своей теории Костер связывает потерю интереса с освоением доступных закономерностей и ограниченностью формальной системы. Повторение вариантов после их понимания не обязательно даёт тот же опыт открытия, что первоначальное исследование.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "exhaustion",
+        "mastery",
+        "replayability",
+        "исчерпание",
+        "мастерство",
+        "повторная игра"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Опытный участник говорит, что уже видел всё, хотя контента количественно много."
+      ],
+      "questions": [
+        "Какая новая задача остаётся для уже освоившего основную закономерность?",
+        "Есть ли другая осознанная причина повторения кроме открытия неизвестного?"
+      ],
+      "recommendations": [
+        "Сопоставить поздние задания по требуемому способу решения, а не только по числу уровней.",
+        "Зафиксировать завершение, новую сложность или иную ценность повторной игры как разные возможные решения."
+      ],
+      "limitations": [
+        "Неизбежность скуки — сильное авторское обобщение, не доказанный срок жизни любой игры.",
+        "Ритуал, общение, самовыражение и упражнение освоенного могут сохранять ценность без нового паттерна."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 49, 53 (1-based); Chapter Three / finite formal systems, mastery, and boredom",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53
+          ],
+          "section": "Chapter Three / finite formal systems, mastery, and boredom",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.new_data_vs_new_system",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Новое сочетание знакомых правил и новая система требуют разного обучения",
+      "description": "Костер отделяет дополнительные данные для уже понятной схемы от столкновения с целой непривычной системой. Увеличение новизны может как уточнить освоение, так и разрушить опоры, поэтому новизна сама по себе не гарантирует более удачную прогрессию.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "variation",
+        "progression",
+        "cognitive load",
+        "вариативность",
+        "прогрессия",
+        "нагрузка"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Поздний контент добавляет правила или комбинации, чтобы избежать однообразия."
+      ],
+      "questions": [
+        "Игрок проверяет знакомое отношение в новой ситуации или должен построить другое?",
+        "Какие прежние опоры сохраняются при добавлении элемента?"
+      ],
+      "recommendations": [
+        "Различать параметрическую вариацию, новое сочетание и смену принципа.",
+        "Проверить, какое именно обучение требуется после изменения, прежде чем наращивать следующий слой."
+      ],
+      "limitations": [
+        "Число новых элементов не является универсальной мерой когнитивной нагрузки.",
+        "Не всякая резкая смена опыта является ошибкой: она может быть авторским разрывом ожиданий."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.unrecognized_pattern",
+        "knowledge.koster.finite_learning_space"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 53 (1-based); Chapter Three / new data, new experiences, and overload",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            53
+          ],
+          "section": "Chapter Three / new data, new experiences, and overload",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.boredom_differential",
+      "version": 1,
+      "kind": "Heuristic",
+      "title": "Одинаковое слово «скучно» может описывать разные проблемы",
+      "description": "Костер перечисляет различные ситуации, заканчивающиеся жалобой на скуку: слишком раннее понимание, отсутствие интереса к задаче, невозможность увидеть закономерность, неверный темп раскрытия и полное освоение. Одного слова недостаточно, чтобы выбрать повышение сложности или дополнительный контент.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "boredom",
+        "diagnosis",
+        "difficulty",
+        "скука",
+        "диагностика",
+        "сложность"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Получен отзыв «скучно» без конкретного эпизода и способа действий."
+      ],
+      "questions": [
+        "Может ли участник предсказывать результат или совсем не понимает происходящее?",
+        "Ему неинтересна сама задача, её повторение или скорость добавления нового?"
+      ],
+      "recommendations": [
+        "Уточнить эпизод, ожидание и фактические попытки до предложения изменения.",
+        "Составить несколько альтернативных причин и выбрать проверку, которая различает их."
+      ],
+      "limitations": [
+        "Список автора — гипотезы объяснения, не исчерпывающая диагностическая классификация.",
+        "Нельзя автоматически считать любую скуку недостатком обучения или патологией мотивации."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.finite_learning_space",
+        "knowledge.koster.new_data_vs_new_system"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 55, 57 (1-based); Chapter Three / different paths to boredom",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            55,
+            57
+          ],
+          "section": "Chapter Three / different paths to boredom",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.variation_pacing",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Скорость раскрытия вариаций может скрывать глубину или перегружать понимание",
+      "description": "Костер отмечает две противоположные ошибки: медленное раскрытие позволяет преждевременно принять игру за тривиальную, а слишком быстрое превращает изменения в непонятный шум. При том же наборе правил порядок и интервалы знакомства способны менять доступность их структуры.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "pacing",
+        "onboarding",
+        "variation",
+        "темп",
+        "обучение",
+        "вариативность"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Есть содержательная система, но участники уходят до её освоения."
+      ],
+      "questions": [
+        "Когда участник впервые получает задачу, требующую нового понимания?",
+        "Сколько непроверенных отношений появляется до возможности разобраться с предыдущими?"
+      ],
+      "recommendations": [
+        "Нанести введение новых отношений на последовательность задач.",
+        "Сравнить изменение порядка или интервала при сохранённом наборе правил."
+      ],
+      "limitations": [
+        "Наблюдаемая скорость освоения зависит от аудитории и предшествующего опыта.",
+        "Нет универсального темпа раскрытия и обязанности поддерживать постоянный вызов без передышек."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.new_data_vs_new_system",
+        "knowledge.koster.boredom_differential"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 55 (1-based); Chapter Three / pacing of pattern variation",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            55
+          ],
+          "section": "Chapter Three / pacing of pattern variation",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.learning_completion",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Завершённое освоение допускает конечный дизайн",
+      "description": "Предлагая своё определение удачной игры, Костер ставит акцент на том, чтобы участник успел освоить предлагаемое до прекращения игры. Это переносит внимание с бесконечного продления на содержание пройденного пути; сама книга рассматривает обучение как процесс с возможным завершением.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "completion",
+        "scope",
+        "learning",
+        "завершение",
+        "объём игры",
+        "освоение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Команда пытается бесконечно продлевать игру после понятного завершения."
+      ],
+      "questions": [
+        "Какое освоение составляет завершённое обещание проекта?",
+        "Чего не увидит игрок, если уйдёт в типичном месте прекращения?"
+      ],
+      "recommendations": [
+        "Определить содержательную границу обучения и показать доступные к ней открытия.",
+        "Рассматривать финал, свободную практику и новую задачу как разные форматы, не навязывая бесконечный рост."
+      ],
+      "limitations": [
+        "Это интерпретация авторского критерия в пределах learning-подхода, не универсальное определение хорошей игры.",
+        "Не нужно заставлять каждого участника освоить все возможности или считать уход после приятной короткой сессии дефектом."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope",
+        "knowledge.koster.finite_learning_space"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 57, 137 (1-based); Chapter Three / teaching what the game offers; Chapter Seven / learning and completion",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            57,
+            137
+          ],
+          "section": "Chapter Three / teaching what the game offers; Chapter Seven / learning and completion",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.structural_novelty",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Количество объектов не равно новому измерению задачи",
+      "description": "Анализируя изменение жанровых структур, Костер противопоставляет добавление ещё одного элемента появлению нового отношения или измерения взаимодействия. Технически более подробное отображение может сохранять прежний тип задачи; новизну полезно искать на уровне доступных решений.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "innovation",
+        "mechanics",
+        "topology",
+        "новизна",
+        "механики",
+        "структура задачи"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Предлагается новая механика, отличающаяся главным образом числом предметов или качеством графики."
+      ],
+      "questions": [
+        "Какая задача стала возможной, которой раньше не было?",
+        "Изменилось отношение между действиями и условиями или только внешний носитель?"
+      ],
+      "recommendations": [
+        "Сравнить варианты по структуре решений, ограничениям и новым возможностям.",
+        "Прототипировать одно новое отношение, прежде чем расширять коллекцию взаимозаменяемых объектов."
+      ],
+      "limitations": [
+        "Исторические оценки жанров в книге отражают эпоху и мнение автора, а не объективный реестр оригинальности.",
+        "Инкрементальное улучшение, тема и качество исполнения могут быть ценны без структурного новшества."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.new_data_vs_new_system"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 81, 83, 89 (1-based); Chapter Four / topology, incremental additions, and new dimensions",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            81,
+            83,
+            89
+          ],
+          "section": "Chapter Four / topology, incremental additions, and new dimensions",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.precision_before_speed",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Проверка точности и проверка быстроты могут требовать разных этапов",
+      "description": "Костер описывает постепенный переход от медленного контролируемого исполнения к быстрому как способ тренировки физической задачи. Он противопоставляет такое освоение необходимости обдумывать ситуацию: ускорение полезно не для любого вида игрового мышления.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "skill",
+        "timing",
+        "practice",
+        "навык",
+        "тайминг",
+        "практика"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Прогрессия ускоряет моторную задачу до того, как участник понимает точное исполнение."
+      ],
+      "questions": [
+        "Какая ошибка связана с неверным решением, а какая с нехваткой времени исполнить его?",
+        "Целевой навык должен автоматизироваться или сохранять обдумывание?"
+      ],
+      "recommendations": [
+        "Разделить точность в спокойном условии и выполнение при ограничении времени.",
+        "Добавлять скорость только там, где она соответствует целевому навыку, сохраняя возможность понять причину ошибки."
+      ],
+      "limitations": [
+        "Описание автора не доказывает универсальную схему моторного обучения.",
+        "Стратегическая игра может намеренно исследовать обдумывание; ускорение не является обязательным способом роста сложности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.understanding_vs_execution"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 85 (1-based); Chapter Four / precision, speed, and rote physical practice",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            85
+          ],
+          "section": "Chapter Four / precision, speed, and rote physical practice",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.exploration_as_skill",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Тщательное исследование может быть отдельным навыком, а не просто замедлением",
+      "description": "Костер рассматривает поиск информации и проверку разных сторон ситуации как иную задачу по сравнению с быстрым исполнением. Исследование может упражнять терпение и полноту обзора, если полученные сведения действительно меняют последующее решение.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "exploration",
+        "information",
+        "skill",
+        "исследование",
+        "информация",
+        "навык"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Проект заявляет исследование, но оно сводится к прохождению обязательных точек."
+      ],
+      "questions": [
+        "Какие сведения игрок получит только благодаря исследованию?",
+        "Как они меняют выбор, прогноз или понимание ситуации?"
+      ],
+      "recommendations": [
+        "Связать найденное с содержательным последствием для решения.",
+        "Сопоставить добровольное исследование и обязательный обход по тому, что участник узнаёт и применяет."
+      ],
+      "limitations": [
+        "Авторские заявления о пользе для современной жизни не доказывают реальный внешний перенос навыка.",
+        "Коллекционирование и прогулка могут иметь другую ценность; не всякое исследование должно максимизировать эффективность."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.structural_transfer"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 87 (1-based); Chapter Four / thoroughness and exploration",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            87
+          ],
+          "section": "Chapter Four / thoroughness and exploration",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.fiction_formal_distinction",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различать формальное правило и смысл его художественного представления",
+      "description": "На примерах абстрактной структуры и её оформления Костер показывает, что одну формальную задачу можно представить разными метафорами. Анализ правила и анализ его значения для человека поэтому выполняют разные функции; математическое совпадение ещё не делает художественные контексты эквивалентными.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "fiction",
+        "formal mechanics",
+        "context",
+        "фикция",
+        "правила",
+        "контекст"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Две механики объявляются одинаковыми или разными только по сюжету и названиям."
+      ],
+      "questions": [
+        "Какие формальные возможности действительно совпадают?",
+        "Как меняются ожидания и значение действия при другом представлении?"
+      ],
+      "recommendations": [
+        "Сопоставить переходы состояния независимо от метафоры, затем отдельно оценить её смысл.",
+        "Не использовать абстрактное совпадение как доказательство одинакового эмоционального или этического воздействия."
+      ],
+      "limitations": [
+        "Костер делает сильный акцент на формальном ядре; это не подтверждает незначимость фикции для всех игроков.",
+        "Из пересказа не следует вывод о безопасности, вреде или реальном поведенческом эффекте медиаконтента."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope",
+        "knowledge.koster.abstraction_for_practice"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages91,95,171,173(1-based); formal structure versus overall represented experience",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            91,
+            95,
+            171,
+            173
+          ],
+          "section": "Chapters Five and Ten / formal structure versus the overall represented experience",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.narrative_gating",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Препятствие между фрагментами истории не гарантирует их интеграцию",
+      "description": "Костер критикует подход, где готовая история чередуется с задачами, существующими лишь как пропуск к следующему фрагменту. Его претензия направляет внимание на то, что действие даёт самому повествовательному переживанию, а не только на количество написанного текста.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "narrative",
+        "integration",
+        "pacing",
+        "повествование",
+        "интеграция",
+        "темп"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Механика используется главным образом для задержки перед следующей сценой."
+      ],
+      "questions": [
+        "Учит ли действие чему-то о происходящем, чего не даёт просмотр сцены?",
+        "Меняет ли игровой результат значение или условия истории?"
+      ],
+      "recommendations": [
+        "Сравнить роль препятствия как самостоятельной задачи и как части повествования.",
+        "Проверить связанный эпизод, где действие раскрывает отношение или последствие, вместо автоматического добавления ещё текста."
+      ],
+      "limitations": [
+        "Оценки автором художественного уровня игр своего времени не принимаются как современные факты.",
+        "Нельзя запрещать линейное повествование, созерцание или автономные мини-игры на основании одной школы анализа."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fiction_formal_distinction"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 97, 99 (1-based); Chapter Five / story grafted onto gameplay; comparison of games and stories",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            97,
+            99
+          ],
+          "section": "Chapter Five / story grafted onto gameplay; comparison of games and stories",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.recognition_delight",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Удовольствие узнавания и открытие нового можно анализировать раздельно",
+      "description": "Костер отличает эстетическое узнавание с неожиданной деталью от процесса первоначального обучения. Знакомая форма может оставаться приятной именно благодаря распознаванию и вариации ожидания; это не обязательно тот же механизм, который автор называет fun.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "aesthetic pleasure",
+        "recognition",
+        "variation",
+        "эстетическое удовольствие",
+        "узнавание",
+        "вариация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Повторяемый знакомый элемент ценится, хотя не обучает новому правилу."
+      ],
+      "questions": [
+        "Что участнику приятно узнавать в знакомой форме?",
+        "Какая неожиданная деталь меняет впечатление, не разрушая опоры?"
+      ],
+      "recommendations": [
+        "Сохранять основания узнаваемости и отдельно проверять новый акцент.",
+        "Измерять или обсуждать заявленное переживание, не объявляя его отсутствием качества из-за нехватки учебной новизны."
+      ],
+      "limitations": [
+        "Это авторская граница понятий, не универсальная теория красоты.",
+        "Не следует выводить обязательную кратковременность любой эстетической привязанности из примеров книги."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 105, 101 (1-based); Chapter Five / delight, recognition, and author terminology",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            105,
+            101
+          ],
+          "section": "Chapter Five / delight, recognition, and author terminology",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.purpose_changes_context",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Одинаковое действие может переживаться по-разному при другой ставке и цели",
+      "description": "Сопоставляя практику и стремление победить, Костер подчёркивает роль контекста занятия. Освоение, демонстрация умения и социальное сравнение могут опираться на ту же операцию, но давать человеку разные причины участвовать и разные значения результата.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "context",
+        "stakes",
+        "motivation",
+        "контекст",
+        "ставки",
+        "мотивация"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Один режим используется одновременно для обучения и публичной оценки исполнения."
+      ],
+      "questions": [
+        "Что для участника сейчас поставлено на кон: возможность попробовать или оценка результата?",
+        "Можно ли безопасно исследовать альтернативу без нежелательного социального последствия?"
+      ],
+      "recommendations": [
+        "Разделить условия практики и соревнования там, где это соответствует замыслу.",
+        "Сопоставить реакцию на одинаковую задачу при разных целях, не смешивая наблюдения в один показатель удовольствия."
+      ],
+      "limitations": [
+        "Эволюционные объяснения социальных эмоций у автора здесь не проверяются.",
+        "Не все участники одинаково воспринимают соревнование; название режима не определяет реальную ставку."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 107 (1-based); Chapter Five / contextual fun and practicing versus winning",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            107
+          ],
+          "section": "Chapter Five / contextual fun and practicing versus winning",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.prior_experience_matters",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Предшествующий опыт ограничивает универсальность одной кривой обучения",
+      "description": "В рассуждении о разных игроках Костер отмечает, что люди приходят с разным опытом и возможностями решения конкретных задач, а один набор предпосылок и один темп не подходит всем. Практическое применение этого положения требует описывать реальные условия людей, а не приписывать им фиксированный способ мышления по группе.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "audience",
+        "prior knowledge",
+        "difficulty",
+        "аудитория",
+        "предшествующий опыт",
+        "сложность"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Рекомендация о темпе или трудности строится на одной удобной группе."
+      ],
+      "questions": [
+        "Какие знакомые способы решения уже доступны каждому участнику?",
+        "Где трудность вызвана неизвестным правилом, управлением или непривычной задачей?"
+      ],
+      "recommendations": [
+        "Записывать релевантный опыт и знакомство с проектом перед интерпретацией результата.",
+        "Проверять варианты входа и практики, а не делать вывод о врождённом типе игрока."
+      ],
+      "limitations": [
+        "Гендерные, возрастные и типологические обобщения соседних страниц не принимаются как установленные факты.",
+        "Упоминание learning styles и типологий в книге не является их научной валидацией или основанием персонального диагноза."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.boredom_differential"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 115 (1-based); Chapter Six / differing experience and limits of universal appeal",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            115
+          ],
+          "section": "Chapter Six / differing experience and limits of universal appeal",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.optimal_shortcuts",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Рациональный путь к награде может обходить желаемый процесс освоения",
+      "description": "Костер описывает, как участники ищут короткий путь и способны повторять безопасную простую задачу ради ресурсов, хотя она уже не даёт интересного открытия. Достижение цели по доступным правилам и прохождение задуманного учебного вызова оказываются разными вещами.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "incentives",
+        "exploits",
+        "routine",
+        "стимулы",
+        "эксплойты",
+        "рутина"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Выгодная стратегия избегает центрального вызова или требует долгого простого повторения."
+      ],
+      "questions": [
+        "Что правила реально поощряют по сравнению с заявленным опытом?",
+        "Можно ли получить нужную выгоду, не применяя целевой навык?"
+      ],
+      "recommendations": [
+        "Построить воспроизводимый сценарий оптимизации с затратами времени и ресурса.",
+        "Сравнить награду целевого действия и обходного пути; определить, является обход дефектом, допустимой стратегией или авторским компромиссом."
+      ],
+      "limitations": [
+        "Популярный или повторяющийся путь не обязательно неинтересен; нужны данные и контекст.",
+        "Нельзя использовать рассуждение автора об обходах как моральное оправдание нарушения согласованных правил или доступа к чужим системам."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.learning_completion"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 125, 129 (1-based); Chapter Seven / circumvention, optimization, and low-risk repetition",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            125,
+            129
+          ],
+          "section": "Chapter Seven / circumvention, optimization, and low-risk repetition",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.novice_expert_challenge",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Одна система наград может по-разному работать для новичка и эксперта",
+      "description": "Костер формулирует проблему освоения: простые испытания могут оставаться выгодными опытному игроку, а жёсткое соревнование исключать тех, кому ещё нужно учиться. Привлечение экспертов и предоставление пространства для практики новичкам требуют разных проверок.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "mastery problem",
+        "rewards",
+        "difficulty",
+        "проблема освоения",
+        "награды",
+        "сложность"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Опытным выгодно повторять простое, а начинающие быстро исключаются из участия."
+      ],
+      "questions": [
+        "Кто получает обучение, а кто только безопасную награду?",
+        "Может ли новичок продолжать пробовать после неудачи?"
+      ],
+      "recommendations": [
+        "Разнести наблюдения по релевантному уровню освоения и доступным возможностям.",
+        "Проверить добровольную практику, соответствующие испытания и структуру вознаграждения без обязательного давления на трудность."
+      ],
+      "limitations": [
+        "Категоричные оценки автором игр без навыка не превращаются в правило, запрещающее расслабляющий или случайный опыт.",
+        "Понятность поддержки, добровольность и цель важнее механического удаления всей пользы от лёгких занятий."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.optimal_shortcuts",
+        "knowledge.koster.prior_experience_matters"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 133, 135 (1-based); Chapter Seven / rewards, easy encounters, and the Mastery Problem",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            133,
+            135
+          ],
+          "section": "Chapter Seven / rewards, easy encounters, and the Mastery Problem",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.preparation_consequence",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Подготовка интересна, когда меняет последующее столкновение",
+      "description": "Костер включает в описание игрового испытания предварительный выбор, пространство задачи, правило и способности исполнения. Подготовка рассматривается как действие, влияющее на будущие возможности, а не как обязательная формальность перед каждым эпизодом.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "preparation",
+        "choice",
+        "dependencies",
+        "подготовка",
+        "выбор",
+        "зависимости"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Перед испытанием есть сбор ресурсов, настройка или выбор снаряжения."
+      ],
+      "questions": [
+        "Какие последствия подготовительного решения реально сохраняются в задаче?",
+        "Есть ли несколько полезных способов подготовки или только обязательный набор операций?"
+      ],
+      "recommendations": [
+        "Проследить подготовительный выбор до отличия в действиях, риске или результате.",
+        "Проверить минимальный эпизод без подготовки, чтобы понять, исчезает ли содержательное решение."
+      ],
+      "limitations": [
+        "Список компонентов автора не является обязательной архитектурой каждой игры.",
+        "Немедленная импровизация или минималистичная головоломка могут обходиться без отдельного этапа подготовки."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.optimal_shortcuts"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 131 (1-based); Chapter Seven / preparation and challenge structure",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            131
+          ],
+          "section": "Chapter Seven / preparation and challenge structure",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.feedback_differentiation",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Различимые последствия помогают связывать качество исполнения и результат",
+      "description": "В рассуждении об учебной структуре Костер выделяет вариативный ответ на действия и возможность различить качество применения способности. Ответом может быть не только численная награда, но и следующий ход противника или изменившаяся ситуация.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "feedback",
+        "learning",
+        "consequences",
+        "обратная связь",
+        "обучение",
+        "последствия"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Участник получает одинаковый итог при различном качестве решения или не понимает причину результата."
+      ],
+      "questions": [
+        "Какая наблюдаемая разница показывает, что способ действия изменил исход?",
+        "Не перекрывает ли случайность связь между решением и последствием?"
+      ],
+      "recommendations": [
+        "Определить, что в результате зависит от действия, ситуации и случайного события.",
+        "Проверить несколько контрастных выполнений и понимание их различия участником."
+      ],
+      "limitations": [
+        "Авторское требование стоимости неудачи не означает обязательности наказания, потери накопленного или запрета повторной попытки.",
+        "Вариативная награда не должна превращаться в манипулятивное подкрепление удержания; здесь проверяется информативность ответа."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.understanding_vs_execution"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 133 (1-based); Chapter Seven / variable feedback and consequences of encounters",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            133
+          ],
+          "section": "Chapter Seven / variable feedback and consequences of encounters",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.coherent_learning_core",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Количество систем оправдывается их вкладом в целевую задачу",
+      "description": "Костер противопоставляет наращивание множества испытаний их совместной работе на смысловое ядро игры. Для нужной задачи может требоваться мало или много систем; само количество не объясняет, чему и зачем участник учится.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "scope",
+        "coherence",
+        "systems",
+        "объём",
+        "согласованность",
+        "системы"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Игра расширяется новыми подсистемами, чтобы отсрочить освоение."
+      ],
+      "questions": [
+        "Как новая подсистема меняет главный способ рассуждать или действовать?",
+        "Что потеряется в обещанном опыте при её удалении?"
+      ],
+      "recommendations": [
+        "Связать каждую значимую систему с целевой задачей и последствиями её применения.",
+        "Сравнить расширение с более содержательным использованием существующих правил."
+      ],
+      "limitations": [
+        "Единое учебное ядро — подход автора, а не обязательная единственная цель полифоничной или экспериментальной игры.",
+        "Подсистема может поддерживать другую ценность, например выразительность или общение, и не обязана оправдываться только обучением."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope",
+        "knowledge.koster.structural_novelty"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 137 (1-based); Chapter Seven / elegant systems and the purpose they support",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            137
+          ],
+          "section": "Chapter Seven / elegant systems and the purpose they support",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.renewing_challenges",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Внешние источники вариаций дают новые задачи вместе с новыми рисками",
+      "description": "Костер рассматривает возникающее поведение, других участников и пользовательский контент как способы обновлять задачи. Такие подходы не освобождают от анализа: новые сочетания могут создавать обходы правил, а соперничество — слишком большой разрыв между участниками.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "emergence",
+        "multiplayer",
+        "user generated content",
+        "эмерджентность",
+        "мультиплеер",
+        "пользовательский контент"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Для долговечности предлагаются бесконечные сочетания, другие игроки или редактор контента."
+      ],
+      "questions": [
+        "Какая новая задача появляется для участника, а не только новый объект?",
+        "Кто проверяет допустимость и соответствие сложности новых ситуаций?"
+      ],
+      "recommendations": [
+        "Разделить источник вариативности, ограничения валидности и способ подбора доступного испытания.",
+        "Протестировать крайние сочетания и неравные уровни освоения до заявления о бесконечной реиграбельности."
+      ],
+      "limitations": [
+        "Мнение автора о частоте эксплойтов и точности подбора соперников не даёт универсального требования одинаковой силы.",
+        "Новизна и количество контента не доказывают интересность; процедурная валидность требует отдельной модели."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.novice_expert_challenge",
+        "knowledge.koster.structural_novelty"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 139 (1-based); Chapter Eight / emergence, opponents, and player-generated challenges",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            139
+          ],
+          "section": "Chapter Eight / emergence, opponents, and player-generated challenges",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.fulfillment_beyond_happiness",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Значимый опыт может быть трудным и не сводиться к веселью",
+      "description": "Костер расширяет разговор за пределы привычно приятного: взаимодействие может давать удовлетворение, заставлять думать и переживаться как сложное или болезненное. Он предлагает не ограничивать художественные возможности игры обязательным состоянием лёгкого веселья.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "fulfillment",
+        "art",
+        "experience",
+        "осмысленный опыт",
+        "искусство",
+        "переживание"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Критерий «весело каждую минуту» противоречит заявленному авторскому намерению."
+      ],
+      "questions": [
+        "Какую ценность участник получает помимо немедленного приятного ощущения?",
+        "Отличает ли он намеренную трудность опыта от непонятного интерфейса или технической ошибки?"
+      ],
+      "recommendations": [
+        "Назвать желаемый опыт и его возможную эмоциональную цену до оценки эпизода.",
+        "Собирать описания смысла, понимания и добровольного участия отдельно от оценки приятности."
+      ],
+      "limitations": [
+        "Фрагмент не доказывает художественное качество страдания или дискомфорта.",
+        "Уважение авторского замысла не отменяет понятных ожиданий, возможности прекратить участие и доступности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 155, 163 (1-based); Chapter Nine / fulfillment, emotional scope, and creative response",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            155,
+            163
+          ],
+          "section": "Chapter Nine / fulfillment, emotional scope, and creative response",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.presentation_whole_experience",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Формальное ядро не исчерпывает опыт готовой игры",
+      "description": "В поздней части книги Костер прямо уточняет, что никто не взаимодействует только с голой абстракцией: материальные качества, оформление, метафора и социальная ситуация важны для общего опыта. Несоответствие представления правилам может мешать, а подходящее представление — поддерживать понимание.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "presentation",
+        "coherence",
+        "game feel",
+        "представление",
+        "целостность",
+        "игровой опыт"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Удачный абстрактный прототип принимается за полную проверку готового опыта."
+      ],
+      "questions": [
+        "Что участник теряет без физической, визуальной или социальной формы взаимодействия?",
+        "Соответствуют ли ожидания от представления реальным последствиям правила?"
+      ],
+      "recommendations": [
+        "Проверять формальное ядро и интегрированный эпизод как разные артефакты.",
+        "Сохранить роль оформления в объяснении и переживании, даже если для диагностики временно убираются эффекты."
+      ],
+      "limitations": [
+        "Тест без графики применим к узкому авторскому определению fun, а не ко всем видам удовольствия.",
+        "Организационные предположения автора о роли творческого руководителя не являются обязательной структурой команды."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fiction_formal_distinction",
+        "knowledge.koster.recognition_delight"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 171, 173, 177 (1-based); Chapter Ten / aesthetic contribution, dressing, and overall experience",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            171,
+            173,
+            177
+          ],
+          "section": "Chapter Ten / aesthetic contribution, dressing, and overall experience",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.ethical_semantic_context",
+      "version": 1,
+      "kind": "Principle",
+      "title": "Известная удачная механика не оправдывает любое придаваемое ей значение",
+      "description": "Костер рассматривает этическую ответственность через целый опыт и подчёркивает, что проверенное формальное устройство можно соединить с отталкивающей посылкой. Обсуждение значения и культурного контекста остаётся содержательным даже тогда, когда механические переходы не изменились.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "ethics",
+        "cultural context",
+        "meaning",
+        "этика",
+        "культурный контекст",
+        "смысл"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Дизайн оправдывается исключительно тем, что его абстрактная механика уже доказала эффективность."
+      ],
+      "questions": [
+        "Какое отношение к людям и действиям выражает выбранное представление?",
+        "Что участник должен совершать и как игра объясняет или вознаграждает это действие?"
+      ],
+      "recommendations": [
+        "Рассмотреть правила, представление и интерпретацию вместе, сохранив альтернативные прочтения.",
+        "Зафиксировать авторское намерение, культурные предпосылки и реальные данные восприятия отдельно."
+      ],
+      "limitations": [
+        "Авторская позиция о социальной ответственности — нормативная аргументация, а не вычислимая универсальная этическая шкала.",
+        "По одной метафоре нельзя доказать реальное поведение игроков или объявить консенсус всех аудиторий."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.presentation_whole_experience",
+        "knowledge.koster.fiction_formal_distinction"
+      ],
+      "verification_status": "VERIFIED_SOURCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 179, 181 (1-based); Chapter Ten / semantic framing and creator responsibility",
+      "interpretation": "Оригинальный пересказ позиции автора по прочитанным OCR-страницам. VERIFIED_SOURCE подтверждает атрибуцию, а не универсальную истинность психологического объяснения. Конкретные вопросы, проверки применимости и рекомендации являются операционализацией LUDOSCOPE.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            179,
+            181
+          ],
+          "section": "Chapter Ten / semantic framing and creator responsibility",
+          "claim_scope": "author_position"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.method_boredom_diagnosis",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Протокол различения причин потери интереса",
+      "description": "Оригинальный протокол LUDOSCOPE проверяет несколько причин жалобы на скуку до изменения сложности. Выходом служат ограниченные контекстом объяснения и различающий эксперимент, а не диагноз участника или численная оценка удовольствия.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "research method",
+        "boredom",
+        "diagnosis",
+        "методика",
+        "скука",
+        "диагностика"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Есть реальное наблюдение или отзыв о потере интереса."
+      ],
+      "questions": [
+        "Скучно из-за понимания, непонимания, неинтересной задачи или внешнего контекста?",
+        "Какое наблюдение различит два наиболее вероятных объяснения?"
+      ],
+      "recommendations": [
+        "Зафиксировать конкретный эпизод и слова участника, отделив их от объяснения аналитика.",
+        "Проверить предсказание результата, фактические попытки и причину выбора действий.",
+        "Сформулировать конкурирующие объяснения: освоение, неразличимая структура, неподходящий темп, нерелевантная задача или иной контекст.",
+        "Изменить один различающий фактор в минимальном варианте и сохранить остальные условия.",
+        "Сопоставить данные без автоматического повышения гипотезы; остановиться при достаточном основании для ближайшего решения или нехватке данных."
+      ],
+      "limitations": [
+        "Протокол разработан LUDOSCOPE и не валидирован как психологическая диагностика.",
+        "Удобная малая выборка не позволяет оценить распространённость объяснения среди всех игроков."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.boredom_differential",
+        "knowledge.koster.variation_pacing",
+        "knowledge.koster.purpose_changes_context"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 53, 55, 57, 101, 107 (1-based); Grounding: boredom mechanisms and author scope of fun",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            53,
+            55,
+            57,
+            101,
+            107
+          ],
+          "section": "Grounding: boredom mechanisms and author scope of fun",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.method_pattern_transfer",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Протокол проверки освоения через изменённую задачу",
+      "description": "Оригинальный протокол LUDOSCOPE отделяет узнавание, словесное объяснение, заученное исполнение и применение общего отношения. Он не обещает перенос в реальную жизнь и исследует только заданный игровой принцип.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "research method",
+        "transfer",
+        "mastery",
+        "методика",
+        "перенос навыка",
+        "освоение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Заявляется обучение принципу, а не только запоминание последовательности."
+      ],
+      "questions": [
+        "Что именно сохраняется в новой задаче?",
+        "Какое прежнее знание или изменение трудности может объяснить успех без переноса?"
+      ],
+      "recommendations": [
+        "Определить целевое отношение, способы выполнения и возможные поверхностные подсказки.",
+        "Записать предыдущий опыт, ресурсы и условия тренировочной задачи.",
+        "Предложить новую конфигурацию с тем же отношением и другими поверхностными признаками без готового решения.",
+        "Собрать действия, ошибки и объяснение раздельно; сравнить словесное знание и выполнение.",
+        "Описать локальное свидетельство переноса или альтернативное объяснение; не выводить общую способность или внешний жизненный эффект."
+      ],
+      "limitations": [
+        "Это оригинальная методика, а не стандартизированный когнитивный тест.",
+        "Новое задание может требовать дополнительных навыков, поэтому неуспех не равен отсутствию исходного понимания."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.structural_transfer",
+        "knowledge.koster.understanding_vs_execution"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 31, 39, 43, 47, 85 (1-based); Grounding: chunking, levels of understanding, transfer and practice",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            31,
+            39,
+            43,
+            47,
+            85
+          ],
+          "section": "Grounding: chunking, levels of understanding, transfer and practice",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.method_variation_map",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Протокол карты вариаций и темпа обучения",
+      "description": "Оригинальный протокол LUDOSCOPE описывает, что именно меняется между заданиями и какие опоры остаются. Такая карта помогает отличить количественное продление от нового отношения и спланировать проверку порядка введения сложности.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "research method",
+        "variation",
+        "pacing",
+        "методика",
+        "вариативность",
+        "темп"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Планируется последовательность уровней, наград или новых правил."
+      ],
+      "questions": [
+        "Какое новое рассуждение требуется после каждого перехода?",
+        "Есть ли время обнаружить связь до появления следующего неизвестного?"
+      ],
+      "recommendations": [
+        "Для каждого задания записать знакомые отношения, новые параметры и новые правила.",
+        "Отделить внешнее разнообразие от различий способа решения.",
+        "Отметить момент первого необходимого применения каждого отношения и доступную обратную связь.",
+        "Сравнить два порядка или интервала введения при одинаковом содержании, сохранив знакомство участников с игрой.",
+        "Сохранить данные понимания и выполнения; не выводить единственную идеальную кривую для всех людей."
+      ],
+      "limitations": [
+        "Карта описывает замысел, пока не сопоставлена с реальными действиями.",
+        "Больше освоенных отношений не означает автоматически более ценный опыт; цель проекта может быть другой."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.variation_pacing",
+        "knowledge.koster.structural_novelty",
+        "knowledge.koster.new_data_vs_new_system"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 49, 53, 55, 81, 83, 89 (1-based); Grounding: novelty, variation pacing and structural change",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            55,
+            81,
+            83,
+            89
+          ],
+          "section": "Grounding: novelty, variation pacing and structural change",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.method_incentive_bypass",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Протокол поиска выгодного обхода целевого вызова",
+      "description": "Оригинальный протокол LUDOSCOPE связывает стимулы с тем действием, которое дизайнер ожидает упражнять. Он проверяет воспроизводимый обход без моральной оценки участника и без объявления любого необычного решения ошибкой.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "research method",
+        "incentives",
+        "exploits",
+        "методика",
+        "стимулы",
+        "обходы"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Есть формальная награда, ресурс или продвижение, допускающие несколько путей."
+      ],
+      "questions": [
+        "Можно ли достичь результата, не решая целевую задачу?",
+        "Как меняется выгодность простого повторения после освоения?"
+      ],
+      "recommendations": [
+        "Назвать желаемый вызов и отдельно фактическую цель, заданную правилами.",
+        "Формализовать доступные действия, затраты, награды и ограничения рассматриваемого участка.",
+        "Построить легальный сценарий обхода или безопасного повторения и проверить его в модели либо воспроизводимом прототипе.",
+        "Сопоставить издержки и последствия целевого и обходного пути, указав условие предпочтительности.",
+        "Классифицировать результат как возможный дефект, осознанную альтернативу или неизвестное; проверить изменение стимулов без автоматического удаления найденной стратегии."
+      ],
+      "limitations": [
+        "Без полной модели вывод ограничен рассмотренными действиями и условиями.",
+        "Выгодность не доказывает скуку; вычислительный результат не устанавливает интересность стратегии."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.optimal_shortcuts",
+        "knowledge.koster.novice_expert_challenge"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 125, 129, 131, 133, 135 (1-based); Grounding: circumvention, optimization, preparation and mastery problem",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            125,
+            129,
+            131,
+            133,
+            135
+          ],
+          "section": "Grounding: circumvention, optimization, preparation and mastery problem",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.method_feedback_discrimination",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Протокол проверки различимости причин результата",
+      "description": "Оригинальный протокол LUDOSCOPE исследует, может ли участник связать различие действий с различием последствий. Он особенно полезен, когда красивый ответ, случайный исход или одинаковая награда маскируют то, что можно освоить.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "research method",
+        "feedback",
+        "learning",
+        "методика",
+        "обратная связь",
+        "обучение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Доступен прототип или модель с последствиями действий."
+      ],
+      "questions": [
+        "Какая часть результата обусловлена действием, а какая случайностью или скрытым состоянием?",
+        "Какую закономерность участник может вывести из доступного сигнала?"
+      ],
+      "recommendations": [
+        "Выбрать два контрастных выполнения при сопоставимом исходном состоянии.",
+        "Разделить формальный переход, представление и случайные условия.",
+        "Проверить различимость сигналов и предсказания следующего результата участником.",
+        "При необходимости повторить с контролируемым случайным входом, не выдавая модель за реальный опыт.",
+        "Сохранить наблюдения, слова и вывод отдельно; прекратить при отсутствии артефакта и запросить достаточную спецификацию."
+      ],
+      "limitations": [
+        "Протокол не требует постоянной полной прозрачности: неопределённость может быть целью.",
+        "Точность предсказания не равна удовольствию и не доказывает общее понимание системы."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.feedback_differentiation",
+        "knowledge.koster.presentation_whole_experience"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 33, 47, 133, 171, 177 (1-based); Grounding: expectation, practicing alternatives, feedback and representation",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            33,
+            47,
+            133,
+            171,
+            177
+          ],
+          "section": "Grounding: expectation, practicing alternatives, feedback and representation",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.method_semantic_mechanical_review",
+      "version": 1,
+      "kind": "ResearchMethod",
+      "title": "Протокол сопоставления правила, представления и намерения",
+      "description": "Оригинальный протокол LUDOSCOPE проверяет одновременно формальную задачу, художественное значение и целевой опыт. Он сохраняет различие между равенством механических переходов и различием культурного или эмоционального смысла.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "research method",
+        "context",
+        "ethics",
+        "методика",
+        "контекст",
+        "этика"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Механика переносится в новый контекст или её значение вызывает противоречивые трактовки."
+      ],
+      "questions": [
+        "Какое действие формально совершается и чем оно представлено?",
+        "Что автор хочет сообщить и какие альтернативные прочтения доступны участнику?"
+      ],
+      "recommendations": [
+        "Описать правило без художественных названий, затем отдельно описать значение представления.",
+        "Сопоставить обещания, поощряемое действие и реальные последствия для мира игры.",
+        "Перечислить возможные трактовки и культурные предпосылки, не объявляя их реакцией всей аудитории.",
+        "Проверить доступный эпизод с подходящими участниками и нейтральными вопросами, сохранив разногласия.",
+        "Предложить варианты изменения правила, формы или объяснения и их компромиссы; не вычислять универсальную этическую оценку."
+      ],
+      "limitations": [
+        "Это оригинальный протокол, а не нормативный стандарт и не доказательство влияния на реальное поведение.",
+        "Без реальных наблюдений реакции аудитории остаются гипотезами, даже если интерпретация выглядит убедительно."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fiction_formal_distinction",
+        "knowledge.koster.ethical_semantic_context",
+        "knowledge.koster.presentation_whole_experience"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 91, 95, 155, 171, 173, 177, 179, 181 (1-based); Grounding: formal abstraction, fulfillment, whole experience and ethical context",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            91,
+            95,
+            155,
+            171,
+            173,
+            177,
+            179,
+            181
+          ],
+          "section": "Grounding: formal abstraction, fulfillment, whole experience and ethical context",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.lens_already_solved",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза уже решённой задачи",
+      "description": "Оригинальный вопрос LUDOSCOPE рассматривает поздний контент глазами участника, который уже понимает основной принцип. Он помогает отличить новую возможность от повторного предъявления известного под другим названием.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "lens",
+        "mastery",
+        "exhaustion",
+        "линза",
+        "мастерство",
+        "исчерпание"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "После освоения появляются новые уровни, не меняющие способ решения."
+      ],
+      "questions": [
+        "Что здесь нужно понять человеку, который уже предсказывает результат?",
+        "Если ничего нового нет, какая другая ценность оправдывает повторение?"
+      ],
+      "recommendations": [
+        "Сравнить несколько поздних задач по рассуждению и действиям, а не оформлению.",
+        "Выбрать осмысленное завершение, практику или новую задачу; не добавлять подсистему без ясного назначения."
+      ],
+      "limitations": [
+        "Отсутствие нового обучения не доказывает отсутствие ценности повторной игры.",
+        "Это оригинальная линза LUDOSCOPE, а не проверенная шкала глубины."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.finite_learning_space",
+        "knowledge.koster.fun_term_scope"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 49, 53, 55, 57 (1-based); Grounding: exhaustion and paths to boredom",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            55,
+            57
+          ],
+          "section": "Grounding: exhaustion and paths to boredom",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.lens_missing_foothold",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза отсутствующей опоры",
+      "description": "Оригинальная линза LUDOSCOPE спрашивает, есть ли у человека доступное основание построить первое полезное предсказание. Она направлена на потенциальную обучаемость структуры, а не на объявление сложной системы ошибкой.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "lens",
+        "onboarding",
+        "patterns",
+        "линза",
+        "обучение",
+        "закономерности"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Игрок не видит закономерности и повторяет несвязанные попытки."
+      ],
+      "questions": [
+        "Какая стабильная связь доступна для обнаружения до первого поражения?",
+        "Какой контрастный пример отделит полезную гипотезу от случайного совпадения?"
+      ],
+      "recommendations": [
+        "Найти наблюдаемый повторяющийся элемент и проверить его фактическую стабильность.",
+        "Дать минимальную опору, сохранив задачу самостоятельного вывода; без данных оставить гипотезу о непонимании."
+      ],
+      "limitations": [
+        "Скрытая закономерность может быть намеренной загадкой; линза не требует объяснить всё сразу.",
+        "Нельзя называть непонимание недостатком интеллекта или фиксированного типа человека."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.unrecognized_pattern",
+        "knowledge.koster.boredom_differential"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 35, 37, 53, 55 (1-based); Grounding: unfamiliar structure and overload",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            35,
+            37,
+            53,
+            55
+          ],
+          "section": "Grounding: unfamiliar structure and overload",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.lens_portable_relation",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза переносимого отношения",
+      "description": "Оригинальная линза LUDOSCOPE ищет то, что сохраняется при изменении поверхности задачи. Её цель — проверить, действительно ли новая ситуация требует обобщения, а не повторения точной моторной или сюжетной последовательности.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "lens",
+        "transfer",
+        "skill",
+        "линза",
+        "перенос навыка",
+        "навык"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Дизайн заявляет развитие умения, применимого в разных ситуациях."
+      ],
+      "questions": [
+        "Какое отношение остаётся верным после смены объектов и расположения?",
+        "Что участник сделает, если знакомая поверхностная подсказка больше не указывает ответ?"
+      ],
+      "recommendations": [
+        "Предложить малую изменённую задачу с тем же принципом и записать способ решения.",
+        "Разделить наблюдение переноса внутри игры и недоказанное обещание внешней пользы."
+      ],
+      "limitations": [
+        "Успех на одной новой задаче не доказывает общий навык.",
+        "Это авторский вопрос LUDOSCOPE, а не нейрокогнитивный тест."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.structural_transfer",
+        "knowledge.koster.method_pattern_transfer"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 39, 43, 47 (1-based); Grounding: understanding, practice, and transfer",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            39,
+            43,
+            47
+          ],
+          "section": "Grounding: understanding, practice, and transfer",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.lens_rewarded_avoidance",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза вознаграждаемого избегания",
+      "description": "Оригинальная линза LUDOSCOPE выясняет, не делает ли система наиболее выгодным уход от того опыта, который она обещает. Она рассматривает правила и стимулы без предположения, что игрок обязан добровольно создавать себе неудобство.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "lens",
+        "incentives",
+        "choice",
+        "линза",
+        "стимулы",
+        "выбор"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Рациональная стратегия состоит из безопасного простого повторения или обхода центрального вызова."
+      ],
+      "questions": [
+        "Какой путь выберет человек, если заботится о результате и имеет доступную информацию?",
+        "Что в награде делает намеренный риск или целевой навык ненужным?"
+      ],
+      "recommendations": [
+        "Построить конкретный сценарий предпочтительного обхода и проверить его условия.",
+        "Рассмотреть изменение стимула, явную альтернативную цель или признание обхода допустимой стратегией."
+      ],
+      "limitations": [
+        "Нельзя объявить повторение скучным без проверки опыта.",
+        "Стратегическая находка может быть удачной эмерджентностью, а не нарушением правил."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.optimal_shortcuts",
+        "knowledge.koster.method_incentive_bypass"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 125, 129, 133 (1-based); Grounding: optimization, circumvention, and mastery rewards",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            125,
+            129,
+            133
+          ],
+          "section": "Grounding: optimization, circumvention, and mastery rewards",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.lens_same_rules_different_meaning",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза другого значения того же действия",
+      "description": "Оригинальная линза LUDOSCOPE сравнивает две формы одной механики и спрашивает, что меняется для человека при неизменной формальной структуре. Она удерживает художественную и культурную интерпретацию рядом с вычислимой моделью, не смешивая их статусы.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "lens",
+        "context",
+        "meaning",
+        "линза",
+        "контекст",
+        "смысл"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Одна механика переносится между сеттингами или её значение объявляют несущественным."
+      ],
+      "questions": [
+        "Что участник считает своим действием в каждой форме?",
+        "Какие ожидания или оценки меняются, хотя состояние обновляется одинаково?"
+      ],
+      "recommendations": [
+        "Описать совпадающее правило и различающиеся значения раздельно.",
+        "Проверить реальные трактовки либо пометить их как гипотезы; не делать вывода о вреде или пользе по абстрактному равенству."
+      ],
+      "limitations": [
+        "Реакции зависят от человека и контекста; одной универсальной трактовки может не быть.",
+        "Линза оригинальна и не служит объективной этической шкалой."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fiction_formal_distinction",
+        "knowledge.koster.ethical_semantic_context"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 91, 95, 171, 173, 179, 181 (1-based); Grounding: metaphor, whole experience, and ethical semantics",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            91,
+            95,
+            171,
+            173,
+            179,
+            181
+          ],
+          "section": "Grounding: metaphor, whole experience, and ethical semantics",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.lens_enjoyment_not_learning",
+      "version": 1,
+      "kind": "Lens",
+      "title": "Линза ценности без нового урока",
+      "description": "Оригинальная линза LUDOSCOPE проверяет, не вытесняет ли применение learning-подхода другие намеренно выбранные переживания. Она нужна, когда знакомая практика, красота, общение или сложное размышление ценны без открытия нового правила.",
+      "source_ids": [
+        "source.koster_user_pdf"
+      ],
+      "school": "learning_patterns",
+      "tags": [
+        "lens",
+        "experience",
+        "creative freedom",
+        "линза",
+        "игровой опыт",
+        "авторская свобода"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "design",
+        "prototype",
+        "playtest",
+        "review",
+        "validate",
+        "release"
+      ],
+      "conditions": [
+        "Предлагается удалить элемент только потому, что он не обучает новой закономерности."
+      ],
+      "questions": [
+        "Какая заявленная ценность существует здесь помимо обучения?",
+        "Что потеряет опыт, если заменить знакомое взаимодействие очередным новым правилом?"
+      ],
+      "recommendations": [
+        "Сопоставить элемент с авторским замыслом и реальными описаниями опыта.",
+        "Зафиксировать осознанный отказ от учебной новизны, если другая ценность обоснована; при отсутствии данных предложить проверку вместо запрета."
+      ],
+      "limitations": [
+        "Это граница применимости конкретной школы, а не утверждение о невозможности обучения в данном эпизоде.",
+        "Заявленная альтернативная ценность тоже требует контекста и не доказывается одним намерением автора."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.koster.fun_term_scope",
+        "knowledge.koster.fulfillment_beyond_happiness",
+        "knowledge.koster.recognition_delight"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "User-supplied scanned Paraglyph PDF, PDF pages 101, 105, 107, 155, 163, 171 (1-based); Grounding: author terminology, recognition, fulfillment, and presentation",
+      "interpretation": "Оригинальная методика или аналитическая линза LUDOSCOPE. Проверенные страницы — основания интерпретации, а не свидетельство авторства Костера или эмпирической валидности данного протокола.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            101,
+            105,
+            107,
+            155,
+            163,
+            171
+          ],
+          "section": "Grounding: author terminology, recognition, fulfillment, and presentation",
+          "claim_scope": "derived_method"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.conflict_learning_routine",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Новое освоение, оптимальная рутина и намеренное повторение",
+      "description": "Костер описывает исчерпание изучаемого паттерна и ситуацию, когда выгодная повторяемая стратегия вытесняет новое освоение. Сильвестр отличает повтор инструмента от повторения опыта: одинаковое действие может обслуживать новые контексты и решения. Возможный компромисс появляется, когда сокращение рутины вместе с обязательной работой убирает подготовку или ритм, которые автор считает ценными. Сначала следует различить новый выбор внутри освоенного действия, оптимальную обязанность и намеренный ритуал; затем выбирать, что менять. Ритуал здесь — возможная авторская цель проекта, а не приписанная одной из книг теория.",
+      "source_ids": [
+        "source.koster_user_pdf",
+        "source.sylvester_ru_2020"
+      ],
+      "school": "cross_source_design_tradeoffs",
+      "tags": [
+        "koster",
+        "cross_source",
+        "conflict",
+        "компромисс",
+        "mastery",
+        "repetition",
+        "мастерство",
+        "повторение"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "prototype",
+        "production",
+        "playtest"
+      ],
+      "conditions": [
+        "Освоенное действие часто повторяется либо является выгодным обязательным путём.",
+        "Рассматривается автоматизация или удаление повторения; назначение повторения ещё не установлено."
+      ],
+      "questions": [
+        "Что меняется в задаче игрока при очередном повторе?",
+        "Можно ли получить тот же прогресс без повторяемой обязанности и какое переживание тогда исчезнет?",
+        "Желает ли автор спокойного ритма, нового освоения или их чередования?"
+      ],
+      "recommendations": [
+        "Составьте варианты: текущая последовательность, автоматизация обязательного исполнения, те же действия в новом контексте.",
+        "Эксперимент: в одинаковых пределах времени и прогресса наблюдайте выбор маршрута, решения внутри повторения и объяснение участником его назначения. Ритм и новизну обсуждайте отдельными вопросами; критерии интерпретации задайте заранее.",
+        "Не объявляйте рутину дефектом только из-за автоматизации навыка; утверждение о скуке оставьте гипотезой до реальных данных."
+      ],
+      "limitations": [
+        "Поведение, выгодное по модели наград, не доказывает, что игрок будет его предпочитать.",
+        "Повторение может иметь расслабляющую или социальную ценность; эксперимент должен проверять цель конкретного проекта.",
+        "Наблюдаемое выполнение не позволяет автоматически заключить об отсутствии мыслительной активности."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.sylvester.repeated_tool_new_context",
+        "knowledge.sylvester.decision_volume_mastery"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "source.koster_user_pdf; PDF pages (1-based): 49, 53, 129; Chapter Three: What Games Are; Chapter Seven: The Problem with Learning — исчерпание паттерна, рутина и повтор лёгких задач; source.sylvester_ru_2020; PDF pages (1-based): 69; Глава 2 → Прекрасный запах элегантности поутру: повторное использование",
+      "interpretation": "Оригинальный межисточниковый вывод LUDOSCOPE о возможном проектном компромиссе. Не утверждается публичный спор авторов или несовместимость их теорий. Проверены указанные фрагменты; сама рекомендация и предлагаемый эксперимент являются авторской операционализацией, а не эмпирически подтверждённым результатом. Когнитивные и нейробиологические объяснения книг не повышаются здесь до общенаучных фактов.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            129
+          ],
+          "section": "Chapter Three: What Games Are; Chapter Seven: The Problem with Learning — исчерпание паттерна, рутина и повтор лёгких задач",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            69
+          ],
+          "section": "Глава 2 → Прекрасный запах элегантности поутру: повторное использование",
+          "claim_scope": "cross_source_inference"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.conflict_fun_experience_scope",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Новое освоение не охватывает весь задуманный игровой опыт",
+      "description": "В прочитанном фрагменте Костер специально ограничивает используемое им понятие fun освоением задачи и отдельно обсуждает эстетическое удовольствие и другие переживания. Сильвестр предлагает оценивать опыт шире веселья, включая тонкие и неоднозначные эмоции. Поэтому из отсутствия нового паттерна нельзя автоматически вывести бесполезность сцены для данной игры. Проектный компромисс возникает при распределении времени между освоением, атмосферой и переживанием последствий: улучшение одной составляющей может сократить другую, хотя терминологически позиции авторов совместимы.",
+      "source_ids": [
+        "source.koster_user_pdf",
+        "source.sylvester_ru_2020"
+      ],
+      "school": "cross_source_design_tradeoffs",
+      "tags": [
+        "koster",
+        "cross_source",
+        "conflict",
+        "компромисс",
+        "experience",
+        "fun_scope",
+        "опыт",
+        "границы_fun"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "prototype",
+        "production",
+        "playtest"
+      ],
+      "conditions": [
+        "Аудит пометил сцену как бесполезную из-за отсутствия новой задачи.",
+        "Авторская цель включает атмосферу, сопереживание, созерцание или неоднозначность."
+      ],
+      "questions": [
+        "Проверяем ли мы освоение задачи или другую заявленную ценность сцены?",
+        "Усиливает ли новая задача переживание события либо отнимает внимание у него?",
+        "Не выдано ли личное предпочтение исследователя за измерение эмоции участника?"
+      ],
+      "recommendations": [
+        "Запишите отдельно цель освоения и цель переживания; применяйте разные критерии к каждой.",
+        "Эксперимент: сравните фрагмент с дополнительной задачей и без неё, сохраняя значимое содержание. После прохождения отдельно выясните понятые последствия, запомнившиеся моменты и характер переживания; не подменяйте их количеством действий.",
+        "Обсудите с автором цену смены темпа до переработки сцены; не превращайте одну рамку анализа в обязательное определение хорошей игры."
+      ],
+      "limitations": [
+        "Это различение области анализа, а не доказанное противоречие между авторами.",
+        "Открытый рассказ после теста ограничен памятью и не является непрерывным измерением эмоций.",
+        "Утверждения Костера об эмоциях и flow трактуются как его позиция; биологические объяснения не проверялись независимо."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.sylvester.emotional_range",
+        "knowledge.sylvester.experience_sequence",
+        "knowledge.sylvester.atmosphere_and_pacing"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "source.koster_user_pdf; PDF pages (1-based): 99, 101, 105, 107, 109; Chapter Five: What Games Aren’t — различение learning-oriented fun, aesthetic appreciation и flow; source.sylvester_ru_2020; PDF pages (1-based): 10, 11, 12, 13, 44; Глава 1 → Главенство эмоций; Создавая опыт",
+      "interpretation": "Оригинальный межисточниковый вывод LUDOSCOPE о возможном проектном компромиссе. Не утверждается публичный спор авторов или несовместимость их теорий. Проверены указанные фрагменты; сама рекомендация и предлагаемый эксперимент являются авторской операционализацией, а не эмпирически подтверждённым результатом. Когнитивные и нейробиологические объяснения книг не повышаются здесь до общенаучных фактов.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            99,
+            101,
+            105,
+            107,
+            109
+          ],
+          "section": "Chapter Five: What Games Aren’t — различение learning-oriented fun, aesthetic appreciation и flow",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            10,
+            11,
+            12,
+            13,
+            44
+          ],
+          "section": "Глава 1 → Главенство эмоций; Создавая опыт",
+          "claim_scope": "cross_source_inference"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.conflict_novelty_attention_cost",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Новая вариация может поддержать освоение или скрыть уже понятные правила",
+      "description": "Костер описывает риск слишком медленного и слишком быстрого раскрытия вариаций: паттерн может казаться исчерпанным или неразличимым. У Сильвестра новая механика имеет цену понимания, а насыщенный опыт может возникать из взаимодействия уже освоенных правил. Возможное противоречие рекомендаций — добавить новый паттерн либо сохранить понятную систему — разрешается через вопрос, требует ли вариация нового осмысленного применения или просто умножает исключения. Новизна и глубина не измеряются количеством введённых правил.",
+      "source_ids": [
+        "source.koster_user_pdf",
+        "source.sylvester_ru_2020"
+      ],
+      "school": "cross_source_design_tradeoffs",
+      "tags": [
+        "koster",
+        "cross_source",
+        "conflict",
+        "компромисс",
+        "novelty",
+        "cognitive_cost",
+        "новизна",
+        "стоимость_понимания"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "prototype",
+        "production",
+        "playtest"
+      ],
+      "conditions": [
+        "Освоившим игру участникам не хватает новых задач, новичкам трудно различать правила.",
+        "Предлагается расширить набор правил или вводить новые исключения."
+      ],
+      "questions": [
+        "Какую прежнюю закономерность игрок использует в новой ситуации?",
+        "Нужен ли новый тип правила или достаточно новых условий применения?",
+        "Какие объяснения результата доступны участникам разного опыта?"
+      ],
+      "recommendations": [
+        "Сравните вариацию контекста при тех же правилах, одно новое правило и более постепенное раскрытие.",
+        "Эксперимент: отдельно для участников с разной знакомостью фиксируйте ошибки, объяснение причин исхода и перенос на следующую ситуацию. Не объединяйте группы в одну оценку сложности.",
+        "Укажите цену альтернатив: скорость раскрытия, дополнительный словарь, выразительность и объём проверяемых сочетаний."
+      ],
+      "limitations": [
+        "Понятная внешне вариация не доказывает освоение правила.",
+        "Группы опыта не являются неизменными типами людей или врождёнными стилями обучения.",
+        "Скорость раскрытия и сложность не имеют универсального оптимума."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.sylvester.attention_cost",
+        "knowledge.sylvester.combinatorial_interactions",
+        "knowledge.schell.difficulty_cohorts"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "source.koster_user_pdf; PDF pages (1-based): 49, 53, 55; Chapter Three: What Games Are — новизна, overload и темп раскрытия вариаций; source.sylvester_ru_2020; PDF pages (1-based): 60, 61, 65, 66; Глава 2 → Элегантность; Прекрасный запах элегантности поутру: простота и несколько применений",
+      "interpretation": "Оригинальный межисточниковый вывод LUDOSCOPE о возможном проектном компромиссе. Не утверждается публичный спор авторов или несовместимость их теорий. Проверены указанные фрагменты; сама рекомендация и предлагаемый эксперимент являются авторской операционализацией, а не эмпирически подтверждённым результатом. Когнитивные и нейробиологические объяснения книг не повышаются здесь до общенаучных фактов.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            49,
+            53,
+            55
+          ],
+          "section": "Chapter Three: What Games Are — новизна, overload и темп раскрытия вариаций",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            60,
+            61,
+            65,
+            66
+          ],
+          "section": "Глава 2 → Элегантность; Прекрасный запах элегантности поутру: простота и несколько применений",
+          "claim_scope": "cross_source_inference"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.conflict_progress_transfer",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Числовой успех и освоение переносимого навыка могут расходиться",
+      "description": "Костер на примере перехода между инструментами различает конкретное движение и более широкую библиотеку применимых закономерностей, а при обсуждении обхода задачи отделяет достижение цели от освоения предполагаемой техники. Шелл прямо различает реальный навык игрока и рост виртуального навыка персонажа. Отсюда возможен проектный компромисс: повышение чисел делает прогресс заметным и доступным, но может скрывать, научился ли игрок применять правило в незнакомом контексте. Это аргумент за разные проверки, а не против числовой прогрессии.",
+      "source_ids": [
+        "source.koster_user_pdf",
+        "source.schell_ru_2019"
+      ],
+      "school": "cross_source_design_tradeoffs",
+      "tags": [
+        "koster",
+        "cross_source",
+        "conflict",
+        "компромисс",
+        "transfer",
+        "progression",
+        "перенос_навыка",
+        "прогрессия"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "prototype",
+        "production",
+        "playtest"
+      ],
+      "conditions": [
+        "Заявлен рост мастерства на основании побед, XP или улучшения экипировки.",
+        "Повторное прохождение может опираться на память конкретного сценария."
+      ],
+      "questions": [
+        "Сохраняется ли результат при одинаковых возможностях персонажа?",
+        "Может ли игрок применить тот же принцип при новых признаках задачи?",
+        "Не проверяем ли мы запоминание расположения вместо заявленного навыка принятия решения?"
+      ],
+      "recommendations": [
+        "Разделите показатели мощности персонажа, знания конкретного сценария и применения принципа.",
+        "Эксперимент: после практики предложите незнакомую вариацию с тем же принципом и фиксированными возможностями; отдельно сравните вариант с числовым усилением. Заранее опишите признаки применения принципа и возможные альтернативные объяснения.",
+        "Сохраняйте числовую прогрессию, если она нужна целевому опыту, но не называйте её самостоятельным доказательством обучения."
+      ],
+      "limitations": [
+        "Одна новая задача не устанавливает устойчивый перенос; различие трудности вариантов нужно учитывать.",
+        "Результат может зависеть от управления, чтения и памяти, а не только от целевого навыка.",
+        "Пример Костера не служит общей эмпирической теорией переноса; вывод здесь является операционализацией LUDOSCOPE."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.schell.player_vs_character_skill",
+        "knowledge.schell.latent_skill_requirements",
+        "knowledge.schell.method_skill_transfer"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "source.koster_user_pdf; PDF pages (1-based): 43, 125; Chapter Two: How the Brain Works — пример переноса между струнными инструментами; Chapter Seven: The Problem with Learning — обход задания и освоение техники; source.schell_ru_2019; PDF pages (1-based): 205, 206; Глава 12 → Механика 6. Навык; Реальные навыки против виртуальных; Список навыков",
+      "interpretation": "Оригинальный межисточниковый вывод LUDOSCOPE о возможном проектном компромиссе. Не утверждается публичный спор авторов или несовместимость их теорий. Проверены указанные фрагменты; сама рекомендация и предлагаемый эксперимент являются авторской операционализацией, а не эмпирически подтверждённым результатом. Когнитивные и нейробиологические объяснения книг не повышаются здесь до общенаучных фактов.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            43,
+            125
+          ],
+          "section": "Chapter Two: How the Brain Works — пример переноса между струнными инструментами; Chapter Seven: The Problem with Learning — обход задания и освоение техники",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.schell_ru_2019",
+          "pdf_pages": [
+            205,
+            206
+          ],
+          "section": "Глава 12 → Механика 6. Навык; Реальные навыки против виртуальных; Список навыков",
+          "claim_scope": "cross_source_inference"
+        }
+      ]
+    },
+    {
+      "id": "knowledge.koster.conflict_variable_outcome_readable_rules",
+      "version": 1,
+      "kind": "TheoryConflict",
+      "title": "Изменчивый исход и понятные последствия требуют раздельной настройки",
+      "description": "Костер предлагает учитывать неодинаковый результат встречи и связь результата с использованием навыка; его пример допускает вариативность через ответ оппонента. Сильвестр подчёркивает устойчивость и понятность правил, позволяющих оценивать возможное будущее. Поэтому совет добавить неопределённость не следует реализовывать произвольной сменой причинно-следственных связей. Проектный компромисс возникает между свежестью исходов, контригрой и возможностью понять, что изменить в следующей попытке.",
+      "source_ids": [
+        "source.koster_user_pdf",
+        "source.sylvester_ru_2020"
+      ],
+      "school": "cross_source_design_tradeoffs",
+      "tags": [
+        "koster",
+        "cross_source",
+        "conflict",
+        "компромисс",
+        "uncertainty",
+        "feedback",
+        "неопределённость",
+        "обратная_связь"
+      ],
+      "applicable_genres": [],
+      "applicable_stages": [
+        "concept",
+        "prototype",
+        "production",
+        "playtest"
+      ],
+      "conditions": [
+        "Повтор задачи полностью предсказуем или введён случайный результат.",
+        "Игрок не может связать действие и исход либо не видит возможности улучшить попытку."
+      ],
+      "questions": [
+        "Что остаётся устойчивым и изучаемым при различии исходов?",
+        "Вариативность создаётся состоянием, выбором оппонента или случайным параметром?",
+        "Как игрок отличит свою ошибку от неизвестного события?"
+      ],
+      "recommendations": [
+        "Разделите стабильное правило, изменчивые условия и доступную до действия информацию.",
+        "Эксперимент: при фиксированном правиле сравните несколько состояний или поведенческих ответов; после попытки попросите объяснить исход и выбрать корректировку для новой ситуации. Случайность документируйте отдельно.",
+        "Проверяйте, не исчезло ли основание для выбора после изменения неопределённости; сохраните намеренное угадывание как осознанное авторское решение."
+      ],
+      "limitations": [
+        "У Костера variable feedback не означает обязательную случайную награду.",
+        "Понятный механизм не требует гарантированного исхода или полной информации.",
+        "Объяснение участника не доказывает единственную причину результата; формальная проверка относится только к модели.",
+        "Неопределённость здесь относится к игровым ситуациям и стратегическому ответу, а не к непредсказуемому подкреплению ради удержания. Манипулятивные схемы наград и эксплуатация уязвимостей игрока не предлагаются."
+      ],
+      "conflicting_entry_ids": [],
+      "related_entry_ids": [
+        "knowledge.sylvester.partial_predictability",
+        "knowledge.sylvester.information_balance",
+        "knowledge.sylvester.ai_predictability_tradeoff"
+      ],
+      "verification_status": "EXPERT_INFERENCE",
+      "confidence": "medium",
+      "evidence_locator": "source.koster_user_pdf; PDF pages (1-based): 127, 131, 133; Chapter Seven: The Problem with Learning — ограниченная неопределённость, range of challenges и variable feedback system; source.sylvester_ru_2020; PDF pages (1-based): 154, 155, 156, 159; Глава 5 → Предсказуемость; Информационный баланс",
+      "interpretation": "Оригинальный межисточниковый вывод LUDOSCOPE о возможном проектном компромиссе. Не утверждается публичный спор авторов или несовместимость их теорий. Проверены указанные фрагменты; сама рекомендация и предлагаемый эксперимент являются авторской операционализацией, а не эмпирически подтверждённым результатом. Когнитивные и нейробиологические объяснения книг не повышаются здесь до общенаучных фактов.",
+      "evidence": [
+        {
+          "source_id": "source.koster_user_pdf",
+          "pdf_pages": [
+            127,
+            131,
+            133
+          ],
+          "section": "Chapter Seven: The Problem with Learning — ограниченная неопределённость, range of challenges и variable feedback system",
+          "claim_scope": "cross_source_inference"
+        },
+        {
+          "source_id": "source.sylvester_ru_2020",
+          "pdf_pages": [
+            154,
+            155,
+            156,
+            159
+          ],
+          "section": "Глава 5 → Предсказуемость; Информационный баланс",
           "claim_scope": "cross_source_inference"
         }
       ]

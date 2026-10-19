@@ -49,6 +49,29 @@ try {
     knowledge.structuredContent.result.sources.length !== 2
   )
     throw new Error("Installed book knowledge or evidence is missing");
+  const mastery = await client.callTool({
+    name: "ludoscope_mastery_analysis",
+    arguments: {
+      skills: [
+        {
+          id: "skill.test",
+          requires: [],
+          introduced_at: 0,
+          practice: ["Try the rule"],
+          variation: ["Apply in a new layout"],
+        },
+      ],
+    },
+  });
+  if (
+    mastery.isError ||
+    mastery.structuredContent.result.evidence_scope !==
+      "structural_plan_only" ||
+    !mastery.structuredContent.result.knowledge.some((e) =>
+      e.source_ids.includes("source.koster_user_pdf"),
+    )
+  )
+    throw new Error("Installed mastery source context missing");
   const model = JSON.parse(
     await readFile(
       path.join(installed, "examples/economic-tycoon/economy.json"),
@@ -67,6 +90,7 @@ try {
       tools: tools.length,
       context: "ok",
       book_knowledge: "ok",
+      koster_mastery: "ok",
       tycoon_final_money: r.structuredContent.result.final.money,
     }),
   );

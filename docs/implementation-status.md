@@ -1,12 +1,12 @@
 # Состояние реализации
 
-Версия 0.2.0, 2026-10-19. Критерии полной1.0 ещё не закрыты. Это перечень фактических возможностей, а не обещание готовности будущих подсистем.
+Версия 0.3.0, 2026-10-19. Критерии полной1.0 ещё не закрыты. Это перечень фактических возможностей, а не обещание готовности будущих подсистем.
 
 | Фаза ТЗ | Реализовано и проверено | Осталось |
 |---|---|---|
 |0 Research & Architecture | Официальные спецификации, SDK, ADR, лицензии | Матрица других версий Codex/платформ |
 |1 Vertical Slice | Установка CLI Codex,init,context,knowledge,mechanic,report,decision,reopen | UI и реальные рабочие проекты |
-|2 Knowledge | Реестр 1.1,18 source/162 entry,страницы и provenance,поиск/get,импорт,контекстные линзы | Глубокое подтверждённое покрытие всех школ |
+|2 Knowledge | Реестр 1.1,19 source/208 entry,страницы и provenance,поиск/get,импорт,контекстные линзы | Глубокое подтверждённое покрытие всех школ |
 |3 Design Reasoning | Findings,структурные проверки,graph impact,версии артефактов,backup graph | Семантический code audit,адресные документационные patches |
 |4 Systems | Ресурсная модель,FSM,seed,invariants,Monte Carlo,sensitivity,gain witnesses | Общие discrete-event/ABM,асинхронное прерывание |
 |5 Experience & Narrative | Learning graph,UX/game feel workflows,Boolean narrative,PCG samples,SCC chains | Исследования пользователей,visual artifacts,продвинутые модели |

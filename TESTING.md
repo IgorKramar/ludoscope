@@ -31,3 +31,8 @@ AI Skills требуют ручной оценки: релевантность �
 Полный suite:49 тестов в 3 файлах. Стандартная проверка не требует книг. Дополнительная локальная сверка хешей/непустых страниц/длинных буквальных совпадений выполняется через scripts/verify-source-evidence.mjs с приватным source-map; это не замена экспертному чтению. Публичный sample review шести записей: docs/knowledge/editorial-review.md. Книги и извлечения остаются вне пакета.
 
 Актуальные результаты 0.2.0: [docs/verification-0.2.0.md](docs/verification-0.2.0.md).
+
+
+## Костер и Mastery Analysis 0.3.0
+
+`tests/koster-knowledge.test.ts` проверяет точную идентичность копии и сохранение отдельного издания 2013 года, статусы evidence, отключение источника, четыре RU/EN запроса, отсутствие жанрового навязывания, фильтры Mastery Analysis, защиту аудита от watermark-only страниц и состав пакета. Общий результат: 61 тест в четырёх файлах. Практический прогон: [koster-mastery-run.json](docs/knowledge/koster-mastery-run.json); результаты установки: [verification-0.3.0.md](docs/verification-0.3.0.md).
