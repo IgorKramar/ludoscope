@@ -1,7 +1,9 @@
 import type { DesignAnalysis } from "./contracts.js";
 
 // Source text stays inert: no raw HTML or Markdown images/links supplied by a caller.
-const text = (value: string) => value.replace(/[\\`*_\[\]<>|]/g, "\\$&").replace(/\s+/g, " ").trim();
+const text = (value: string) => value
+  .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+  .replace(/[\\`*_\[\]|]/g, "\\const text = (value: string) => value.replace(/[\\`*_\[\]<>|]/g, "\\$&").replace(/\s+/g, " ").trim();").replace(/\s+/g, " ").trim();
 const items = (values: string[]) => values.length ? values.map((v) => "- " + text(v)) : ["—"];
 export function renderAnalysis(r: DesignAnalysis): string {
   const lines = [
