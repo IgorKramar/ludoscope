@@ -6,7 +6,7 @@
 
 **Game Design Intelligence Engine** — a local game-design toolkit for Codex and other agents. Explore mechanics, inspect dependencies, run seeded models and retain the evidence behind a design decision.
 
-**Version 0.5.0:** 17 Skills, 40 MCP tools and a shared TypeScript core. This is a functional release; the full 1.0 specification remains a roadmap.
+**Version 0.6.0:** 17 Skills, 41 MCP tools and a shared TypeScript core. This is a functional release; the full 1.0 specification remains a roadmap.
 
 ## Try the complete demonstration
 
@@ -85,6 +85,8 @@ Run package imports from a consumer project with LUDOSCOPE installed, or use the
 An unconfigured Chronicler yields explicit incomplete history and a `partial` analysis. The local analysis still runs. FIP is a provisional profile; remote publication needs both explicit intent and host authorization.
 
 ## What you can inspect
+
+The [Hydrocraft pilot](examples/hydrocraft-pilot/README.md) links pinned recipe and callback files to an original stock-flow model. `npm run pilot:hydrocraft` runs offline; add `-- --source /path/to/pinned-checkout` to verify source fingerprints. The mod remains unchanged. [Traceability](docs/TRACEABILITY.md) reports stale bindings and incomplete declared evidence chains; it does not run game tests or authenticate playtests.
 
 | Area | Implementation |
 | :--- | :--- |

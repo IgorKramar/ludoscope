@@ -10,6 +10,7 @@ export * from "./analysis/labs.js";
 export * from "./simulation/index.js";
 export * from "./project/store.js";
 export * from "./analysis/systems.js";
+export * from "./analysis/traceability.js";
 export * from "./core/version.js";
 
 export * from "./integration/api.js";

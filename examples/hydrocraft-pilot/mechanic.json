@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "id": "mechanic.hydrocraft.cotton",
+  "name": "Cotton processing and circulating spindles",
+  "player_goal": "DESIGN_HYPOTHESIS: plan a textile production batch while understanding stock committed to intermediate products.",
+  "player_actions": [
+    "Process raw cotton with a cotton gin.",
+    "Spin cotton into cotton thread using a spindle and a spinning station.",
+    "Weave three cotton threads into cotton cloth."
+  ],
+  "preconditions": [
+    "PROJECT_FACT: the selected recipes require a cotton gin, a spinning wheel or anchored tailoring bench, and a loom or floor loom.",
+    "MODEL ASSUMPTION: all stations are already accessible; 18 raw cotton, no initial intermediate products; no external supply."
+  ],
+  "rules": [
+    "PROJECT_FACT: Process Cotton declares one raw cotton consumed and one cotton produced; the selected callback adds one cotton seed.",
+    "PROJECT_FACT: Make Cotton Thread declares three cotton and one spindle consumed for one cotton thread; the station is kept.",
+    "PROJECT_FACT: Make Cotton Cloth declares three cotton threads consumed for one cotton cloth; its selected callback adds three spindles and the loom is kept."
+  ],
+  "state_transitions": [
+    "Raw cotton stock decreases; processed cotton and seed stock increase.",
+    "Three cotton and one available spindle become one cotton thread.",
+    "Three cotton threads become one cotton cloth and three available spindles."
+  ],
+  "resources": [
+    "cotton_raw",
+    "cotton",
+    "cotton_thread",
+    "cotton_cloth",
+    "cotton_seeds",
+    "spindle",
+    "cotton_gin",
+    "spinning_station",
+    "loom"
+  ],
+  "feedback": [
+    "UNVERIFIED: actual recipe UI, callback output visibility and inventory feedback have not been observed in this pilot."
+  ],
+  "failure_conditions": [
+    "MODEL_RESULT (bounded abstraction): with fewer than three starting spindles and no initial thread or external supply, the selected chain cannot complete its first cloth."
+  ],
+  "success_conditions": [
+    "MODEL_RESULT (bounded abstraction): with three starting spindles and all stations present, 18 raw cotton can complete two cloth in the bounded model."
+  ],
+  "dependencies": [
+    "system.hydrocraft.crafting",
+    "system.hydrocraft.recipe_callbacks",
+    "system.hydrocraft.inventory"
+  ],
+  "expected_experiences": [
+    "DESIGN_HYPOTHESIS: production planning feels understandable when the player can see stock temporarily committed to intermediate products."
+  ],
+  "design_risks": [
+    "Inspecting only declarative recipe outputs misses callback byproducts and spindle returns.",
+    "A consumed spindle may be mistaken for a lost tool before the cloth step returns it.",
+    "A model without acquisition, runtime callbacks and station access cannot establish in-game reachability or balance."
+  ],
+  "validation_plan": [
+    "Reproduce the pinned static-source facts using hashes and line locators.",
+    "Compare starting spindle stock 0, 1, 2 and 3 under identical scheduling assumptions.",
+    "Verify stock accounting across every simulated state.",
+    "In a separate game test profile, inspect inventories and callback errors after each recipe; no such runtime test is claimed here.",
+    "With consenting players, test whether they can predict the stock needed for a first cloth; record actual choices and subjective feedback separately."
+  ],
+  "tags": [
+    "production",
+    "resource_cycles",
+    "feedback",
+    "learning",
+    "choice"
+  ],
+  "genre": "survival crafting",
+  "stage": "review",
+  "choices": [
+    {
+      "id": "choice.hydrocraft.commit_stock",
+      "consequences": [
+        "Commit cotton and spindles to intermediate thread toward the cloth target."
+      ]
+    },
+    {
+      "id": "choice.hydrocraft.reserve_stock",
+      "consequences": [
+        "Retain available spindle/cotton stock until the player has planned a complete batch; the modeled chain produces no cloth during deferral."
+      ]
+    }
+  ],
+  "intentional_tradeoffs": [
+    "The upstream project explicitly aims to complement vanilla Build 42 systems. This pilot does not prescribe additional economy, progression or crafting systems.",
+    "The original spindle circulation may be intentional. A bootstrap constraint is not automatically a defect."
+  ]
+}

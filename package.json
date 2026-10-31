@@ -1,6 +1,6 @@
 {
   "name": "ludoscope",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Local game design intelligence tools for Codex",
   "type": "module",
   "license": "MIT",
@@ -41,7 +41,8 @@
     "mcp": "node dist/mcp/index.js",
     "prepack": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\"",
-    "demo": "node scripts/demo.mjs"
+    "demo": "node scripts/demo.mjs",
+    "pilot:hydrocraft": "node scripts/hydrocraft-pilot.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

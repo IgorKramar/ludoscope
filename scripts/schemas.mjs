@@ -2,6 +2,12 @@ import { z } from "zod";
 import { writeFile, mkdir } from "node:fs/promises";
 import * as schemas from "../dist/core/schemas.js";
 await mkdir("schemas", { recursive: true });
+const traceability = await import("../dist/analysis/traceability.js");
+for (const name of ["TraceabilityManifest", "TraceabilityReport"])
+  await writeFile(
+    `schemas/${name}.schema.json`,
+    JSON.stringify(z.toJSONSchema(traceability[name]), null, 2) + "\n",
+  );
 for (const name of [
   "RegistrySchema",
   "Source",

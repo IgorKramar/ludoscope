@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { TraceabilityReport } from "../analysis/traceability.js";
 import {
   Text,
   Strings,
@@ -102,6 +103,7 @@ const RuleResult = obj({
 });
 const Summary = obj({ min: n, max: n, mean: n });
 export const resultSchemas = {
+  ludoscope_check_traceability: TraceabilityReport,
   ludoscope_knowledge_get: obj({
     entries: z.array(Entry),
     sources: z.array(Source),

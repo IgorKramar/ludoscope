@@ -2,10 +2,11 @@
 
 Локальный stdio-сервер на официальном @modelcontextprotocol/sdk. Запуск: `node dist/mcp/index.js`. stdout зарезервирован протоколом. Корень определяется LUDOSCOPE_PROJECT_ROOT или cwd при старте; инструменты не принимают произвольный root. Данные не отправляются в сеть.
 
-Ниже описаны прежние 24 операции; новый агентный контракт — в разделе «Агентный API 0.4.0». Каждый input/output строго проверяется Zod. JSON Schema: `schemas/tools/<name>.input.json` и `<name>.output.json`. Успех: `{schema_version:"1.0",operation:<name>,result:<typed result>}`. Ошибка: isError=true и текст JSON `{error:{code,message}}`; ошибки аргументов SDK могут возвращаться до обработчика. Типы данных экспортируются TypeScript-библиотекой.
+Ниже описаны 25 операций ядра; новый агентный контракт — в разделе «Агентный API 0.4.0». Каждый input/output строго проверяется Zod. JSON Schema: `schemas/tools/<name>.input.json` и `<name>.output.json`. Успех: `{schema_version:"1.0",operation:<name>,result:<typed result>}`. Ошибка: isError=true и текст JSON `{error:{code,message}}`; ошибки аргументов SDK могут возвращаться до обработчика. Типы данных экспортируются TypeScript-библиотекой.
 
 | Инструмент | Назначение | Доступ |
 |---|---|---|
+| ludoscope_check_traceability | Проверка объявленных связей, SHA-256 файлов и ревизии; не запускает код и тесты. | read-only |
 | ludoscope_knowledge_get | Load specific knowledge entries and source provenance by stable IDs without retrieving full books. Respects disabled sources/schools. | read-only |
 | ludoscope_record_artifact | Preview or explicitly commit a versioned mechanic, hypothesis, experiment, playtest or GDD document. Existing versions are immutable. | preview; explicit commit writes |
 | ludoscope_update_graph | Preview graph replacement; explicit commit requires reviewed expected_sha256 and creates an immutable backup. | preview; explicit commit writes |
@@ -63,3 +64,7 @@ record_artifact и update_graph работают как прежде: preview п
 ## Агентный API 0.4.0
 
 Дополнительно зарегистрированы 16 агентных операций: get_capabilities, list_lenses, get_lens, analyze_concept, analyze_mechanic, analyze_game_loop, evaluate_player_agency, analyze_progression, analyze_balance, evaluate_systems, review_gdd, generate_alternatives, formulate_playtest, evaluate_playtest, compare_designs, publish_analysis. Всего 40 инструментов. Они используют самостоятельный предварительный FIP envelope; wrapper старых 24 операций сохранён. Схемы — contracts/fip/v1/operations. Полное описание и MCP-вызов: [docs/API.md](docs/API.md). Текущий standalone сервер не подключает Chronicler; это дополнительная возможность встраиваемого сервера/API.
+
+## Трассировка 0.6.0
+
+`ludoscope_check_traceability({"manifest": <TraceabilityManifest>})` возвращает строгий `TraceabilityReport` внутри обычного wrapper. Работает до init; файлы читаются только из корня сервера. [Контракт, CLI и ограничения](docs/TRACEABILITY.md).

@@ -1,5 +1,7 @@
 # Расширение
 
+Проверка явных design–code связей доступна через публичные `TraceabilityManifest`, `TraceabilityReport` и `auditTraceability(root, input, signal?)`. Адаптер может сформировать manifest из подтверждённой карты проекта, но не должен автоматически объявлять смысловое соответствие по именам файлов. [Контракт трассировки](docs/TRACEABILITY.md).
+
 Контракт расширений — API 1.0, TypeScript interfaces в `src/core/extensions.ts`: KnowledgeProvider, EngineAdapter, AnalysisRule, ReportRenderer, DataImporter, ExternalResearchProvider и UniversalModderAdapter. RetrievalProvider и SimulationProvider находятся рядом с реализациями. Это библиотеки для явного подключения разработчиком, а не автоматический запуск произвольного пакета из project.yaml.
 
 Добавление знания: JSON Schema `RegistrySchema.schema.json`, уникальные namespaced ID, version>=1, sources/entries. Укажите конкретное издание, URL, лицензию, доступность, статус, локатор проверенного фрагмента. Оригинальная методика/интерпретация получает EXPERT_INFERENCE. SOURCE_REQUIRED не попадает в поиск. Подтверждённое содержание требует проверенных source IDs; одна библиографическая карточка не подтверждает пересказ.
