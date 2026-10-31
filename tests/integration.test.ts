@@ -344,7 +344,9 @@ describe("shared operations and real MCP protocol", () => {
     await Promise.all([server.connect(st), client.connect(ct)]);
     try {
       const listed = await client.listTools();
-      expect(listed.tools.length).toBe(Object.keys(operations).length + agentCapabilities.length);
+      expect(listed.tools.length).toBe(
+        Object.keys(operations).length + agentCapabilities.length,
+      );
       expect(
         listed.tools.find((t) => t.name === "ludoscope_simulate_system")!
           .annotations?.readOnlyHint,
@@ -409,6 +411,21 @@ describe("shared operations and real MCP protocol", () => {
       ),
     );
     const inputs: Record<keyof typeof operations, unknown> = {
+      ludoscope_check_traceability: {
+        manifest: {
+          schema_version: "1.0",
+          id: "trace.contract",
+          artifacts: [
+            {
+              id: "requirement.missing",
+              kind: "requirement",
+              path: "missing.md",
+              sha256: "0".repeat(64),
+            },
+          ],
+          links: [],
+        },
+      },
       ludoscope_record_artifact: {
         artifact: {
           kind: "mechanic",
@@ -421,7 +438,10 @@ describe("shared operations and real MCP protocol", () => {
       ludoscope_project_scan: {},
       ludoscope_project_context: {},
       ludoscope_knowledge_search: { query: "choice" },
-      ludoscope_knowledge_get: { ids: ["source.mda", "knowledge.lens_consequence"], include_sources: true },
+      ludoscope_knowledge_get: {
+        ids: ["source.mda", "knowledge.lens_consequence"],
+        include_sources: true,
+      },
       ludoscope_get_lenses: { query: "", system: "Hunger" },
       ludoscope_analyse_mechanic: { mechanic },
       ludoscope_analyse_dependencies: { id: mechanic.id, graph },

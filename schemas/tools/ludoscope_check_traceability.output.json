@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+    },
+    "claim_type": {
+      "type": "string",
+      "const": "PROJECT_FACT"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial"
+      ]
+    },
+    "bindings": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "requirement",
+              "mechanic",
+              "implementation",
+              "automated_test",
+              "playtest"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "current",
+              "stale",
+              "missing",
+              "blocked",
+              "unreadable",
+              "invalid_range",
+              "budget_exceeded"
+            ]
+          },
+          "expected_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "actual_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "bytes": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "line_count": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "diagnostics": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            }
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "path",
+          "status",
+          "expected_sha256",
+          "actual_sha256",
+          "bytes",
+          "line_count",
+          "diagnostics"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+          },
+          "declared_chain": {
+            "type": "boolean"
+          },
+          "current_chain": {
+            "type": "boolean"
+          },
+          "missing_stages": {
+            "maxItems": 5,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "requirement",
+                "mechanic",
+                "implementation",
+                "automated_test",
+                "playtest"
+              ]
+            }
+          },
+          "chain_artifact_ids": {
+            "maxItems": 5,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+            }
+          }
+        },
+        "required": [
+          "requirement_id",
+          "declared_chain",
+          "current_chain",
+          "missing_stages",
+          "chain_artifact_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unlinked_artifact_ids": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{0,119}$"
+      }
+    },
+    "revision": {
+      "type": "object",
+      "properties": {
+        "expected": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^(?:[a-f0-9]{40}|[a-f0-9]{64})$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "actual": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^(?:[a-f0-9]{40}|[a-f0-9]{64})$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "unpinned",
+            "match",
+            "mismatch",
+            "unavailable"
+          ]
+        },
+        "dirty": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "expected",
+        "actual",
+        "status",
+        "dirty"
+      ],
+      "additionalProperties": false
+    },
+    "bytes_read": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20971520
+    },
+    "limitations": {
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "claim_type",
+    "status",
+    "bindings",
+    "coverage",
+    "unlinked_artifact_ids",
+    "revision",
+    "bytes_read",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

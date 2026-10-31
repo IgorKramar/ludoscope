@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "id": "traceability.hydrocraft.cotton_source",
+  "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+  "artifacts": [
+    {
+      "id": "implementation.hydrocraft.cotton_recipes",
+      "kind": "implementation",
+      "path": "common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt",
+      "sha256": "14cb175b40f1f084f10fbcd8e4310af1a0de3459b52da0ab01f8d0f02984fdd5",
+      "lines": {
+        "start": 950,
+        "end": 1002
+      }
+    },
+    {
+      "id": "implementation.hydrocraft.spindle_return",
+      "kind": "implementation",
+      "path": "common/media/lua/server/HCExtra.lua",
+      "sha256": "f842d9f08ba61314f891ab2a9f001f4a010fb5361741d3d7a9f3713a66d2cb3f",
+      "lines": {
+        "start": 481,
+        "end": 483
+      }
+    },
+    {
+      "id": "implementation.hydrocraft.seed_return",
+      "kind": "implementation",
+      "path": "common/media/lua/server/HCExtra.lua",
+      "sha256": "f842d9f08ba61314f891ab2a9f001f4a010fb5361741d3d7a9f3713a66d2cb3f",
+      "lines": {
+        "start": 1329,
+        "end": 1332
+      }
+    },
+    {
+      "id": "implementation.hydrocraft.recipe_bridge",
+      "kind": "implementation",
+      "path": "common/media/lua/server/zzz_HCR42_RecipeCode.lua",
+      "sha256": "f6f6f8fb4672be69f65ce71213f1436eda58be62a73817b54cae695e99c634d8",
+      "lines": {
+        "start": 7,
+        "end": 286
+      }
+    },
+    {
+      "id": "implementation.hydrocraft.food_dispatch",
+      "kind": "implementation",
+      "path": "common/media/lua/server/HCR_FoodBridge.lua",
+      "sha256": "85fb83dc478c9753fab09091ef37ff59054d7fe081e1f7f03ed75165895521fe",
+      "lines": {
+        "start": 5,
+        "end": 123
+      }
+    }
+  ],
+  "links": []
+}

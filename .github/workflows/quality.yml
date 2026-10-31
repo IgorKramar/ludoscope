@@ -25,7 +25,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Formatting
-        run: npm exec -- prettier --check src/integration/api.ts src/integration/engines.ts src/integration/integrity.ts src/integration/report.ts src/analysis/mechanic.ts tests/agent-integrity.test.ts tests/evaluation-integrity.test.ts tests/history-integrity.test.ts tests/report-integrity.test.ts scripts/demo.mjs scripts/check-docs.mjs scripts/verify-package.mjs
+        run: npm exec -- prettier --check src/integration/api.ts src/integration/engines.ts src/integration/integrity.ts src/integration/report.ts src/analysis/mechanic.ts src/analysis/traceability.ts tests/traceability.test.ts tests/hydrocraft-pilot.test.ts tests/agent-integrity.test.ts tests/evaluation-integrity.test.ts tests/history-integrity.test.ts tests/report-integrity.test.ts scripts/demo.mjs scripts/hydrocraft-pilot.mjs scripts/check-docs.mjs scripts/verify-package.mjs
       - run: npm run check
       - name: Verify generated contracts are committed
         run: git diff --exit-code -- schemas contracts
@@ -38,6 +38,7 @@ jobs:
       - name: Reproducible portfolio demonstration
         run: |
           npm run demo -- --output "$RUNNER_TEMP/ludoscope-demo"
+          npm run pilot:hydrocraft -- --output "$RUNNER_TEMP/ludoscope-hydrocraft"
           git diff --exit-code -- examples
       - name: Verify installed package
         run: |
@@ -46,11 +47,14 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/ludoscope-installed" --ignore-scripts "$RUNNER_TEMP"/ludoscope-*.tgz
           node scripts/smoke-installed.mjs "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope"
           node "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope/scripts/demo.mjs" --output "$RUNNER_TEMP/ludoscope-installed-demo"
+          node "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope/scripts/hydrocraft-pilot.mjs" --output "$RUNNER_TEMP/ludoscope-installed-hydrocraft"
       - name: Save demonstration evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: demo-node-${{ matrix.node }}
-          path: ${{ runner.temp }}/ludoscope-demo/
+          path: |
+            ${{ runner.temp }}/ludoscope-demo/
+            ${{ runner.temp }}/ludoscope-hydrocraft/
           if-no-files-found: warn
           retention-days: 14

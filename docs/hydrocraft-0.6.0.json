@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "ludoscope_version": "0.6.0",
+  "timestamp": "2026-10-31T16:26:38.162Z",
+  "project_id": "project.hydrocraft-pilot",
+  "task_id": "task.cotton-circulation",
+  "upstream": {
+    "repository": "https://github.com/IgorKramar/HydrocraftReinvented",
+    "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea"
+  },
+  "source_verification_performed": true,
+  "source_file_checks": [
+    {
+      "path": "common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt",
+      "sha256": "14cb175b40f1f084f10fbcd8e4310af1a0de3459b52da0ab01f8d0f02984fdd5",
+      "bytes": 61990
+    },
+    {
+      "path": "common/media/lua/server/HCExtra.lua",
+      "sha256": "f842d9f08ba61314f891ab2a9f001f4a010fb5361741d3d7a9f3713a66d2cb3f",
+      "bytes": 82031
+    },
+    {
+      "path": "common/media/lua/server/zzz_HCR42_RecipeCode.lua",
+      "sha256": "f6f6f8fb4672be69f65ce71213f1436eda58be62a73817b54cae695e99c634d8",
+      "bytes": 19385
+    },
+    {
+      "path": "common/media/lua/server/HCR_FoodBridge.lua",
+      "sha256": "85fb83dc478c9753fab09091ef37ff59054d7fe081e1f7f03ed75165895521fe",
+      "bytes": 5619
+    },
+    {
+      "path": "README.md",
+      "sha256": "60076681065607ea945b6ebe973c6d307350ce8145cce20905d545cd68e50369",
+      "bytes": 16105
+    }
+  ],
+  "traceability": {
+    "status": "partial",
+    "bindings": [
+      {
+        "id": "implementation.hydrocraft.cotton_recipes",
+        "status": "current"
+      },
+      {
+        "id": "implementation.hydrocraft.spindle_return",
+        "status": "current"
+      },
+      {
+        "id": "implementation.hydrocraft.seed_return",
+        "status": "current"
+      },
+      {
+        "id": "implementation.hydrocraft.recipe_bridge",
+        "status": "current"
+      },
+      {
+        "id": "implementation.hydrocraft.food_dispatch",
+        "status": "current"
+      }
+    ],
+    "revision": {
+      "expected": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "actual": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "status": "match",
+      "dirty": false
+    },
+    "coverage": []
+  },
+  "origin": "simulation",
+  "human_participants": 0,
+  "cases": [
+    {
+      "initial_spindles": 0,
+      "seed": 42,
+      "steps": 18,
+      "final": {
+        "cotton_raw": 0,
+        "cotton": 18,
+        "cotton_thread": 0,
+        "cotton_cloth": 0,
+        "cotton_seeds": 18,
+        "spindle": 0,
+        "cotton_gin": 1,
+        "spinning_station": 1,
+        "loom": 1
+      },
+      "violations": 0
+    },
+    {
+      "initial_spindles": 1,
+      "seed": 42,
+      "steps": 18,
+      "final": {
+        "cotton_raw": 0,
+        "cotton": 15,
+        "cotton_thread": 1,
+        "cotton_cloth": 0,
+        "cotton_seeds": 18,
+        "spindle": 0,
+        "cotton_gin": 1,
+        "spinning_station": 1,
+        "loom": 1
+      },
+      "violations": 0
+    },
+    {
+      "initial_spindles": 2,
+      "seed": 42,
+      "steps": 18,
+      "final": {
+        "cotton_raw": 0,
+        "cotton": 12,
+        "cotton_thread": 2,
+        "cotton_cloth": 0,
+        "cotton_seeds": 18,
+        "spindle": 0,
+        "cotton_gin": 1,
+        "spinning_station": 1,
+        "loom": 1
+      },
+      "violations": 0
+    },
+    {
+      "initial_spindles": 3,
+      "seed": 42,
+      "steps": 18,
+      "final": {
+        "cotton_raw": 0,
+        "cotton": 0,
+        "cotton_thread": 0,
+        "cotton_cloth": 2,
+        "cotton_seeds": 18,
+        "spindle": 3,
+        "cotton_gin": 1,
+        "spinning_station": 1,
+        "loom": 1
+      },
+      "violations": 0
+    }
+  ],
+  "omitted_callback_diagnostic": {
+    "final": {
+      "cotton_raw": 0,
+      "cotton": 9,
+      "cotton_thread": 0,
+      "cotton_cloth": 1,
+      "cotton_seeds": 18,
+      "spindle": 0,
+      "cotton_gin": 1,
+      "spinning_station": 1,
+      "loom": 1
+    }
+  },
+  "input_sha256": {
+    "economy.json": "7fb2505d86a5d55c7a111979555d5848f251845444bbd371c2f79b5da83ba57b",
+    "mechanic.json": "e9491473ecd26cb44e9b9b469c083662f166b27516196be97a01ae95356df531",
+    "source-traceability.json": "c85ea58d70b45d2a3541cf026cc0c6fcde432fa7215c49077a63dd41e8f9b3cd",
+    "sources.json": "f238bf139cc860c7a201ef70a5544033b9a4e7d1582d61372c66566a9e6083e4"
+  },
+  "limitations": [
+    "Original bounded stock-flow abstraction; upstream code was read, not executed.",
+    "Sequential process order, one execution per process per tick; ticks are scheduler passes, not seconds or game time.",
+    "Assumes successful callbacks, available stations, no initial thread and no outside supply. Acquisition, skill, interruptions, runtime loading and other recipes are excluded.",
+    "The spindle threshold is a MODEL_RESULT under these assumptions, not a confirmed game defect or a recommendation to change the mod.",
+    "No human participants, game build or interface inspection. Source fingerprints establish identity, not semantic equivalence or runtime correctness."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "id": "model.hydrocraft.cotton",
+  "seed": 42,
+  "steps": 18,
+  "initial": {
+    "cotton_raw": 18,
+    "cotton": 0,
+    "cotton_thread": 0,
+    "cotton_cloth": 0,
+    "cotton_seeds": 0,
+    "spindle": 3,
+    "cotton_gin": 1,
+    "spinning_station": 1,
+    "loom": 1
+  },
+  "processes": [
+    {
+      "id": "process_cotton",
+      "inputs": {
+        "cotton_raw": 1,
+        "cotton_gin": 1
+      },
+      "outputs": {
+        "cotton": 1,
+        "cotton_seeds": 1,
+        "cotton_gin": 1
+      },
+      "probability": 1,
+      "limit": 1
+    },
+    {
+      "id": "spin_cotton",
+      "inputs": {
+        "cotton": 3,
+        "spindle": 1,
+        "spinning_station": 1
+      },
+      "outputs": {
+        "cotton_thread": 1,
+        "spinning_station": 1
+      },
+      "probability": 1,
+      "limit": 1
+    },
+    {
+      "id": "weave_cotton",
+      "inputs": {
+        "cotton_thread": 3,
+        "loom": 1
+      },
+      "outputs": {
+        "cotton_cloth": 1,
+        "spindle": 3,
+        "loom": 1
+      },
+      "probability": 1,
+      "limit": 1
+    }
+  ],
+  "invariants": [
+    {
+      "resource": "cotton_raw",
+      "min": 0
+    },
+    {
+      "resource": "cotton",
+      "min": 0
+    },
+    {
+      "resource": "cotton_thread",
+      "min": 0
+    },
+    {
+      "resource": "cotton_cloth",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "resource": "spindle",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "resource": "cotton_gin",
+      "min": 1,
+      "max": 1
+    },
+    {
+      "resource": "spinning_station",
+      "min": 1,
+      "max": 1
+    },
+    {
+      "resource": "loom",
+      "min": 1,
+      "max": 1
+    }
+  ]
+}

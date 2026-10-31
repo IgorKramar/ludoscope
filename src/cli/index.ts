@@ -41,6 +41,15 @@ cli
     print(await scan(path.resolve(p ?? cli.opts().project))),
   );
 cli.command("context").action(async () => print(await store().context()));
+cli
+  .command("trace <manifest-file>")
+  .description(
+    "Audit read-only project bindings; manifest is relative to the current working directory",
+  )
+  .action(async (file) => {
+    const manifest = JSON.parse(await readBounded(process.cwd(), file));
+    print(await invoke("ludoscope_check_traceability", { manifest }, store()));
+  });
 const knowledge = cli.command("knowledge");
 knowledge
   .command("get <ids...>")

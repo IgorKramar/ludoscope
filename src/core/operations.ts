@@ -1,4 +1,8 @@
 import { resultSchemas } from "./results.js";
+import {
+  TraceabilityManifest,
+  auditTraceability,
+} from "../analysis/traceability.js";
 import { analyseSystems } from "../analysis/systems.js";
 import { z } from "zod";
 import {
@@ -55,6 +59,11 @@ function operation<S extends z.ZodType, R>(
   return { description, input, run, write };
 }
 export const operations = {
+  ludoscope_check_traceability: operation(
+    "Read-only audit of declared requirement-to-evidence chains, file fingerprints and pinned revision. Does not run tests or prove implementation semantics.",
+    z.strictObject({ manifest: TraceabilityManifest }),
+    (a, s) => auditTraceability(s.root, a.manifest),
+  ),
   ludoscope_knowledge_get: operation(
     "Load specific knowledge entries and source provenance by stable IDs without retrieving full books. Respects disabled sources/schools.",
     z.strictObject({

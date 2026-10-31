@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0",
+  "id": "source_map.hydrocraft.cotton",
+  "repository": "https://github.com/IgorKramar/HydrocraftReinvented",
+  "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+  "provenance": {
+    "access": "public_repository",
+    "upstream_attribution": [
+      "Hydromancerx — original Hydrocraft",
+      "Hydrocraft Continued team — B41 maintenance",
+      "hombrehumor — B42 port and Russian localization"
+    ],
+    "upstream_license": "No blanket LICENSE identified; see pinned README lines129–136.",
+    "redistribution": "Only original analytical summaries, formal abstractions and file fingerprints are distributed here. Upstream source code and assets are not bundled."
+  },
+  "files": [
+    {
+      "path": "common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt",
+      "sha256": "14cb175b40f1f084f10fbcd8e4310af1a0de3459b52da0ab01f8d0f02984fdd5",
+      "git_blob_sha": "13f9396062cc9256dc12abb01564f6148c5d03d7",
+      "bytes": 61990
+    },
+    {
+      "path": "common/media/lua/server/HCExtra.lua",
+      "sha256": "f842d9f08ba61314f891ab2a9f001f4a010fb5361741d3d7a9f3713a66d2cb3f",
+      "git_blob_sha": "b1beb4643c652ca9c3aa03f45c42c5c1f1aaae98",
+      "bytes": 82031
+    },
+    {
+      "path": "common/media/lua/server/zzz_HCR42_RecipeCode.lua",
+      "sha256": "f6f6f8fb4672be69f65ce71213f1436eda58be62a73817b54cae695e99c634d8",
+      "git_blob_sha": "c779ef1fc48dcc3295f959377ba511b8799b04cf",
+      "bytes": 19385
+    },
+    {
+      "path": "common/media/lua/server/HCR_FoodBridge.lua",
+      "sha256": "85fb83dc478c9753fab09091ef37ff59054d7fe081e1f7f03ed75165895521fe",
+      "git_blob_sha": "ba606f41ba7704cb01e5b506e67f57aef71a667c",
+      "bytes": 5619
+    },
+    {
+      "path": "README.md",
+      "sha256": "60076681065607ea945b6ebe973c6d307350ce8145cce20905d545cd68e50369",
+      "git_blob_sha": "b4ac59fe92504d2c3786fae4317436b5ca054e73",
+      "bytes": 16105
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact.cotton.recipe.process",
+      "path": "common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt",
+      "lines": {
+        "start": 950,
+        "end": 967
+      },
+      "claim": "Process Cotton declares one raw cotton consumed, one cotton produced, a kept cotton gin and the cotton-seed OnCreate callback. Its time field is 15.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt#L950-L967"
+    },
+    {
+      "id": "fact.cotton.recipe.spin",
+      "path": "common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt",
+      "lines": {
+        "start": 968,
+        "end": 985
+      },
+      "claim": "Make Cotton Thread declares three cotton plus one consumed spindle per cotton thread; a spinning wheel or anchored tailoring bench is kept. Its time field is 15.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt#L968-L985"
+    },
+    {
+      "id": "fact.cotton.recipe.weave",
+      "path": "common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt",
+      "lines": {
+        "start": 986,
+        "end": 1002
+      },
+      "claim": "Make Cotton Cloth declares three cotton threads per cloth, a kept loom or floor loom and the three-spindle OnCreate callback. Its time field is 1000.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/scripts/HydrocraftReinvented/HCR_Tailoring.txt#L986-L1002"
+    },
+    {
+      "id": "fact.cotton.callback.spindles",
+      "path": "common/media/lua/server/HCExtra.lua",
+      "lines": {
+        "start": 481,
+        "end": 483
+      },
+      "claim": "The selected spindle callback adds three Hydrocraft.HCSpindle items to the player's inventory.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/HCExtra.lua#L481-L483"
+    },
+    {
+      "id": "fact.cotton.callback.seeds",
+      "path": "common/media/lua/server/HCExtra.lua",
+      "lines": {
+        "start": 1329,
+        "end": 1332
+      },
+      "claim": "The selected cotton-seed callback adds one Hydrocraft.HCCottonseeds item to the player's inventory.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/HCExtra.lua#L1329-L1332"
+    },
+    {
+      "id": "fact.cotton.bridge.dispatch",
+      "path": "common/media/lua/server/zzz_HCR42_RecipeCode.lua",
+      "lines": {
+        "start": 7,
+        "end": 37
+      },
+      "claim": "The bridge resolves the callback by name, returns if it is missing, and calls it with pcall; callback failures are logged.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/zzz_HCR42_RecipeCode.lua#L7-L37"
+    },
+    {
+      "id": "fact.cotton.bridge.seeds",
+      "path": "common/media/lua/server/zzz_HCR42_RecipeCode.lua",
+      "lines": {
+        "start": 156,
+        "end": 156
+      },
+      "claim": "The bridge registers the cotton-seed callback by its matching name.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/zzz_HCR42_RecipeCode.lua#L156-L156"
+    },
+    {
+      "id": "fact.cotton.bridge.spindles",
+      "path": "common/media/lua/server/zzz_HCR42_RecipeCode.lua",
+      "lines": {
+        "start": 286,
+        "end": 286
+      },
+      "claim": "The bridge registers the three-spindle callback by its matching name.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/zzz_HCR42_RecipeCode.lua#L286-L286"
+    },
+    {
+      "id": "fact.cotton.bridge.food_names",
+      "path": "common/media/lua/server/HCR_FoodBridge.lua",
+      "lines": {
+        "start": 5,
+        "end": 18
+      },
+      "claim": "The food bridge's enumerated nutrition/split callback names do not include either selected cotton callback.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/HCR_FoodBridge.lua#L5-L18"
+    },
+    {
+      "id": "fact.cotton.bridge.food_guard",
+      "path": "common/media/lua/server/HCR_FoodBridge.lua",
+      "lines": {
+        "start": 119,
+        "end": 120
+      },
+      "claim": "The food bridge returns false for callbacks outside its enumerated nutrition/split sets.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/common/media/lua/server/HCR_FoodBridge.lua#L119-L120"
+    },
+    {
+      "id": "fact.cotton.author_intent",
+      "path": "README.md",
+      "lines": {
+        "start": 35,
+        "end": 55
+      },
+      "claim": "The upstream README describes a complement-rather-than-duplicate philosophy for vanilla Build 42 systems.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/README.md#L35-L55"
+    },
+    {
+      "id": "fact.cotton.attribution",
+      "path": "README.md",
+      "lines": {
+        "start": 129,
+        "end": 136
+      },
+      "claim": "The upstream README attributes the original mod, B41 maintenance and B42 port, and states that no blanket LICENSE covers the entire mod.",
+      "claim_type": "PROJECT_FACT",
+      "revision": "c2b72c30f52be23eb3d4d25d60d53a1974af6cea",
+      "url": "https://github.com/IgorKramar/HydrocraftReinvented/blob/c2b72c30f52be23eb3d4d25d60d53a1974af6cea/README.md#L129-L136"
+    }
+  ],
+  "model_mapping": [
+    {
+      "resource": "cotton_raw",
+      "upstream_item_ids": [
+        "Hydrocraft.HCCottonraw"
+      ]
+    },
+    {
+      "resource": "cotton",
+      "upstream_item_ids": [
+        "Hydrocraft.HCCotton"
+      ]
+    },
+    {
+      "resource": "cotton_thread",
+      "upstream_item_ids": [
+        "Hydrocraft.HCCottonthread"
+      ]
+    },
+    {
+      "resource": "cotton_cloth",
+      "upstream_item_ids": [
+        "Hydrocraft.HCCottoncloth"
+      ]
+    },
+    {
+      "resource": "cotton_seeds",
+      "upstream_item_ids": [
+        "Hydrocraft.HCCottonseeds"
+      ]
+    },
+    {
+      "resource": "spindle",
+      "upstream_item_ids": [
+        "Hydrocraft.HCSpindle"
+      ]
+    },
+    {
+      "resource": "cotton_gin",
+      "upstream_item_ids": [
+        "Hydrocraft.HCCottongin"
+      ]
+    },
+    {
+      "resource": "spinning_station",
+      "upstream_item_ids": [
+        "Hydrocraft.HCSpinningwheel",
+        "Hydrocraft.HCTailoringbench2"
+      ]
+    },
+    {
+      "resource": "loom",
+      "upstream_item_ids": [
+        "Hydrocraft.HCLoom",
+        "Hydrocraft.HCLoomfloor"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Callbacks are successfully loaded, reached and invoked exactly once per successful craft.",
+    "All selected resources are counted as whole inventory items; stations are represented as conserved catalysts.",
+    "One of each alternative station type suffices; differences in access or behavior between alternatives are not modeled.",
+    "18 raw cotton and 3 spindles are scenario inputs, not measured player inventory or upstream default values.",
+    "One simulator tick is one scheduling pass in process_cotton, spin_cotton, weave_cotton order, with at most one firing per process.",
+    "Recipe time fields 15/15/1000 are recorded as source facts but are not modeled as duration or assumed to be seconds.",
+    "No acquisition, player travel, skill progression, recipes outside this chain, station setup, callback failure or multiplayer race is simulated."
+  ],
+  "limitations": [
+    "Static reading of selected declarations and Lua functions does not prove in-game execution or full implementation equivalence.",
+    "Model results cannot establish interest, economy-wide balance or an exploit in the game.",
+    "The working-stock threshold applies only with no initial intermediate stock and no external spindle/thread supply.",
+    "No participant data or real game runtime measurements were collected for this pilot."
+  ]
+}

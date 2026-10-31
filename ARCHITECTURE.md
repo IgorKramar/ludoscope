@@ -1,6 +1,6 @@
 # Архитектура
 
-Версия пакета 0.5.0. Knowledge Registry 1.1 (чтение 1.0 сохранено); проектные и MCP envelope-контракты 1.0. Архитектурные решения и проверенные официальные спецификации: [ADR](docs/architecture/decisions.md).
+Версия пакета 0.6.0. Knowledge Registry 1.1 (чтение 1.0 сохранено); проектные и MCP envelope-контракты 1.0. Архитектурные решения и проверенные официальные спецификации: [ADR](docs/architecture/decisions.md).
 
 ```mermaid
 flowchart TD
@@ -24,6 +24,8 @@ flowchart TD
 
 При сканировании возвращаются инвентарь и хеши, а не содержимое всех файлов. Маркеры движков — только свидетельства структуры. Нет достоверного автоматического извлечения игровых правил из кода. Design-code traceability задаётся `nodes[].files`, связями Implements/Validates и утверждениями с evidence; полнота не предполагается.
 
+С 0.6.0 `src/analysis/traceability.ts` дополнительно проверяет явный manifest: требование → механика → реализация → автоматический тест → плейтест. Общая функция `auditTraceability` используется CLI и MCP; строгие входы/выходы экспортируются как JSON Schema. Проверяются исходные байты, строки, ссылки и закреплённая ревизия. Связи остаются объявленными пользователем, полнота цепочки не доказывает соответствие кода спецификации. [ADR-009](docs/architecture/adr-009-traceability.md).
+
 Запись осуществляется только init, explicit import/report и record_decision(commit=true). Временный файл синхронизируется, затем атомарно публикуется через hard link без перезаписи; существующее имя отклоняется. Путь проверяется на traversal и symlink. Поведение при конкурентной атаке на родительские каталоги и неполной инициализации описано в LIMITATIONS.
 
 Публичные интерфейсы находятся в `src/core/extensions.ts`, SimulationProvider — в `src/simulation/index.ts`. Никакая запись знаний не загружается как исполняемый модуль. UniversalModderAdapter — интерфейс будущей интеграции, реальный API не предполагается.
@@ -43,7 +45,7 @@ Mastery operation переиспользует неизменённый structur
 
 ## WORLD FORGE Integration Layer
 
-`src/integration/` содержит публичный LudoscopeAgentApi, DesignKnowledgeEngine, AnalysisEngine, RecommendationEngine, EvaluationEngine, FIP schemas и ChroniclerAdapter. Это логические модули общего процесса, переиспользующие существующие mechanics/systems/labs/simulation. MCP сервер регистрирует 24 старых операции и 16 новых; совместимость старого wrapper сохранена. Агентные ответы используют отдельный FIP envelope непосредственно в structuredContent. CLI по-прежнему работает через прежнее ядро; агентная интеграция доступна MCP и библиотеке.
+`src/integration/` содержит публичный LudoscopeAgentApi, DesignKnowledgeEngine, AnalysisEngine, RecommendationEngine, EvaluationEngine, FIP schemas и ChroniclerAdapter. Это логические модули общего процесса, переиспользующие существующие mechanics/systems/labs/simulation. MCP сервер регистрирует 25 операций ядра и 16 агентных; совместимость старого wrapper сохранена. Агентные ответы используют отдельный FIP envelope непосредственно в structuredContent. CLI по-прежнему работает через прежнее ядро; агентная интеграция доступна MCP и библиотеке.
 
 `contracts/fip/v1/` генерируется из Zod; api_version 1.0 предварительная, profile=ludoscope.fip-v1-draft.1. Новый API знает author_goals, creative_principles, constraints и project/task correlation. Он возвращает кандидатные спецификации и не переписывает авторские решения. Вызовы Chronicler ограничены timeout и требуют хостового клиента; публикация отдельно авторизуется. Конкретное официальное подключение не заявляется.
 
