@@ -1,0 +1,39 @@
+name: Quality
+on:
+  push:
+    branches: [main, "codex/**"]
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - name: Verify generated contracts are committed
+        run: git diff --exit-code -- schemas contracts
+      - name: Agent workflow
+        run: node examples/world-forge/workflow.mjs
+      - name: Real stdio MCP client
+        run: node examples/world-forge/mcp-client.mjs
+      - name: Verify installed package
+        run: |
+          npm pack --pack-destination "$RUNNER_TEMP"
+          mkdir "$RUNNER_TEMP/ludoscope-installed"
+          npm install --prefix "$RUNNER_TEMP/ludoscope-installed" --ignore-scripts "$RUNNER_TEMP/ludoscope-0.4.0.tgz"
+          node scripts/smoke-installed.mjs "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope"
