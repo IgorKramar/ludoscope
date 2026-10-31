@@ -1,6 +1,6 @@
 {
   "name": "ludoscope",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Local game design intelligence tools for Codex",
   "type": "module",
   "license": "MIT",
@@ -36,11 +36,12 @@
   "scripts": {
     "build": "tsc && node scripts/schemas.mjs",
     "test": "vitest run",
-    "check": "npm run build && npm test && node scripts/verify-package.mjs",
+    "check": "npm run build && npm test && node scripts/verify-package.mjs && node scripts/check-docs.mjs",
     "start": "node dist/cli/index.js",
     "mcp": "node dist/mcp/index.js",
     "prepack": "npm run build",
-    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\""
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\"",
+    "demo": "node scripts/demo.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
@@ -55,5 +56,20 @@
     "prettier": "^3.9.10",
     "typescript": "^5.9.0",
     "vitest": "^5.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorKramar/ludoscope.git"
+  },
+  "homepage": "https://github.com/IgorKramar/ludoscope#readme",
+  "bugs": {
+    "url": "https://github.com/IgorKramar/ludoscope/issues"
+  },
+  "keywords": [
+    "game-design",
+    "codex",
+    "mcp",
+    "simulation",
+    "agent-tools"
+  ]
 }

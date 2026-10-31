@@ -29,6 +29,7 @@ import {
 } from "./chronicler.js";
 import { type KnowledgeRegistry } from "../core/knowledge.js";
 import { mergeRecords, validateEnvelopeReferences, validateAnalysisReferences } from "./integrity.js";
+import { renderAnalysis } from "./report.js";
 export interface AgentApiOptions {
   knowledge?: KnowledgeRegistry;
   chronicler?: ChroniclerAdapter;
@@ -154,7 +155,10 @@ export class LudoscopeAgentApi {
       ),
     };
   }
-  private async history(r: DesignRequest) {
+  private async history(
+    r: DesignRequest,
+    priorArtifacts: DesignAnalysis["artifact_refs"] = [],
+  ) {
     if (!this.options.chronicler)
       return {
         data: undefined,
@@ -176,12 +180,22 @@ export class LudoscopeAgentApi {
         )
       )
         throw new Error("Cross-project history rejected");
+      for (const records of [data.decisions, data.experiments, data.rejected_alternatives]) {
+        if (new Set(records.map((record) => record.id)).size !== records.length)
+          throw new Error("Duplicate historical record ID");
+      }
+      // Optional history cannot invalidate a usable submitted/prior context.
+      mergeRecords("history artifact", [
+        r.artifact_refs,
+        priorArtifacts,
+        data.decisions.flatMap((decision) => decision.artifact_refs),
+      ], 100);
       return { data, limitations: [] as string[] };
     } catch {
       return {
         data: undefined,
         limitations: [
-          "Chronicler unavailable, timed out or returned invalid/cross-project data; using submitted context only.",
+          "Chronicler unavailable, timed out or returned invalid/conflicting/cross-project data; using submitted context and any supplied prior analysis.",
         ],
       };
     }
@@ -355,7 +369,6 @@ export class LudoscopeAgentApi {
     r: DesignRequest,
     base: ReturnType<LudoscopeAgentApi["base"]>,
   ) {
-    const history = await this.history(r);
     const a = operationInputs[name].parse(input);
     const priorAnalysis =
       name === "analyze_mechanic"
@@ -363,6 +376,7 @@ export class LudoscopeAgentApi {
         : name === "evaluate_playtest"
           ? operationInputs.evaluate_playtest.parse(input).prior_analysis
           : undefined;
+    const history = await this.history(r, priorAnalysis?.artifact_refs);
     const analysisEngine = new AnalysisEngine(this.knowledge),
       recommendation = new RecommendationEngine();
     const checks: Checks =
@@ -639,6 +653,19 @@ export class LudoscopeAgentApi {
     }
     if (priorAnalysis) {
       const prior = priorAnalysis;
+      const evaluationEvidence = name === "evaluate_playtest" ? computedEvidence : prior.evidence;
+      const evaluationKind = checks.evaluation?.claim_type === "MODEL_RESULT"
+        ? "model"
+        : checks.evaluation?.claim_type === "PLAYTEST_OBSERVATION"
+          ? "playtest" : "artifact";
+      const evaluationEvidenceIds = (hypothesisId: string) =>
+        [...new Set(evaluationEvidence
+          .filter((entry) =>
+            entry.kind === evaluationKind &&
+            entry.claim_type === checks.evaluation?.claim_type &&
+            entry.description.startsWith(hypothesisId + ":"),
+          )
+          .map((entry) => entry.id))];
       findings.push({
         id: stableId("finding", r.request_id + "revision"),
         claim: `Revisited ${prior.analysis_id}; prior recommendations remain proposals. ${"evaluation" in checks && checks.evaluation ? (name === "evaluate_playtest" ? "New submitted observations have been descriptively evaluated." : "The previously supplied evaluation is carried forward; no new observations are claimed.") : "No new observed player behavior was supplied."}`,
@@ -672,7 +699,7 @@ export class LudoscopeAgentApi {
               "Use actual submitted outcomes in the next design iteration.",
             ],
             tradeoffs: ["Descriptive support is not causal confirmation."],
-            evidence_ids: [inputEvidence.id],
+            evidence_ids: [inputEvidence.id, ...evaluationEvidenceIds(outcome.hypothesis_id)],
             hypothesis_ids: [outcome.hypothesis_id],
             confidence: confidence(outcome.rationale, "low"),
             status: "proposed",
@@ -709,39 +736,4 @@ export class LudoscopeAgentApi {
     return result;
   }
 }
-export function renderAnalysis(r: DesignAnalysis) {
-  const lines = [
-    `# ${r.context.subject}`,
-    `Project: ${r.project_id}; task: ${r.task_id ?? "unspecified"}; request: ${r.request_id}`,
-    `## Context`,
-    JSON.stringify(r.context),
-    `## Lenses`,
-    ...r.lenses.map(
-      (l) => `- ${l.id}: ${l.title}; sources: ${l.source_ids.join(", ")}`,
-    ),
-    `## Findings`,
-    ...r.findings.map((f) => `- [${f.claim_type}] ${f.claim}`),
-    `## Problems`,
-    ...r.problems.map((f) => `- [${f.claim_type}] ${f.claim}`),
-    `## Recommendations`,
-    ...r.recommendations.map((x) => `- ${x.id} (${x.priority}): ${x.action}`),
-    `## Alternatives`,
-    ...r.alternatives.map(
-      (x) => `- ${x.id}: ${x.title}. ${x.changes.join(" ")}`,
-    ),
-    `## Hypotheses`,
-    ...r.hypotheses.map((x) => `- ${x.id}: ${x.statement}`),
-    `## Validation`,
-    ...r.validation.map((x) => `- ${x.id}: ${x.question}; ${x.interpretation}`),
-    `## Evidence`,
-    ...r.evidence.map(
-      (e) =>
-        `- ${e.id} [${e.claim_type}]: ${e.description}; ${e.locator}${e.uri ? `; ${e.uri}` : ""}`,
-    ),
-    `## Confidence`,
-    `${r.confidence.level}: ${r.confidence.rationale}`,
-    `## History`,
-    ...r.history.limitations,
-  ];
-  return lines.join("\n\n").slice(0, 200000);
-}
+export { renderAnalysis } from "./report.js";

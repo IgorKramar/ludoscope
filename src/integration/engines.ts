@@ -54,6 +54,7 @@ export class DesignKnowledgeEngine {
   }
   evidence(entry: {
     id: string;
+    version?: number;
     title: string;
     verification_status: string;
     source_ids: string[];
@@ -67,8 +68,7 @@ export class DesignKnowledgeEngine {
         ?.filter((e) => e.source_id === sourceId)
         .map((e) => `${e.section}; PDF ${e.pdf_pages.join(", ")}`)
         .join("; ");
-      return EvidenceReference.parse({
-        id: stableId("evidence", entry.id + sourceId),
+      const record = {
         kind: "source",
         claim_type: entry.verification_status,
         source_id: sourceId,
@@ -78,6 +78,14 @@ export class DesignKnowledgeEngine {
         limitations: [
           "Source alignment is not empirical proof of player experience.",
         ],
+      };
+      // Updated provenance is a new immutable evidence record, even when its
+      // knowledge/source identifiers remain stable across registry releases.
+      return EvidenceReference.parse({
+        id: stableId("evidence", JSON.stringify([
+          entry.id, entry.version ?? null, sourceId, source.version, record,
+        ])),
+        ...record,
       });
     });
   }

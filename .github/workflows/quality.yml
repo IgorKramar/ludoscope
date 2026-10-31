@@ -18,8 +18,8 @@ jobs:
       matrix:
         node: [22, 24]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node }}
           cache: npm
@@ -27,13 +27,28 @@ jobs:
       - run: npm run check
       - name: Verify generated contracts are committed
         run: git diff --exit-code -- schemas contracts
+      - name: Dependency audit
+        run: npm audit --audit-level=high
       - name: Agent workflow
         run: node examples/world-forge/workflow.mjs
       - name: Real stdio MCP client
         run: node examples/world-forge/mcp-client.mjs
+      - name: Reproducible portfolio demonstration
+        run: |
+          npm run demo -- --output "$RUNNER_TEMP/ludoscope-demo"
+          git diff --exit-code -- examples
       - name: Verify installed package
         run: |
           npm pack --pack-destination "$RUNNER_TEMP"
           mkdir "$RUNNER_TEMP/ludoscope-installed"
-          npm install --prefix "$RUNNER_TEMP/ludoscope-installed" --ignore-scripts "$RUNNER_TEMP/ludoscope-0.4.0.tgz"
+          npm install --prefix "$RUNNER_TEMP/ludoscope-installed" --ignore-scripts "$RUNNER_TEMP"/ludoscope-*.tgz
           node scripts/smoke-installed.mjs "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope"
+          node "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope/scripts/demo.mjs" --output "$RUNNER_TEMP/ludoscope-installed-demo"
+      - name: Save demonstration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-node-${{ matrix.node }}
+          path: ${{ runner.temp }}/ludoscope-demo/
+          if-no-files-found: warn
+          retention-days: 14
