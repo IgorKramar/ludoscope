@@ -147,8 +147,7 @@ export function renderAnalysis(r: DesignAnalysis): string {
       "",
     );
   lines.push("## Validation", "");
-  if (!r.validation.length)
-    lines.push("No experiment proposal supplied.", "");
+  if (!r.validation.length) lines.push("No experiment proposal supplied.", "");
   for (const experiment of r.validation)
     lines.push(
       "### " + text(experiment.id),
