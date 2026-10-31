@@ -28,6 +28,7 @@ import {
   type PublishAuthorization,
 } from "./chronicler.js";
 import { type KnowledgeRegistry } from "../core/knowledge.js";
+import { mergeRecords, validateEnvelopeReferences, validateAnalysisReferences } from "./integrity.js";
 export interface AgentApiOptions {
   knowledge?: KnowledgeRegistry;
   chronicler?: ChroniclerAdapter;
@@ -197,8 +198,7 @@ export class LudoscopeAgentApi {
     const a = operationInputs[name].parse(input);
     const r = a.request;
     const base = this.base(r);
-    if (r.artifact_refs.some((ref) => ref.project_id !== r.project_id))
-      throw new Error("Cross-project artifact rejected");
+    validateEnvelopeReferences(r);
     const prior =
       name === "analyze_mechanic"
         ? operationInputs.analyze_mechanic.parse(input).prior_analysis
@@ -206,6 +206,12 @@ export class LudoscopeAgentApi {
           ? operationInputs.evaluate_playtest.parse(input).prior_analysis
           : undefined;
     if (prior) this.checkIdentity(r, prior);
+    if (name === "evaluate_playtest" && prior) {
+      const args = operationInputs.evaluate_playtest.parse(input);
+      const ids = new Set(prior.hypotheses.map((h) => h.id));
+      if (args.criteria.some((c) => !ids.has(c.hypothesis_id)))
+        throw new Error("Criterion hypothesis is not declared in prior_analysis");
+    }
     let output: unknown;
     if (name === "get_capabilities")
       output = { ...base, capabilities: this.capabilities() };
@@ -335,6 +341,7 @@ export class LudoscopeAgentApi {
     >;
   }
   private checkIdentity(r: DesignRequest, analysis: DesignAnalysis) {
+    validateAnalysisReferences(analysis);
     if (analysis.project_id !== r.project_id || analysis.task_id !== r.task_id)
       throw new Error(
         "Analysis project_id/task_id must match the current request",
@@ -406,23 +413,32 @@ export class LudoscopeAgentApi {
           "Result applies only to submitted rules/data; collection provenance is caller-supplied.",
         ],
       }));
-    const computedIds = computedEvidence.slice(0, 100).map((e) => e.id);
-    const evidence = [
-      ...new Map(
-        [
-          inputEvidence,
-          ...computedEvidence.slice(0, 100),
-          ...r.evidence,
-          ...(priorAnalysis?.evidence ?? []),
-          ...sourceEvidence,
-        ].map((e) => [e.id, e]),
-      ).values(),
-    ].slice(0, 200);
+    const historyEvidence = (history.data?.decisions ?? []).map((d) => ({
+      id: stableId("evidence", JSON.stringify(["history", r.project_id, d])),
+      kind: "artifact" as const,
+      claim_type: "UNVERIFIED" as const,
+      ...(d.artifact_refs[0] ? { artifact_id: d.artifact_refs[0].id } : {}),
+      locator: `Chronicler decision ${d.id}`,
+      description: d.decision,
+      limitations: ["Adapter-supplied history; not independently authenticated."],
+    }));
+    const artifacts = mergeRecords("artifact", [
+      r.artifact_refs, priorAnalysis?.artifact_refs ?? [],
+      (history.data?.decisions ?? []).flatMap((d) => d.artifact_refs),
+    ], 100);
+    const evidence = mergeRecords("evidence", [
+      [inputEvidence], computedEvidence, historyEvidence, r.evidence,
+      priorAnalysis?.evidence ?? [], sourceEvidence,
+    ], 200);
+    const checkEvidence = (c: Checks["findings"][number]) => [
+      inputEvidence.id,
+      ...computedEvidence.filter((e) => e.description === c.message.slice(0, 4000)).map((e) => e.id),
+    ];
     const findings = checks.findings.map((c, i) => ({
       id: stableId("finding", r.request_id + name + i),
       claim: c.message,
       claim_type: c.claim_type ?? "EXPERT_INFERENCE",
-      evidence_ids: [inputEvidence.id, ...computedIds],
+      evidence_ids: checkEvidence(c),
       assumptions: ["Only explicitly supplied rules/data are checked."],
       limitations: ["Not a proof of intended player experience."],
       confidence: confidence(
@@ -434,7 +450,7 @@ export class LudoscopeAgentApi {
       id: stableId("problem", r.request_id + name + i),
       claim: c.message,
       claim_type: c.claim_type ?? "EXPERT_INFERENCE",
-      evidence_ids: [inputEvidence.id, ...computedIds],
+      evidence_ids: checkEvidence(c),
       assumptions: [
         "Absence from submitted data may reflect incomplete documentation or an intentional author tradeoff.",
       ],
@@ -449,7 +465,7 @@ export class LudoscopeAgentApi {
       {
         id: stableId(
           "hypothesis",
-          r.project_id + (r.task_id || "") + r.context.subject,
+          JSON.stringify([r.project_id, r.task_id ?? null, r.context, "mechanic" in a ? a.mechanic : null]),
         ),
         statement:
           `For ${r.context.subject}, the proposed rule/feedback change will support ${r.context.author_goals.join("; ") || "the author-defined experience"} under the specified conditions.`.slice(
@@ -519,7 +535,7 @@ export class LudoscopeAgentApi {
           4000,
         ),
         claim_type: "EXPERT_INFERENCE",
-        evidence_ids: [inputEvidence.id],
+        evidence_ids: [stableId("evidence", JSON.stringify(["history", r.project_id, decision]))],
         assumptions: [
           "History was returned by the configured adapter; author decisions remain authoritative unless explicitly revised.",
         ],
@@ -641,7 +657,7 @@ export class LudoscopeAgentApi {
           "Compare linked hypotheses and observed outcomes, then authorize a new decision separately.",
       });
       if (checks.evaluation)
-        for (const outcome of checks.evaluation.hypothesis_outcomes)
+        for (const outcome of checks.evaluation.hypothesis_outcomes.filter((o) => prior.hypotheses.some((h) => h.id === o.hypothesis_id)))
           recommendations.push({
             id: stableId(
               "recommendation",
@@ -662,26 +678,19 @@ export class LudoscopeAgentApi {
             status: "proposed",
           });
     }
-    if (checks.evaluation) {
-      for (const id of new Set(
-        checks.evaluation.hypothesis_outcomes.map((o) => o.hypothesis_id),
-      )) {
-        if (hypotheses.some((h) => h.id === id)) continue;
-        const prior = priorAnalysis?.hypotheses.find((h) => h.id === id);
-        if (prior) hypotheses.push(prior);
-      }
-    }
+    const allHypotheses = mergeRecords("hypothesis", [hypotheses, priorAnalysis?.hypotheses ?? []], 100);
     const result = GameDesignAnalysis.parse({
       ...base,
       status: history.data ? "completed" : "partial",
       analysis_id: `analysis.${randomUUID()}`,
       context: r.context,
       lenses,
-      findings: findings.slice(0, 200),
-      problems: problems.slice(0, 200),
-      recommendations: recommendations.slice(0, 100),
+      findings,
+      problems,
+      recommendations,
       alternatives,
-      hypotheses: hypotheses.slice(0, 100),
+      hypotheses: allHypotheses,
+      artifact_refs: artifacts,
       validation,
       evidence,
       history: {
@@ -695,6 +704,7 @@ export class LudoscopeAgentApi {
       ...(checks.evaluation ? { evaluation: checks.evaluation } : {}),
       markdown: "",
     });
+    validateAnalysisReferences(result);
     result.markdown = renderAnalysis(result);
     return result;
   }
