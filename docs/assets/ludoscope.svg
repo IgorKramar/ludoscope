@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+<title id="title">LUDOSCOPE — Game Design Intelligence Engine</title>
+<desc id="desc">A local toolkit connecting player experience, game systems and evidence. A lens diagram connects intent, rules and validation.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#142536"/></linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#284050" stroke-width=".6"/></pattern>
+</defs>
+<rect width="1440" height="560" rx="24" fill="url(#bg)"/>
+<rect width="1440" height="560" rx="24" fill="url(#grid)" opacity=".4"/>
+<path d="M72 72h46" stroke="#54dec3" stroke-width="4"/>
+<text x="136" y="80" fill="#9eafbf" font-family="ui-monospace,Consolas,monospace" font-size="18" letter-spacing="4">GAME DESIGN INTELLIGENCE ENGINE</text>
+<text x="68" y="216" fill="#edf3fa" font-family="Arial,Helvetica,sans-serif" font-size="86" font-weight="700" letter-spacing="2">LUDOSCOPE</text>
+<text x="74" y="280" fill="#54dec3" font-family="Arial,Helvetica,sans-serif" font-size="29">From mechanics to meaningful decisions.</text>
+<text x="74" y="332" fill="#a9bbcb" font-family="Arial,Helvetica,sans-serif" font-size="22">Explore intent. Model consequences. Keep the evidence.</text>
+<g font-family="ui-monospace,Consolas,monospace" font-size="16" fill="#d9e6ef">
+  <rect x="74" y="402" width="156" height="42" rx="21" fill="#203347"/><text x="103" y="429">LOCAL FIRST</text>
+  <rect x="244" y="402" width="160" height="42" rx="21" fill="#203347"/><text x="273" y="429">CLI + MCP</text>
+  <rect x="418" y="402" width="166" height="42" rx="21" fill="#203347"/><text x="446" y="429">OPEN SOURCE</text>
+</g>
+<g transform="translate(1115 264)" fill="none">
+  <circle r="154" stroke="#395569" stroke-width="1.5"/>
+  <circle r="112" stroke="#395569" stroke-width="1.5"/>
+  <circle r="69" stroke="#54dec3" stroke-width="1.5"/>
+  <path d="M0-181V181M-181 0H181" stroke="#395569" stroke-width="1"/>
+  <path d="M0-154L133 77H-133Z" stroke="#54dec3" stroke-width="2"/>
+  <path d="M0-154V0L133 77M0 0L-133 77" stroke="#f2b86b" stroke-width="2"/>
+  <circle r="12" fill="#f2b86b" stroke="#0b1220" stroke-width="5"/>
+  <g fill="#54dec3" stroke="#0b1220" stroke-width="5"><circle cy="-154" r="10"/><circle cx="133" cy="77" r="10"/><circle cx="-133" cy="77" r="10"/></g>
+</g>
+<g font-family="ui-monospace,Consolas,monospace" font-size="16" letter-spacing="2" fill="#d9e6ef" text-anchor="middle">
+  <text x="1115" y="82">INTENT</text><text x="955" y="392">RULES</text><text x="1272" y="392">EVIDENCE</text>
+</g>
+<path d="M74 488H1366" stroke="#304454"/>
+<text x="74" y="524" fill="#7f97ab" font-family="ui-monospace,Consolas,monospace" font-size="14" letter-spacing="2">EXPERIENCE FIRST / SYSTEMS THINKING / TRACEABLE REASONING</text>
+</svg>

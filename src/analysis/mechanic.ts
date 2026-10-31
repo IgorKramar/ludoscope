@@ -16,7 +16,7 @@ export async function analyseMechanic(
   const retrievalContext = {
     ...context,
     tags: [...(context.tags ?? []), ...m.tags],
-    genre: m.genre || undefined,
+    genre: m.genre || context.genre || undefined,
     stage: m.stage,
     mode: context.mode ?? ("design" as const),
     system_types: [

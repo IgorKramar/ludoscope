@@ -1,0 +1,56 @@
+name: Quality
+on:
+  push:
+    branches: [main, "codex/**"]
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Formatting
+        run: npm exec -- prettier --check src/integration/api.ts src/integration/engines.ts src/integration/integrity.ts src/integration/report.ts src/analysis/mechanic.ts tests/agent-integrity.test.ts tests/evaluation-integrity.test.ts tests/history-integrity.test.ts tests/report-integrity.test.ts scripts/demo.mjs scripts/check-docs.mjs scripts/verify-package.mjs
+      - run: npm run check
+      - name: Verify generated contracts are committed
+        run: git diff --exit-code -- schemas contracts
+      - name: Dependency audit
+        run: npm audit --audit-level=high
+      - name: Agent workflow
+        run: node examples/world-forge/workflow.mjs
+      - name: Real stdio MCP client
+        run: node examples/world-forge/mcp-client.mjs
+      - name: Reproducible portfolio demonstration
+        run: |
+          npm run demo -- --output "$RUNNER_TEMP/ludoscope-demo"
+          git diff --exit-code -- examples
+      - name: Verify installed package
+        run: |
+          npm pack --pack-destination "$RUNNER_TEMP"
+          mkdir "$RUNNER_TEMP/ludoscope-installed"
+          npm install --prefix "$RUNNER_TEMP/ludoscope-installed" --ignore-scripts "$RUNNER_TEMP"/ludoscope-*.tgz
+          node scripts/smoke-installed.mjs "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope"
+          node "$RUNNER_TEMP/ludoscope-installed/node_modules/ludoscope/scripts/demo.mjs" --output "$RUNNER_TEMP/ludoscope-installed-demo"
+      - name: Save demonstration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-node-${{ matrix.node }}
+          path: ${{ runner.temp }}/ludoscope-demo/
+          if-no-files-found: warn
+          retention-days: 14

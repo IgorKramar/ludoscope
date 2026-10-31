@@ -1,75 +1,106 @@
-<div align="center">
+![LUDOSCOPE](docs/assets/ludoscope.svg)
 
-# Ludoscope
+[Русский](README.md) · [API](docs/API.md) · [Architecture](ARCHITECTURE.md) · [Limitations](LIMITATIONS.md)
 
-**English** · [Русский](README.md)
+# LUDOSCOPE
 
-**Game-design analysis, reproducible simulations and project memory.**
+**Game Design Intelligence Engine** — a local game-design toolkit for Codex and other agents. Explore mechanics, inspect dependencies, run seeded models and retain the evidence behind a design decision.
 
-TypeScript · CLI · MCP · Local-first
+**Version 0.5.0:** 17 Skills, 40 MCP tools and a shared TypeScript core. This is a functional release; the full 1.0 specification remains a roadmap.
 
-</div>
+## Try the complete demonstration
 
----
-
-Ludoscope is a local toolkit for exploring game mechanics, resource economies and design decisions. A shared typed core is exposed through a CLI and MCP tools; agent skills help connect analysis to a human-led design workflow.
-
-**Status: functional core, version 0.4.0.** This is not a declaration that every 1.0 acceptance criterion is complete. See [LIMITATIONS.md](LIMITATIONS.md).
-
-## What is implemented
-
-- Structured project profiles, design principles, graphs and immutable decision records.
-- Analysis of mechanics, resource economies, dependencies and feedback structures.
-- Seeded simulations, invariants, Monte Carlo runs and sensitivity analysis.
-- Markdown/JSON reporting, project-context retrieval and design-document templates.
-- CLI and MCP interfaces with explicit input/output schemas.
-- Project scanning tied to Git revisions and file hashes rather than assumptions based on filenames.
-
-A simulation checks the specified model. It does **not** prove that a game is fun, balanced for real players or educationally effective. Playtesting remains part of the process.
-
-## Build and explore
-
-Use Node.js 22+ and npm, as specified by the project documentation.
+Node.js 22+ and npm are required. CI runs on Node.js 22 and 24 on Linux.
 
 ```sh
+git clone https://github.com/IgorKramar/ludoscope.git
+cd ludoscope
 npm ci --ignore-scripts
 npm run check
+npm run demo
 ```
 
-Try the included survival example from the repository root:
+The demo creates an isolated game project and a separate output directory. It produces `report.md`, `analysis.md`, `data.json` and `manifest.json` with checksums. It uses actual simulator output, preserves project/task identity through analysis and revision, and never changes the bundled fixtures.
 
 ```sh
-node dist/cli/index.js --project examples/survival init
-node dist/cli/index.js --project examples/survival scan
-node dist/cli/index.js --project examples/survival analyse mechanic mechanic.json
-node dist/cli/index.js --project examples/survival simulate economy.json
-node dist/cli/index.js --project examples/survival validate
+npm run demo -- --output /tmp/ludoscope-demo
 ```
 
-`init` refuses to overwrite existing project files. The [Russian guide](README.md) contains the plugin/MCP setup, report commands and explicit decision-commit workflow. Build before installing the plugin: the installed copy is not a live link to your source tree.
+The chosen output directory must be new. Omit `--output` for a fresh temporary directory on every run. The demo report is Russian; structured API identifiers remain English.
 
-## Where to start reading
+## Install in Codex
 
-| Document | Purpose |
+Build first, then register the absolute repository path:
+
+```sh
+codex plugin marketplace add /absolute/path/to/ludoscope
+codex plugin add ludoscope@ludoscope-local
+codex plugin list --json
+```
+
+Local plugin installation was verified with Codex CLI 0.159.2 in the [0.4.0 verification record](docs/verification-0.4.0.md). Current CI separately verifies the npm-installed package and real MCP calls. It does not test every Codex client version or desktop UI.
+
+Codex installs a copy containing `dist/` and dependencies. Rebuild and reinstall after updating. Start Codex in your game repository, or explicitly set the MCP project root:
+
+```sh
+codex mcp add ludoscope --env LUDOSCOPE_PROJECT_ROOT=/absolute/path/to/game -- node /absolute/path/to/ludoscope/dist/mcp/index.js
+```
+
+Standalone MCP supplies tools; the full plugin also supplies Skills. Initialize a new game's memory:
+
+```sh
+node /absolute/path/to/ludoscope/dist/cli/index.js --project /absolute/path/to/game init --language en
+```
+
+Use `context` to reopen an initialized project. `init` refuses to overwrite existing files. Decisions use preview followed by explicit `--commit`.
+
+## Use the agent API
+
+```js
+import { LudoscopeAgentApi } from "ludoscope/api";
+
+const api = await LudoscopeAgentApi.create();
+const analysis = await api.call("analyze_concept", {
+  request: {
+    api_version: "1.0",
+    request_id: "request.route",
+    project_id: "project.puzzle",
+    task_id: "task.route",
+    timestamp: new Date().toISOString(),
+    status: "submitted",
+    context: {
+      subject: "Route selection",
+      author_goals: ["Discover a spatial rule"],
+      creative_principles: ["Only three rules"],
+      constraints: ["No character progression"]
+    }
+  },
+  concept: "Choose a route using visible spatial clues."
+});
+console.log(analysis.markdown);
+```
+
+Run package imports from a consumer project with LUDOSCOPE installed, or use the built local module in repository scripts. [API reference](docs/API.md) · [Executable MCP client](examples/world-forge/mcp-client.mjs).
+
+An unconfigured Chronicler yields explicit incomplete history and a `partial` analysis. The local analysis still runs. FIP is a provisional profile; remote publication needs both explicit intent and host authorization.
+
+## What you can inspect
+
+| Area | Implementation |
 | :--- | :--- |
-| [Architecture](ARCHITECTURE.md) | System organisation and boundaries |
-| [API](docs/API.md) / [MCP](MCP.md) | Programmatic integration |
-| [Simulation](SIMULATION.md) | Models and reproducibility |
-| [Testing](TESTING.md) | Validation approach |
-| [Knowledge](KNOWLEDGE.md) | Provenance and limits of the knowledge base |
-| [Limitations](LIMITATIONS.md) | Incomplete subsystems and constraints |
-| [Changelog](CHANGELOG.md) | Changes between versions |
+| Knowledge | 208 entries, 19 sources, contextual lenses and provenance |
+| Systems | Dependency graphs, resource models, invariants and sensitivity |
+| Research | Experiment plans, imported observations, linked measurement criteria |
+| Memory | Profiles, versioned artifacts and immutable decision records |
+| Integration | CLI, typed API, strict MCP input/output schemas |
+| Quality | Node 22/24 CI, regression tests, stdio MCP and installed-package checks |
 
-## Boundaries and provenance
+## Evidence and boundaries
 
-The tools operate inside the configured project root. Saving a design decision requires explicit intent; analysis is not permission to change a project. The standard local workflow has no mandatory model-provider account or telemetry.
+Hypotheses, source summaries, model results, engineering tests and player observations remain distinct. Multiple criteria for one hypothesis are evaluated conjunctively; repeated rows do not count as additional participants. Reference validation rejects conflicting evidence IDs and preserves artifact links across revisions.
 
-Knowledge entries are summaries, original methods and bibliographic references. Full commercial books are not redistributed. English output is available in several interfaces and templates, while some structural diagnostics still contain Russian text; see the localisation limitations.
+A simulation checks specified rules. Real players are needed to evaluate experience. Knowledge coverage is selective; full commercial books and OCR are not distributed. Some diagnostics and the demo narrative remain Russian. See [knowledge provenance](KNOWLEDGE.md) and [known limitations](LIMITATIONS.md).
 
-## License
+[Testing](TESTING.md) · [Contributing](CONTRIBUTING.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md).
 
-MIT for original code and independently written materials. Rights to third-party sources remain with their owners; see [KNOWLEDGE.md](KNOWLEDGE.md).
-
----
-
-[Igor Kramar](https://github.com/IgorKramar) · Product engineering & developer tools
+MIT for original code and independently written material. Third-party rights remain with their owners.
