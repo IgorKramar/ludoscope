@@ -82,9 +82,16 @@ export class DesignKnowledgeEngine {
       // Updated provenance is a new immutable evidence record, even when its
       // knowledge/source identifiers remain stable across registry releases.
       return EvidenceReference.parse({
-        id: stableId("evidence", JSON.stringify([
-          entry.id, entry.version ?? null, sourceId, source.version, record,
-        ])),
+        id: stableId(
+          "evidence",
+          JSON.stringify([
+            entry.id,
+            entry.version ?? null,
+            sourceId,
+            source.version,
+            record,
+          ]),
+        ),
         ...record,
       });
     });
@@ -422,9 +429,18 @@ export class RecommendationEngine {
     return {
       id: stableId(
         "experiment",
-        JSON.stringify([request.project_id, request.task_id ?? null, hypothesisId,
-          question, method, metrics, participants, interpretation,
-          request.context.constraints, conditions]),
+        JSON.stringify([
+          request.project_id,
+          request.task_id ?? null,
+          hypothesisId,
+          question,
+          method,
+          metrics,
+          participants,
+          interpretation,
+          request.context.constraints,
+          conditions,
+        ]),
       ),
       hypothesis_ids: [hypothesisId],
       question,
@@ -448,21 +464,32 @@ export class EvaluationEngine {
       (o) => o.kind === "measurement" && o.value !== undefined,
     );
     if (new Set(measured.map((o) => o.metric)).size > 100)
-      throw new Error("FIP playtest budget exceeded: <=100 distinct measured metrics");
+      throw new Error(
+        "FIP playtest budget exceeded: <=100 distinct measured metrics",
+      );
     const meanOf = (values: number[]) => {
       const scale = Math.max(...values.map((value) => Math.abs(value)));
       if (scale === 0) return 0;
-      const normalized = values.reduce((sum, value) => sum + value / scale, 0) / values.length;
+      const normalized =
+        values.reduce((sum, value) => sum + value / scale, 0) / values.length;
       return Math.max(-1, Math.min(1, normalized)) * scale;
     };
     const r = evaluatePlaytest(a.observations);
     const metrics = Object.entries(r.measurements).map(([metric, x]) => ({
-      metric, count: x.rows, min: x.min, max: x.max,
-      mean: meanOf(measured.filter((o) => o.metric === metric).map((o) => o.value!)),
+      metric,
+      count: x.rows,
+      min: x.min,
+      max: x.max,
+      mean: meanOf(
+        measured.filter((o) => o.metric === metric).map((o) => o.value!),
+      ),
     }));
     const claim_type: "PLAYTEST_OBSERVATION" | "MODEL_RESULT" | "PROJECT_FACT" =
-      a.data_origin === "human_playtest" ? "PLAYTEST_OBSERVATION"
-        : a.data_origin === "simulation" ? "MODEL_RESULT" : "PROJECT_FACT";
+      a.data_origin === "human_playtest"
+        ? "PLAYTEST_OBSERVATION"
+        : a.data_origin === "simulation"
+          ? "MODEL_RESULT"
+          : "PROJECT_FACT";
     const grouped = new Map<string, typeof a.criteria>();
     for (const criterion of a.criteria) {
       const group = grouped.get(criterion.hypothesis_id) ?? [];
@@ -472,33 +499,46 @@ export class EvaluationEngine {
     const outcomes = [...grouped].map(([hypothesis_id, criteria]) => {
       const evaluated = criteria.map((c) => {
         const values = measured
-          .filter((o) => o.metric === c.metric && o.hypothesis === c.hypothesis_id)
+          .filter(
+            (o) => o.metric === c.metric && o.hypothesis === c.hypothesis_id,
+          )
           .map((o) => o.value!);
         const mean = values.length ? meanOf(values) : undefined;
-        const status = mean === undefined ? "inconclusive" as const
-          : (c.operator === "gte" ? mean >= c.threshold : mean <= c.threshold)
-            ? "descriptively_supported" as const : "descriptively_contradicted" as const;
+        const status =
+          mean === undefined
+            ? ("inconclusive" as const)
+            : (c.operator === "gte" ? mean >= c.threshold : mean <= c.threshold)
+              ? ("descriptively_supported" as const)
+              : ("descriptively_contradicted" as const);
         return {
           status,
-          detail: mean === undefined
-            ? `${c.metric} ${c.operator} ${c.threshold}: no matching measured data linked to this hypothesis.`
-            : `${c.metric} ${c.operator} ${c.threshold}: linked-row mean ${mean}, n=${values.length}; ${status}.`,
+          detail:
+            mean === undefined
+              ? `${c.metric} ${c.operator} ${c.threshold}: no matching measured data linked to this hypothesis.`
+              : `${c.metric} ${c.operator} ${c.threshold}: linked-row mean ${mean}, n=${values.length}; ${status}.`,
         };
       });
-      const status = evaluated.some((e) => e.status === "descriptively_contradicted")
-        ? "descriptively_contradicted" as const
+      const status = evaluated.some(
+        (e) => e.status === "descriptively_contradicted",
+      )
+        ? ("descriptively_contradicted" as const)
         : evaluated.some((e) => e.status === "inconclusive")
-          ? "inconclusive" as const : "descriptively_supported" as const;
+          ? ("inconclusive" as const)
+          : ("descriptively_supported" as const);
       const details = evaluated.map((e) => e.detail).join(" ");
       return {
-        hypothesis_id, status,
+        hypothesis_id,
+        status,
         rationale: `All ${criteria.length} submitted criteria are required. ${details.length > 3000 ? details.slice(0, 3000) + " [Details truncated; inspect submitted criteria.]" : details} Descriptive only; no causal inference.`,
       };
     });
     const evaluation: z.infer<typeof PlaytestEvaluation> = {
-      data_origin: a.data_origin, claim_type,
+      data_origin: a.data_origin,
+      claim_type,
       participants: a.data_origin === "human_playtest" ? r.participants : 0,
-      rows: r.rows, metrics, hypothesis_outcomes: outcomes,
+      rows: r.rows,
+      metrics,
+      hypothesis_outcomes: outcomes,
       limitations: [
         ...r.limitations,
         "Origin and participant identities are caller-supplied, not independently authenticated.",
@@ -512,17 +552,24 @@ export class EvaluationEngine {
         {
           message: `${a.data_origin}: ${r.rows} submitted rows; ${evaluation.participants} declared human participants.`,
           claim_type,
-          validation: "Inspect artifact revision, collection conditions, participant identities and missing data.",
+          validation:
+            "Inspect artifact revision, collection conditions, participant identities and missing data.",
         },
         ...outcomes.map((o) => ({
-          message: `${o.hypothesis_id}: ${o.status}. ${o.rationale}`, claim_type,
-          validation: "Repeat under controlled conditions and examine confounds before promoting a hypothesis.",
+          message: `${o.hypothesis_id}: ${o.status}. ${o.rationale}`,
+          claim_type,
+          validation:
+            "Repeat under controlled conditions and examine confounds before promoting a hypothesis.",
         })),
       ],
-      problems: outcomes.filter((o) => o.status === "descriptively_contradicted").map((o) => ({
-        message: `${o.hypothesis_id}: supplied data miss the submitted criterion.`, claim_type,
-        validation: "Revisit the proposed change or criterion; preserve the prior hypothesis and test another iteration.",
-      })),
+      problems: outcomes
+        .filter((o) => o.status === "descriptively_contradicted")
+        .map((o) => ({
+          message: `${o.hypothesis_id}: supplied data miss the submitted criterion.`,
+          claim_type,
+          validation:
+            "Revisit the proposed change or criterion; preserve the prior hypothesis and test another iteration.",
+        })),
     };
   }
 }

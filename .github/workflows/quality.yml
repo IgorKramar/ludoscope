@@ -24,6 +24,8 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: npm
       - run: npm ci --ignore-scripts
+      - name: Formatting
+        run: npm exec -- prettier --check src/integration/api.ts src/integration/engines.ts src/integration/integrity.ts src/integration/report.ts src/analysis/mechanic.ts tests/agent-integrity.test.ts tests/evaluation-integrity.test.ts tests/history-integrity.test.ts tests/report-integrity.test.ts scripts/demo.mjs scripts/check-docs.mjs scripts/verify-package.mjs
       - run: npm run check
       - name: Verify generated contracts are committed
         run: git diff --exit-code -- schemas contracts

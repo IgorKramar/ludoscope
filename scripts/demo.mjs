@@ -146,7 +146,8 @@ try {
     statement:
       "При seed=42 за 10 тактов модель не нарушит ограничение food <= 12.",
     claim_type: "DESIGN_HYPOTHESIS",
-    falsification: "Симулятор зарегистрирует хотя бы одно нарушение инварианта.",
+    falsification:
+      "Симулятор зарегистрирует хотя бы одно нарушение инварианта.",
     metric: "invariant_violations",
   };
   const experiment = await api.call("formulate_playtest", {
@@ -176,7 +177,9 @@ try {
   // One explicit parameter change, held against the same seed and horizon.
   const candidateModel = structuredClone(model);
   candidateModel.id = "model.survival.candidate";
-  const farm = candidateModel.processes.find((process) => process.id === "farm");
+  const farm = candidateModel.processes.find(
+    (process) => process.id === "farm",
+  );
   assert.ok(farm);
   farm.outputs.food = 1;
   const candidate = simulate(candidateModel);
@@ -388,7 +391,9 @@ try {
   await writeFile(path.join(output, "manifest.json"), json(manifest), {
     flag: "wx",
   });
-  console.log(json({ output, report: path.join(output, "report.md"), ...summary }));
+  console.log(
+    json({ output, report: path.join(output, "report.md"), ...summary }),
+  );
 } finally {
   await rm(work, { recursive: true, force: true });
 }

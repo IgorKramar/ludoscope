@@ -57,6 +57,13 @@ const { VERSION } = await import("../dist/core/version.js");
 const packageInfo = await json("package.json");
 const pluginInfo = await json("plugin.json");
 const lockInfo = await json("package-lock.json");
-if ([packageInfo.version, pluginInfo.version, lockInfo.version, lockInfo.packages[""].version].some((v) => v !== VERSION))
+if (
+  [
+    packageInfo.version,
+    pluginInfo.version,
+    lockInfo.version,
+    lockInfo.packages[""].version,
+  ].some((v) => v !== VERSION)
+)
   throw new Error("Package, plugin, lockfile and runtime versions must agree");
 console.log(JSON.stringify({ version: VERSION, version_consistency: "valid" }));

@@ -28,7 +28,11 @@ import {
   type PublishAuthorization,
 } from "./chronicler.js";
 import { type KnowledgeRegistry } from "../core/knowledge.js";
-import { mergeRecords, validateEnvelopeReferences, validateAnalysisReferences } from "./integrity.js";
+import {
+  mergeRecords,
+  validateEnvelopeReferences,
+  validateAnalysisReferences,
+} from "./integrity.js";
 import { renderAnalysis } from "./report.js";
 export interface AgentApiOptions {
   knowledge?: KnowledgeRegistry;
@@ -180,16 +184,24 @@ export class LudoscopeAgentApi {
         )
       )
         throw new Error("Cross-project history rejected");
-      for (const records of [data.decisions, data.experiments, data.rejected_alternatives]) {
+      for (const records of [
+        data.decisions,
+        data.experiments,
+        data.rejected_alternatives,
+      ]) {
         if (new Set(records.map((record) => record.id)).size !== records.length)
           throw new Error("Duplicate historical record ID");
       }
       // Optional history cannot invalidate a usable submitted/prior context.
-      mergeRecords("history artifact", [
-        r.artifact_refs,
-        priorArtifacts,
-        data.decisions.flatMap((decision) => decision.artifact_refs),
-      ], 100);
+      mergeRecords(
+        "history artifact",
+        [
+          r.artifact_refs,
+          priorArtifacts,
+          data.decisions.flatMap((decision) => decision.artifact_refs),
+        ],
+        100,
+      );
       return { data, limitations: [] as string[] };
     } catch {
       return {
@@ -224,7 +236,9 @@ export class LudoscopeAgentApi {
       const args = operationInputs.evaluate_playtest.parse(input);
       const ids = new Set(prior.hypotheses.map((h) => h.id));
       if (args.criteria.some((c) => !ids.has(c.hypothesis_id)))
-        throw new Error("Criterion hypothesis is not declared in prior_analysis");
+        throw new Error(
+          "Criterion hypothesis is not declared in prior_analysis",
+        );
     }
     let output: unknown;
     if (name === "get_capabilities")
@@ -434,19 +448,36 @@ export class LudoscopeAgentApi {
       ...(d.artifact_refs[0] ? { artifact_id: d.artifact_refs[0].id } : {}),
       locator: `Chronicler decision ${d.id}`,
       description: d.decision,
-      limitations: ["Adapter-supplied history; not independently authenticated."],
+      limitations: [
+        "Adapter-supplied history; not independently authenticated.",
+      ],
     }));
-    const artifacts = mergeRecords("artifact", [
-      r.artifact_refs, priorAnalysis?.artifact_refs ?? [],
-      (history.data?.decisions ?? []).flatMap((d) => d.artifact_refs),
-    ], 100);
-    const evidence = mergeRecords("evidence", [
-      [inputEvidence], computedEvidence, historyEvidence, r.evidence,
-      priorAnalysis?.evidence ?? [], sourceEvidence,
-    ], 200);
+    const artifacts = mergeRecords(
+      "artifact",
+      [
+        r.artifact_refs,
+        priorAnalysis?.artifact_refs ?? [],
+        (history.data?.decisions ?? []).flatMap((d) => d.artifact_refs),
+      ],
+      100,
+    );
+    const evidence = mergeRecords(
+      "evidence",
+      [
+        [inputEvidence],
+        computedEvidence,
+        historyEvidence,
+        r.evidence,
+        priorAnalysis?.evidence ?? [],
+        sourceEvidence,
+      ],
+      200,
+    );
     const checkEvidence = (c: Checks["findings"][number]) => [
       inputEvidence.id,
-      ...computedEvidence.filter((e) => e.description === c.message.slice(0, 4000)).map((e) => e.id),
+      ...computedEvidence
+        .filter((e) => e.description === c.message.slice(0, 4000))
+        .map((e) => e.id),
     ];
     const findings = checks.findings.map((c, i) => ({
       id: stableId("finding", r.request_id + name + i),
@@ -479,7 +510,12 @@ export class LudoscopeAgentApi {
       {
         id: stableId(
           "hypothesis",
-          JSON.stringify([r.project_id, r.task_id ?? null, r.context, "mechanic" in a ? a.mechanic : null]),
+          JSON.stringify([
+            r.project_id,
+            r.task_id ?? null,
+            r.context,
+            "mechanic" in a ? a.mechanic : null,
+          ]),
         ),
         statement:
           `For ${r.context.subject}, the proposed rule/feedback change will support ${r.context.author_goals.join("; ") || "the author-defined experience"} under the specified conditions.`.slice(
@@ -549,7 +585,12 @@ export class LudoscopeAgentApi {
           4000,
         ),
         claim_type: "EXPERT_INFERENCE",
-        evidence_ids: [stableId("evidence", JSON.stringify(["history", r.project_id, decision]))],
+        evidence_ids: [
+          stableId(
+            "evidence",
+            JSON.stringify(["history", r.project_id, decision]),
+          ),
+        ],
         assumptions: [
           "History was returned by the configured adapter; author decisions remain authoritative unless explicitly revised.",
         ],
@@ -653,19 +694,26 @@ export class LudoscopeAgentApi {
     }
     if (priorAnalysis) {
       const prior = priorAnalysis;
-      const evaluationEvidence = name === "evaluate_playtest" ? computedEvidence : prior.evidence;
-      const evaluationKind = checks.evaluation?.claim_type === "MODEL_RESULT"
-        ? "model"
-        : checks.evaluation?.claim_type === "PLAYTEST_OBSERVATION"
-          ? "playtest" : "artifact";
-      const evaluationEvidenceIds = (hypothesisId: string) =>
-        [...new Set(evaluationEvidence
-          .filter((entry) =>
-            entry.kind === evaluationKind &&
-            entry.claim_type === checks.evaluation?.claim_type &&
-            entry.description.startsWith(hypothesisId + ":"),
-          )
-          .map((entry) => entry.id))];
+      const evaluationEvidence =
+        name === "evaluate_playtest" ? computedEvidence : prior.evidence;
+      const evaluationKind =
+        checks.evaluation?.claim_type === "MODEL_RESULT"
+          ? "model"
+          : checks.evaluation?.claim_type === "PLAYTEST_OBSERVATION"
+            ? "playtest"
+            : "artifact";
+      const evaluationEvidenceIds = (hypothesisId: string) => [
+        ...new Set(
+          evaluationEvidence
+            .filter(
+              (entry) =>
+                entry.kind === evaluationKind &&
+                entry.claim_type === checks.evaluation?.claim_type &&
+                entry.description.startsWith(hypothesisId + ":"),
+            )
+            .map((entry) => entry.id),
+        ),
+      ];
       findings.push({
         id: stableId("finding", r.request_id + "revision"),
         claim: `Revisited ${prior.analysis_id}; prior recommendations remain proposals. ${"evaluation" in checks && checks.evaluation ? (name === "evaluate_playtest" ? "New submitted observations have been descriptively evaluated." : "The previously supplied evaluation is carried forward; no new observations are claimed.") : "No new observed player behavior was supplied."}`,
@@ -684,7 +732,9 @@ export class LudoscopeAgentApi {
           "Compare linked hypotheses and observed outcomes, then authorize a new decision separately.",
       });
       if (checks.evaluation)
-        for (const outcome of checks.evaluation.hypothesis_outcomes.filter((o) => prior.hypotheses.some((h) => h.id === o.hypothesis_id)))
+        for (const outcome of checks.evaluation.hypothesis_outcomes.filter(
+          (o) => prior.hypotheses.some((h) => h.id === o.hypothesis_id),
+        ))
           recommendations.push({
             id: stableId(
               "recommendation",
@@ -699,13 +749,20 @@ export class LudoscopeAgentApi {
               "Use actual submitted outcomes in the next design iteration.",
             ],
             tradeoffs: ["Descriptive support is not causal confirmation."],
-            evidence_ids: [inputEvidence.id, ...evaluationEvidenceIds(outcome.hypothesis_id)],
+            evidence_ids: [
+              inputEvidence.id,
+              ...evaluationEvidenceIds(outcome.hypothesis_id),
+            ],
             hypothesis_ids: [outcome.hypothesis_id],
             confidence: confidence(outcome.rationale, "low"),
             status: "proposed",
           });
     }
-    const allHypotheses = mergeRecords("hypothesis", [hypotheses, priorAnalysis?.hypotheses ?? []], 100);
+    const allHypotheses = mergeRecords(
+      "hypothesis",
+      [hypotheses, priorAnalysis?.hypotheses ?? []],
+      100,
+    );
     const result = GameDesignAnalysis.parse({
       ...base,
       status: history.data ? "completed" : "partial",
