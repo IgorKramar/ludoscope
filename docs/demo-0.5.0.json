@@ -1,0 +1,161 @@
+{
+  "version": "0.5.0",
+  "observed_at": "2026-10-31",
+  "source": {
+    "commit": "1ba4137955d5dcafb10031fbc345fa580017a7ff",
+    "workflow_run_id": 41217299072,
+    "url": "https://github.com/IgorKramar/ludoscope/actions/runs/41217299072"
+  },
+  "runs": [
+    {
+      "node": "Node 22",
+      "job_id": 124584405245,
+      "conclusion": "success",
+      "tests": {
+        "passed": 95,
+        "total": 95,
+        "files": 9
+      },
+      "npm_audit": {
+        "vulnerabilities": 0,
+        "observed_at": "2026-10-31"
+      },
+      "source_demo": {
+        "output": "/home/runner/work/_temp/ludoscope-demo",
+        "report": "/home/runner/work/_temp/ludoscope-demo/report.md",
+        "version": "0.5.0",
+        "seed": 42,
+        "steps": 10,
+        "baseline": {
+          "final": {
+            "food": 15,
+            "energy": 5
+          },
+          "invariant_violations": 3
+        },
+        "candidate": {
+          "final": {
+            "food": 5,
+            "energy": 5
+          },
+          "invariant_violations": 0
+        },
+        "alternatives": 3,
+        "affected_nodes": 5,
+        "data_origin": "simulation",
+        "human_participants": 0,
+        "hypothesis_outcome": "descriptively_contradicted",
+        "chronicler_publication": "preview",
+        "project_memory_reopened": true,
+        "identity_preserved": true
+      },
+      "installed_demo": {
+        "output": "/home/runner/work/_temp/ludoscope-installed-demo",
+        "report": "/home/runner/work/_temp/ludoscope-installed-demo/report.md",
+        "version": "0.5.0",
+        "seed": 42,
+        "steps": 10,
+        "baseline": {
+          "final": {
+            "food": 15,
+            "energy": 5
+          },
+          "invariant_violations": 3
+        },
+        "candidate": {
+          "final": {
+            "food": 5,
+            "energy": 5
+          },
+          "invariant_violations": 0
+        },
+        "alternatives": 3,
+        "affected_nodes": 5,
+        "data_origin": "simulation",
+        "human_participants": 0,
+        "hypothesis_outcome": "descriptively_contradicted",
+        "chronicler_publication": "preview",
+        "project_memory_reopened": true,
+        "identity_preserved": true
+      }
+    },
+    {
+      "node": "Node 24",
+      "job_id": 124584405035,
+      "conclusion": "success",
+      "tests": {
+        "passed": 95,
+        "total": 95,
+        "files": 9
+      },
+      "npm_audit": {
+        "vulnerabilities": 0,
+        "observed_at": "2026-10-31"
+      },
+      "source_demo": {
+        "output": "/home/runner/work/_temp/ludoscope-demo",
+        "report": "/home/runner/work/_temp/ludoscope-demo/report.md",
+        "version": "0.5.0",
+        "seed": 42,
+        "steps": 10,
+        "baseline": {
+          "final": {
+            "food": 15,
+            "energy": 5
+          },
+          "invariant_violations": 3
+        },
+        "candidate": {
+          "final": {
+            "food": 5,
+            "energy": 5
+          },
+          "invariant_violations": 0
+        },
+        "alternatives": 3,
+        "affected_nodes": 5,
+        "data_origin": "simulation",
+        "human_participants": 0,
+        "hypothesis_outcome": "descriptively_contradicted",
+        "chronicler_publication": "preview",
+        "project_memory_reopened": true,
+        "identity_preserved": true
+      },
+      "installed_demo": {
+        "output": "/home/runner/work/_temp/ludoscope-installed-demo",
+        "report": "/home/runner/work/_temp/ludoscope-installed-demo/report.md",
+        "version": "0.5.0",
+        "seed": 42,
+        "steps": 10,
+        "baseline": {
+          "final": {
+            "food": 15,
+            "energy": 5
+          },
+          "invariant_violations": 3
+        },
+        "candidate": {
+          "final": {
+            "food": 5,
+            "energy": 5
+          },
+          "invariant_violations": 0
+        },
+        "alternatives": 3,
+        "affected_nodes": 5,
+        "data_origin": "simulation",
+        "human_participants": 0,
+        "hypothesis_outcome": "descriptively_contradicted",
+        "chronicler_publication": "preview",
+        "project_memory_reopened": true,
+        "identity_preserved": true
+      }
+    }
+  ],
+  "limitations": [
+    "Computed formal model only; no real human observations.",
+    "Runner paths identify historical ephemeral CI directories; reproduce with npm run demo.",
+    "Chronicler publication was preview only.",
+    "Later revisions are verified by their own workflow runs."
+  ]
+}

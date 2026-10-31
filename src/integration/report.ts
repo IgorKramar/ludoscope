@@ -28,6 +28,7 @@ export function renderAnalysis(r: DesignAnalysis): string {
     "## Context",
     "",
     "**Genre:** " + text(r.context.genre || "Unspecified"),
+    "",
     "**Audience:** " + text(r.context.audience || "Unspecified"),
     "",
     "### Author goals",
@@ -45,6 +46,8 @@ export function renderAnalysis(r: DesignAnalysis): string {
     "## Lenses",
     "",
   ];
+  if (!r.lenses.length)
+    lines.push("No lenses selected from the supplied context.", "");
   for (const lens of r.lenses)
     lines.push(
       "### " + text(lens.title),
@@ -116,6 +119,8 @@ export function renderAnalysis(r: DesignAnalysis): string {
       "",
     );
   lines.push("## Alternatives", "");
+  if (!r.alternatives.length)
+    lines.push("No candidate variants generated for this operation.", "");
   for (const alt of r.alternatives)
     lines.push(
       "### " + text(alt.title),
@@ -142,6 +147,8 @@ export function renderAnalysis(r: DesignAnalysis): string {
       "",
     );
   lines.push("## Validation", "");
+  if (!r.validation.length)
+    lines.push("No experiment proposal supplied.", "");
   for (const experiment of r.validation)
     lines.push(
       "### " + text(experiment.id),
@@ -266,8 +273,10 @@ export function renderAnalysis(r: DesignAnalysis): string {
     "",
     "**Decisions:** " +
       text(r.history.decision_ids.join(", ") || "None supplied"),
+    "",
     "**Rejected alternatives:** " +
       text(r.history.rejected_alternative_ids.join(", ") || "None supplied"),
+    "",
     "**Prior experiments:** " +
       text(r.history.experiment_ids.join(", ") || "None supplied"),
     "",
