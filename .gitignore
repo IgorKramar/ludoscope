@@ -3,6 +3,7 @@ dist/
 *.tgz
 coverage/
 .ludoscope/
+.live-chronicle-venv/
 
 # Licensed source books and private extraction artifacts never belong in the public plugin.
 *.pdf

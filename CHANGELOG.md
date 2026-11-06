@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 — optional Chronicle HTTP adapter
+
+- Опубликованный HTTP FIP v1: scoped capabilities/read, latest decision revisions, explicit experiment result convention и проверенный ACK.
+- Standalone MCP получает optional доверенную host configuration; default deny записи сохранён.
+- Детерминированная ограниченная projection, idempotent retry после потерянного ACK; гипотезы не становятся доказательствами.
+- Изолированный настоящий Collector smoke и протокольные проверки; Notion и deployment не входят в библиотеку.
+
 ## 0.6.0 — 2026-10-31
 
 Добавлена read-only трассировка: строгий manifest и результат, SHA-256 исходных байтов, диапазоны строк, контроль ссылок и ревизии, частичное покрытие цепочек и лимиты чтения. Библиотека, CLI `trace`, MCP `ludoscope_check_traceability` и генерируемые схемы используют общее ядро. Всего 41 MCP-инструмент; FIP-контракт сохранён.

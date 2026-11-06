@@ -16,4 +16,6 @@ export * from "./core/version.js";
 export * from "./integration/api.js";
 export * from "./integration/contracts.js";
 export * from "./integration/chronicler.js";
+export * from "./integration/chronicle-http.js";
+export * from "./integration/chronicle-host.js";
 export * from "./integration/engines.js";

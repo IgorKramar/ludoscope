@@ -1,4 +1,4 @@
-# Программный API LUDOSCOPE 0.6.0
+# Программный API LUDOSCOPE 0.7.0
 
 Основной транспорт — MCP stdio. Дополнительно доступна локальная TypeScript/JavaScript-библиотека. HTTP-сервера нет: для текущих локальных операций он не требуется. Прежние 24 `ludoscope_*` операции сохранены; добавлены 15 запрошенных агентных операций и `publish_analysis`, с инструментом трассировки всего 41 инструмент. Все новые операции имеют строгие схемы аргументов и результатов.
 
@@ -102,3 +102,7 @@ Markdown-отчёт включает авторские цели, компром
 ## Трассировка 0.6.0
 
 В 0.6.0 добавлена операция ядра `ludoscope_check_traceability` с обычным legacy wrapper, отдельно от FIP. Библиотека экспортирует `auditTraceability(root, manifest, signal?)`, `validateTraceability`, `TraceabilityManifest` и `TraceabilityReport`. JSON Schema лежат в `schemas/Traceability*.schema.json`; лимиты, ошибки, CLI и пример вызова — в [TRACEABILITY.md](TRACEABILITY.md). Изменений полей FIP нет.
+
+## Chronicle HTTP adapter
+
+Optional `ChronicleHttpAdapter` реализует существующий порт через опубликованный Chronicle HTTP FIP v1. Host options подключаются к standalone MCP через доверенное окружение; базовый режим не меняется. [Конфигурация, безопасность, ограничения и живой smoke](CHRONICLER_INTEGRATION.md). Формы Ludoscope draft FIP не менялись.
